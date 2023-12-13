@@ -1,5 +1,6 @@
 import Logo from "../../assets/icons/logo";
-import { Button as AntButton } from "antd";
+// import { Button as AntButton } from "antd";
+import CustomButton from "../Button";
 
 function Navbar() {
   return (
@@ -15,7 +16,7 @@ function Navbar() {
         </div>
         <ul className="flex gap-[42px] items-center">
             <li className="hover:text-primary-p25"> Blogs</li>
-            <AntButton className="rounded ">Contact Us</AntButton>
+            <CustomButton  color="g1" type="primary" >Contact Us</CustomButton>
         </ul>
       </div>
     </div>
