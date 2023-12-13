@@ -3,14 +3,14 @@ import { Button as AntButton } from 'antd';
 
 const CustomButton = styled(AntButton)`
   &&.ant-btn {
-    padding: 8px 16px;
+    padding: 13px 27px;
     height: 44px;
     display: flex;
     border: 1.2px solid ${({theme})=>theme.colors.utils.u1};
     justify-content: center;
     align-items: center;
     gap: 12px;
-    border-radius: 8px;
+    border-radius: 4px;
 
     > svg {
       width: 20px;
@@ -25,10 +25,12 @@ const CustomButton = styled(AntButton)`
     &.ant-btn-primary {
       > span,
       > svg {
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.utils.u1};
       }
-      background: ${({ theme }) => theme.colors.primary.p25};
-      box-shadow: 0px 1px 2px 0px #1018280d;
+      background: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.white};
+      box-shadow: 0px 1px 2px 0px #1018280d;s
+
 
       :disabled {
         border-color: ${({ theme }) => theme.colors.primary.g2};
