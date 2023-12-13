@@ -23,7 +23,7 @@ function ShowCase() {
         <div className=" h-[500px] border m-2 flex justify-center">
           <div className="h-[360px] border border-[#900]">
             <div>
-
+            We are more than just a company
             </div>
           </div>
         </div>
