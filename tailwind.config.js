@@ -34,6 +34,7 @@ export default {
           p7: "#ff0018",
           p8: "#ff000c",
           p9: "#ff0005",
+          p10 : '#EB1C24',
         },
         utils: {
           DEFAULT: "#22092C",

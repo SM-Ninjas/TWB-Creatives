@@ -35,7 +35,7 @@ function ShowCase() {
           <div className="h-[360px] w-full flex justify-center items-center bg-utils-u2">
             <div className=" flex flex-col gap-[30px] h-[157px] w-1/2 text-center ">
               <h1 className="font-bold text-white text-[2rem]">We are more than just a company</h1>
-              <p className="text-[16px] text-gray-g2">We are the architects of innovation, crafting a seamless fusion of graphic design, marketing prowess, and web development expertise. More than just a company, we are your creative partners, transforming concepts into captivating visual narratives and strategies that resonate with your audience. </p>
+              <p className="text-[16px] opacity-[0.7] text-gray-g2">We are the architects of innovation, crafting a seamless fusion of graphic design, marketing prowess, and web development expertise. More than just a company, we are your creative partners, transforming concepts into captivating visual narratives and strategies that resonate with your audience. </p>
             </div>
           </div>
         </div>
