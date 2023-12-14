@@ -8,7 +8,7 @@ function ShowCase() {
         <div className="w-full flex justify-center">
           <div className="flex flex-col items-center w-[878px] h-[663px] pt-[60px] relative">
             <div className="w-[600px]">
-              <h1 className="text-[2rem] text-center">
+              <h1 className="text-[1.9rem] font-bold text-center">
                 We Deliver Exceptional Graphic Design, Marketing and Web
                 Design/Development Services.
               </h1>
@@ -16,7 +16,7 @@ function ShowCase() {
             <div className="pt-[1.2rem] pb-[45px]">
               <CustomButton type="primary">Call Now</CustomButton>
             </div>
-            <div className="w-[878px] h-[375px] border relative">
+            <div className="w-[878px] h-[375px] relative">
               <img
                 src="../../assets/images/Overlay.png"
                 alt="my img"

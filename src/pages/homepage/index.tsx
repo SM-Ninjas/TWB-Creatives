@@ -1,4 +1,5 @@
 import AboutUs from "./aboutUs"
+import ChooseUs from "./chooseUs"
 import ShowCase from "./showcase"
 
 function HomePage() {
@@ -6,6 +7,7 @@ function HomePage() {
     <div>
         <ShowCase/>  
         <AboutUs/>    
+        <ChooseUs/>
     </div>
   )
 }
