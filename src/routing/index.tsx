@@ -13,7 +13,8 @@ function Routing() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs/>}/>
+        <Route path="/portfolio" element={<h1>welcome to portfolio</h1>} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

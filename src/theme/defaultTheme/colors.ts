@@ -19,7 +19,8 @@ const colors = {
   primary: {
     DEFAULT: "#ff0037", //600
     p25: "#ff0047", //500
-    p50: "#ffcccc",
+    p50: "#f87171",
+    p60: "#f8cccc",
     p1: "#ff80a7",
     p2: "#ff547a",
     p3: "#ff1a4d",

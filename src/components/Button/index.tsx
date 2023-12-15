@@ -47,6 +47,7 @@ const CustomButton = styled(AntButton)`
     /* Default button */
     &.ant-btn-default {
       border-color: ${({ theme }) => theme.colors.gray.g3};
+      padding:.5rem 1rem;
       > span,
       > svg {
         color: ${({ theme }) => theme.colors.gray.g8};
