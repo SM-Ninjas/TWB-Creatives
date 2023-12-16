@@ -10,3 +10,8 @@
 .active:hover{
     transition: 2.9 ease-in-out;
 }
+
+body{
+    background: var(--Background, #F8F8F8);
+    font-family: 'Shippori Mincho B1', serif;
+}

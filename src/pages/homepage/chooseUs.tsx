@@ -22,7 +22,7 @@ function ChooseUs() {
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
-              <div className="text-center flex flex-col gap-[10px] border ">
+              <div className="text-center flex flex-col gap-[10px] ">
                 <h2 className="font-bold">Graphic Designing</h2>
                 <p className="text-utils-u1 opacity-[0.7]">
                   Transform your brand with our creative graphic design

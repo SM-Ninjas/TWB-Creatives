@@ -1,6 +1,7 @@
 import { NavLink} from "react-router-dom";
 import Logo from "../../assets/icons/logo";
 import CustomButton from "../Button";
+import DropDown from "./dropdown";
 
 
 
@@ -22,22 +23,17 @@ function Navbar() {
             <li>About Us</li>
           </NavLink>
           <NavLink
-            to="/services"
+            to="/blogs"
             className="hover:text-primary-p25 transition"
           >
-            <li>Our Services</li>
+            <li>Blogs</li>
           </NavLink>
         </ul>
         <div>
           <Logo />
         </div>
         <ul className="flex gap-[42px] items-center">
-          <NavLink
-            to="/blogs"
-            className="hover:text-primary-p25 transition"
-          >
-            <li>Blogs</li>
-          </NavLink>
+            <DropDown/>
           <NavLink
             to="/contact"
             className="hover:text-primary-p25"
