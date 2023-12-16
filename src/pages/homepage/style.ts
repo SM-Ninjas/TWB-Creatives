@@ -25,9 +25,9 @@ export const StyledDiv = styled('div')`
  padding:2px;
  width: 261px;
  height: 281px;
- border-radius: 8px;
+ border-radius:8px;
  background: var(--Background, #F8F8F8);
- box-shadow: -4px -4px 20px 0px rgba(0, 0, 0, 0.05);
+//  box-shadow: -4px -4px 20px 0px rgba(0, 0, 0, 0.05);
  
-`;
+`
 
