@@ -84,7 +84,7 @@ function Form() {
           placeholder="Message"
           required
           className="w-full"
-          rows={10}
+          rows={8}
           value={formData.message}
           onChange={handleChange}
         ></TextArea>
