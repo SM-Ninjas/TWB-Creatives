@@ -29,8 +29,7 @@ const CustomButton = styled(AntButton)`
       }
       background: ${({ theme }) => theme.colors.white};
       color: ${({ theme }) => theme.colors.white};
-      box-shadow: 0px 1px 2px 0px #1018280d;s
-
+      box-shadow: 0px 1px 2px 0px #1018280d;
 
       :disabled {
         border-color: ${({ theme }) => theme.colors.primary.g2};
