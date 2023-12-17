@@ -1,6 +1,7 @@
 const colors = {
   // light to dark
   gray: {
+    DEFAULT: "#1b1b1b", //600
     g50: "#F9FAFB",
     g25: "#FCFCFD",
     g1: "#F2F4F7",
@@ -15,9 +16,10 @@ const colors = {
     g10: "#101828",
     g11: "#1C2448",
     g12: "#636363",
+    g13 : "#1b1b1b",
   },
   primary: {
-    DEFAULT: "#ff0037", //600
+    DEFAULT: "#EB1C24", //600
     p25: "#ff0047", //500
     p50: "#f87171",
     p60: "#f8cccc",
