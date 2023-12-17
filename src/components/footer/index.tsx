@@ -4,7 +4,7 @@ import { Logo } from "../../assets/icons";
 function Footer() {
   return (
     <>
-      <div className="bg-utils w-full h-[565px] py-[5rem] flex justify-center items-center">
+      <div className="bg-utils w-full h-[565px] py-[5rem] flex justify-center items-center ">
         <div className="w-[638px] flex flex-col gap-[2rem]">
           <div className="flex flex-col items-center gap-[30px]">
             <Logo />

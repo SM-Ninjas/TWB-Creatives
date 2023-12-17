@@ -1,9 +1,14 @@
+import Footer from "../../components/footer"
+import AboutMain from "./main"
+// import OurTeam from "./team"
 
 function About() {
   return (
-    <div>
-        This is about page      
-    </div>
+    <>
+        <AboutMain/>     
+        {/* <OurTeam/>  */}
+        <Footer/>
+    </>
   )
 }
 
