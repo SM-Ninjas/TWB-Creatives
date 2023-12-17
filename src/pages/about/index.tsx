@@ -1,12 +1,12 @@
 import Footer from "../../components/footer"
 import AboutMain from "./main"
-// import OurTeam from "./team"
+import OurTeam from "./team"
 
 function About() {
   return (
     <>
         <AboutMain/>     
-        {/* <OurTeam/>  */}
+        <OurTeam/> 
         <Footer/>
     </>
   )
