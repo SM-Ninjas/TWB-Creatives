@@ -1,8 +1,11 @@
+import Footer from "../../components/footer"
+import Projects from "./projects"
 
 function Portfolio() {
   return (
     <div>
-        view our Portfolio      
+      <Projects/>
+        <Footer/> 
     </div>
   )
 }
