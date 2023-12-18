@@ -34,12 +34,13 @@ export default {
           p7: "#ff0018",
           p8: "#ff000c",
           p9: "#ff0005",
-          p10 : '#EB1C24',
+          p10: "#EB1C24",
         },
         utils: {
           DEFAULT: "#22092C",
           u1: "#22092C",
           u2: "#22092ce6",
+          u3: "#31497D",
         },
         error: {
           DEFAULT: "#D92D20", // 600

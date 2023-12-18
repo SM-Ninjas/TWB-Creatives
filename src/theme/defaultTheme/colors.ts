@@ -37,6 +37,8 @@ const colors = {
     DEFAULT: "#22092C",
     u1: "#22092C",
     u2: "#22092ce6",
+    u3: "#31497D",
+
   },
   error: {
     e25: "#FFFBFA",
