@@ -31,7 +31,7 @@ function ShowCase() {
             </div>
           </div>
         </div>
-        <div className="h-[500px] m-2 flex justify-center items-center">
+        <div className="h-[500px] flex justify-center items-center">
           <div className="h-[360px] w-full flex justify-center items-center bg-utils-u2">
             <div className=" flex flex-col h-[157px] w-1/2 text-center">
               <h1 className="font-bold text-white text-[2rem]">We are more than just a company</h1>
