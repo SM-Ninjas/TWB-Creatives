@@ -47,7 +47,7 @@ function Projects() {
             Design, Marketing, and Web Development.
           </h1>
         </div>
-        <Mouse size="32" color="#22092C" variant="Bulk" />
+        <Mouse size="32" color="#22092C" className="animate-float" variant="Bulk" />
         <div className="flex">
           <div className="flex flex-col gap-[30px] ">
             {portfolioCopy.map((p, i) => (
@@ -64,7 +64,8 @@ function Projects() {
               </StyledProject>
             ))}
           </div>
-          <div className="ml-6">
+          <div className="ml-6 fixed button-[100px] right-[160px]   z-10">
+            {/* Adjust the positioning of your Filter component here */} 
             <Filter onFilterChange={filterProjects} />
           </div>
         </div>

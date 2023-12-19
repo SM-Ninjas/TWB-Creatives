@@ -23,7 +23,7 @@ function Filter({ onFilterChange }: FilterProps) {
   };
 
   return (
-    <div onMouseLeave={handleClose} className="relative ">
+    <div onMouseLeave={handleClose} className="relative z-50">
       <FilterSquare
         size="32"
         color="#22092C"
@@ -66,3 +66,5 @@ function Filter({ onFilterChange }: FilterProps) {
 }
 
 export default Filter;
+
+

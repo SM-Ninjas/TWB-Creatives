@@ -7,7 +7,7 @@ import DropDown from "./dropdown";
 
 function Navbar() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center sticky top-0 bg-gray-g2 z-50">
       <div className="flex w-full justify-evenly items-center pt-2">
         <ul className="flex justify-between gap-[42px]">
           <NavLink
