@@ -47,7 +47,7 @@ function Projects() {
             Design, Marketing, and Web Development.
           </h1>
         </div>
-        <Mouse size="32" color="#22092C" className="animate-float" variant="Bulk" />
+        <Mouse size="32" color="#22092C" className="animate-bounce" variant="Bulk" />
         <div className="flex">
           <div className="flex flex-col gap-[30px] ">
             {portfolioCopy.map((p, i) => (
@@ -75,3 +75,4 @@ function Projects() {
 }
 
 export default Projects;
+
