@@ -7,7 +7,7 @@ function AboutUs() {
             <h3 className="text-primary-p10">About us</h3>
             <h1 className="text-[2rem] font-bold">Our Approach</h1>
           </div>
-          <div className="flex items-end w-[276px]">
+          <div className="flex items-end w-[270px]">
             <p className="text-utils-u1 opacity-[0.7] text-[1rem] ">
               Our core goals encompass delivering cutting-edge graphic design,
               impactful marketing strategies, and user-centric web development
@@ -16,7 +16,7 @@ function AboutUs() {
               business environment.
             </p>
             </div>
-            <div className="w-[290px] flex items-end">
+            <div className="w-[280px] flex items-end">
             <p className="text-utils-u1 opacity-[0.7] text-[1rem] ">
               Our vision is to be a trailblazer in the intersection of
               creativity and technology, setting new standards in graphic

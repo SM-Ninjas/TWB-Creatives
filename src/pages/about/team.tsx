@@ -8,7 +8,7 @@ import Suyog from "../../assets/images/suyog.png";
 function OurTeam() {
   return (
     <>
-      <div className="mt-[5.5rem] border border-[#901]">
+      <div className="mt-[5.5rem]">
         <div className="">
           <div className=" bg-utils flex justify-center h-[304px] pt-[103px] ">
             <h1 className="text-[2rem] font-bold text-white">Meet The Team</h1>
