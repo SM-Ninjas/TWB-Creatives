@@ -37,7 +37,7 @@ function OurSteps() {
           Web Development
         </button>
       </div>
-      <hr className="bg-[#111] w-full m-3" />
+      <hr className="bg-[#111] w-full mt-3 mb-[72px]" />
 
       {/* conditionally render the components*/}
       {selectedComponent === "digital marketing" && <DigitalMarketing />}

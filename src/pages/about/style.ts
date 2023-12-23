@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface StyledProps {
+    background: string; // Define the background prop
+  }
+  
+
 export const StyledTeam = styled('div')`
 width: 261px;
 height: 406px;
@@ -16,7 +21,7 @@ font-weight: 700;
 line-height: normal;
 text-align: center; 
 `
-export const StyledParagraph = styled.p`
+export const StyledParagraph = styled.p<StyledProps>`
 color: rgba(248, 248, 248);
 opacity:0.75;
 text-align: center;
@@ -25,4 +30,5 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+color: ${(props) => props.background || "#fff"};
 `

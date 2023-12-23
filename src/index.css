@@ -12,6 +12,20 @@
 }
 
 body{
-    background: var(--Background, #F8F8F8);
+    background: #f8f8f8;
     font-family: 'Shippori Mincho B1', serif;
 }
+
+.scrollBar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-style: none;
+    -moz-overflow-style: none;
+  
+    box-align: center;
+  }
+  .scrollBar::-webkit-scrollbar {
+    /* background-color: #888;
+     */
+     display: none;
+  }
