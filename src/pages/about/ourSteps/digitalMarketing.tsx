@@ -14,7 +14,7 @@ function DigitalMarketing() {
           brand identity and objectives.
         </p>
       </div>
-      <div className="w-[38%] overflow-y-auto scrollBar max-h-[400px]">
+      <div className="w-[38%] overflow-y-auto cursor-all-scroll scrollBar max-h-[400px]">
       {graphicDesigningData.map((item, index) => (
         <div key={index} className="bg-[#fff] rounded w-[100%] mb-[15px]"> 
           <h2 className="text-black px-[22px] py-[18px]">{item}</h2>
