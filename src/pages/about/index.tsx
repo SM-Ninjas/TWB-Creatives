@@ -6,13 +6,13 @@ import OurTeam from "./team"
 
 function About() {
   return (
-    <>
+    <div className="">
         <AboutMain/>     
         <Stats/>
         <OurSteps/>
         <OurTeam/> 
         <Footer/>
-    </>
+    </div>
   )
 }
 

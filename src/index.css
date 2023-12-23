@@ -2,30 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.active{
-    border-bottom: #ff000c 3px solid;
-    transform: scale(1.2);
+.active {
+  border-bottom: #ff000c 3px solid;
+  transform: scale(1.2);
 }
 
-.active:hover{
-    transition: 2.9 ease-in-out;
+.active:hover {
+  transition: 2.9 ease-in-out;
 }
 
-body{
-    background: #f8f8f8;
-    font-family: 'Shippori Mincho B1', serif;
+body {
+  background: #f8f8f8;
+  font-family: "Shippori Mincho B1", serif;
 }
-
+/* 
 .scrollBar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-style: none;
-    -moz-overflow-style: none;
-  
-    box-align: center;
-  }
-  .scrollBar::-webkit-scrollbar {
-    /* background-color: #888;
-     */
-     display: none;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-style: none;
+  -moz-overflow-style: none;
+ background-color: #111;
+  box-align: center;
+} */
+.scrollBar::-webkit-scrollbar {
+    display: none;
+}
