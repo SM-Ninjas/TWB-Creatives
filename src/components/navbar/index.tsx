@@ -1,4 +1,4 @@
-import { NavLink} from "react-router-dom";
+import { NavLink , Link} from "react-router-dom";
 import Logo from "../../assets/icons/logo";
 import CustomButton from "../Button";
 import DropDown from "./dropdown";
@@ -34,12 +34,12 @@ function Navbar() {
         </div>
         <ul className="flex gap-[42px] items-center">
             <DropDown/>
-          <NavLink
+          <Link
             to="/contact"
             className="hover:text-primary-p25"
           >
             <CustomButton type="primary" className="">Contact Us</CustomButton>
-          </NavLink>
+          </Link>
         </ul>
       </div>
     </div>

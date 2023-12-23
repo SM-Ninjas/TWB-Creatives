@@ -1,4 +1,21 @@
+import { useState } from "react";
+import DigitalMarketing from "./digitalMarketing";
+import GraphicDesign from "./graphicsDesign";
+import WebDev from "./webDev";
+
+// type ComponentName =
+//   | "digital marketing"
+//   | "graphic designing"
+//   | "web development";
+
 function OurSteps() {
+  const [selectedComponent, setSelectedComponent] =
+    useState<string>('graphic designing');
+
+  function handleSelectComponent(componentName: string) {
+    setSelectedComponent(componentName);
+  }
+
   return (
     <div className="h-dvh flex flex-col items-center">
       <div className="w-[48%] text-center pt-[129px] mb-[60px]">
@@ -10,11 +27,22 @@ function OurSteps() {
         </p>
       </div>
       <div className="flex  gap-[60px]">
-        <h2>Digital Marketing</h2>
-        <h2>Graphic Designing</h2>
-        <h2>Web Development</h2>
+        <button onClick={() => handleSelectComponent("digital marketing")}>
+          Digital Marketing
+        </button>
+        <button onClick={() => handleSelectComponent("graphic designing")}>
+          Graphic Designing
+        </button>
+        <button onClick={() => handleSelectComponent("web development")}>
+          Web Development
+        </button>
       </div>
-      <hr className="bg-[#111] w-full " />
+      <hr className="bg-[#111] w-full mt-3 mb-[72px]" />
+
+      {/* conditionally render the components*/}
+      {selectedComponent === "digital marketing" && <DigitalMarketing />}
+      {selectedComponent === "graphic designing" && <GraphicDesign />}
+      {selectedComponent === "web development" && <WebDev />}
     </div>
   );
 }
