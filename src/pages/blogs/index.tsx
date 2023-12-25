@@ -1,7 +1,10 @@
+import BlogList from "./blogs"
+
 function Blogs() {
   return (
     <div>
-      welcome to our blogs page
+     
+      <BlogList/>
     </div>
   )
 }
