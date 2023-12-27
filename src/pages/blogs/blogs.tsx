@@ -1,14 +1,17 @@
 import { StyledImg, StyledDes } from "./style";
-import DOMPurify from 'dompurify';
-
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 interface BlogData {
   id: number;
   attributes: {
     BlogTitle: string;
     BlogDate: string;
-    BlogDescription: string;
+    BlogDescription: {
+      type: string;
+      children: { type: string; text: string; bold?: boolean }[];
+    }[];
     BlogThumbnail: {
       data: {
         id: number;
@@ -21,22 +24,14 @@ interface BlogData {
   };
 }
 
-const truncateString = (text: string, maxWords: number) => {
+const truncateString = (text: string, maxLength: number) => {
   if (!text || typeof text !== "string") {
+    console.log("Unable to fetch data");
     return "error occurred";
   }
 
-  const words = text.split(" ");
-
-  if (words.length > maxWords) {
-    // Slice the array to the maximum number of words
-    const truncatedWords = words.slice(0, maxWords);
-
-    // Join string back
-    const truncatedText = truncatedWords.join(" ");
-
-    // Append ellipsis if the string is truncated
-    return `${truncatedText}...`;
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "...";
   }
 
   return text;
@@ -61,10 +56,34 @@ const BlogList = () => {
     fetchData();
   }, []);
 
+  const renderParagraphs = (
+    paragraphs: {
+      type: string;
+      children: { type: string; text: string; bold?: boolean }[];
+    }[]
+  ) => {
+    const combinedText = paragraphs
+      .filter((paragraph) => paragraph.type === "paragraph")
+      .map((paragraph) => {
+        let paragraphText = "";
+        paragraph.children.forEach((child) => {
+          paragraphText += child.bold ? `<b>${child.text}</b>` : child.text;
+        });
+        return paragraphText;
+      })
+      .join(" ");
+
+    const truncatedText = truncateString(combinedText, 369); // Adjust the maxLength as needed
+
+    return (
+      truncatedText + (truncatedText.length < combinedText.length ? "..." : "")
+    );
+  };
+
   return (
-    <div className="flex flex-col w-full items-center">
-      <div className="flex justify-center text-[2rem] p-2 w-[48%] mt-[73px] mb-[153px]">
-        <h1 className="text-center">
+    <div className="flex flex-col w-full my-[5rem] items-center">
+      <div className="flex justify-center p-2 w-[48%] mb-[80px]">
+        <h1 className="text-center text-[2rem] font-bold">
           Explore Insights and Inspiration: Our Blog Unveils the Latest Trends,
           Tips, and Stories in Design, Marketing, and Web Development.
         </h1>
@@ -82,16 +101,14 @@ const BlogList = () => {
             </div>
             <div className="w-[26%]">
               <h2 className="text-utils text-[21px] font-bold">
-                {blog.attributes.BlogTitle}
+                <Link to={`/blogs/${blog.id}`}>
+                  {blog.attributes.BlogTitle}
+                </Link>
               </h2>
-              <h3 className="text-primary">{blog.attributes.BlogDate}</h3>{" "}
-              <StyledDes
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(
-                    truncateString(blog.attributes.BlogDescription, 58)
-                  ),
-                }}
-              />
+              <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
+              <StyledDes>
+                {renderParagraphs(blog.attributes.BlogDescription)}
+              </StyledDes>
             </div>
           </div>
         ))}
