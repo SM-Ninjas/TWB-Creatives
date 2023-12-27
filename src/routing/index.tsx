@@ -6,6 +6,7 @@ import Services from "../pages/services";
 import Blogs from "../pages/blogs";
 import Contact from "../pages/contact";
 import Portfolio from "../pages/portfolio";
+import BlogDetails from "../pages/blogs/blogDetails";
 
 function Routing() {
   return (
@@ -14,9 +15,10 @@ function Routing() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/blogs" element={<Blogs/>}/>
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs/>}/>
+        <Route path="/blogs/:id" element={<BlogDetails/>} />
       </Routes>
     </div>
   );
