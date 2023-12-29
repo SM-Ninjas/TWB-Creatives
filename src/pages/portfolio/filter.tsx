@@ -32,7 +32,7 @@ function Filter({ onFilterChange }: FilterProps) {
       ></FilterSquare>
 
       {isDropdownVisible && (
-        <div className="absolute z-10 divide-y pointer divide-white rounded-lg shadow w-44">
+        <div className="absolute bg-white divide-y pointer divide-white  rounded-lg shadow w-44">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 pointer">
             <li
               onClick={() => handleFilterChange(null)}
