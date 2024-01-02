@@ -23,17 +23,16 @@ function Filter({ onFilterChange }: FilterProps) {
   };
 
   return (
-    <div onMouseLeave={handleClose} className="relative z-50">
+    <div onMouseLeave={handleClose} className="">
       <FilterSquare
         size="32"
         color="#22092C"
         onClick={handleOpen}
         variant="Bulk"
       ></FilterSquare>
-
       {isDropdownVisible && (
         <div className="absolute bg-white divide-y pointer divide-white  rounded-lg shadow w-44">
-          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 pointer">
+          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
             <li
               onClick={() => handleFilterChange(null)}
               className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"

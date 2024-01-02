@@ -1,88 +1,34 @@
 import styled from 'styled-components';
-import { Button as AntButton } from 'antd';
+import colors from '../../theme/defaultTheme/colors';
 
-const CustomButton = styled(AntButton)`
-  &&.ant-btn {
-    padding: 13px 27px;
-    height: 44px;
-    display: flex;
-    border: 1.2px solid ${({theme})=>theme.colors.utils.u1};
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 4px;
+const CustomButton = styled.button`
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: ${colors.gray.DEFAULT};
+  padding: 10px 18px;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1.2px solid ${colors.utils.u1};
+  transition: 0.5s ease;
+  user-select: none;
 
-    > svg {
-      width: 20px;
-      height: 20px;
-    }
+  &:hover {
+    background: ${colors.primary.p50}; // Use your primary color here
+    border: 1px solid ${colors.primary.p50}; // Use your primary color here
+    color: ${colors.white};
+    box-shadow: 0 0 5px ${colors.primary.p50}, 0 0 20px ${colors.primary.p50}, 0 0 50px ${colors.primary.p50}, 0 0 100px ${colors.primary.p50};
+  }
 
-    > span {
-      font-weight: 600;
-    }
-
-    /* Primary button */
-    &.ant-btn-primary {
-      > span,
-      > svg {
-        color: ${({ theme }) => theme.colors.utils.u1};
-      }
-      background: ${({ theme }) => theme.colors.white};
-      color: ${({ theme }) => theme.colors.white};
-      box-shadow: 0px 1px 2px 0px #1018280d;
-
-      :disabled {
-        border-color: ${({ theme }) => theme.colors.primary.g2};
-        background: ${({ theme }) => theme.colors.primary};
-      }
-
-      &.ant-btn-dangerous {
-        :not(:disabled):hover {
-          background: ${({ theme }) => theme.colors.error};
-        }
-      }
-    }
-
-    /* Default button */
-    &.ant-btn-default {
-      border-color: ${({ theme }) => theme.colors.gray.g3};
-      padding:.5rem 1rem;
-      > span,
-      > svg {
-        color: ${({ theme }) => theme.colors.gray.g8};
-      }
-      :not(:disabled):hover {
-        border-color: ${({ theme }) => theme.colors.utils.u1};
-        background: ${({ theme }) => theme.colors.gray.g50};
-      }
-      :disabled {
-        > span,
-        > svg {
-          color: ${({ theme }) => theme.colors.gray.g3};
-        }
-        border-color: ${({ theme }) => theme.colors.gray.g2};
-        background: ${({ theme }) => theme.colors.white};
-      }
-
-      &.ant-btn-dangerous {
-        border-color: ${({ theme }) => theme.colors.error.e3};
-        > span,
-        > svg {
-          color: ${({ theme }) => theme.colors.error.e8};
-        }
-        :not(:disabled):hover {
-          border-color: ${({ theme }) => theme.colors.error.e3};
-          background: ${({ theme }) => theme.colors.error.e50};
-        }
-      }
-    }
-
-    /* Text button */
-    &.ant-btn-text {
-      :not(:disabled):hover {
-        background: ${({ theme }) => theme.colors.gray.g50};
-      }
-    }
+  > span {
+    font-weight: 600;
   }
 `;
 
