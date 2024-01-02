@@ -16,7 +16,7 @@ function DropDown() {
     <div onMouseLeave={handleMouseLeave} className="relative ">
       <button
         onMouseEnter={handleMouseEnter}
-        className=" text-utils hover:text-utils opacity-[0.6] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center "
+        className=" text-utils hover:text-utils opacity-[0.6] font-medium rounded-lg text-[1.05rem] px-5 py-2.5 text-center inline-flex items-center "
         type="button"
       >
         Our Works
@@ -44,7 +44,7 @@ function DropDown() {
               to="/services"
               className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
             >
-              <li>Service We Provide</li>
+              <li className="">Service We Provide</li>
             </Link>
             <Link
               to="/portfolio"

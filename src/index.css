@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-  border-bottom: #ff000c 3px solid;
-  transform: scale(1.2);
-}
 
-.active:hover {
-  transition: 2.9 ease-in-out;
-}
 
 body {
   background: #f8f8f8;

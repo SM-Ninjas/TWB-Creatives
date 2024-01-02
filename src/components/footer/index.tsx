@@ -27,7 +27,7 @@ function Footer() {
               <p className="font-medium">98xxxxxxxx</p>
             </div>
           </div>
-          <div className="flex justify-center text-gray-g2 gap-[12px]" > 
+          <div className="flex justify-center text-gray-g2 gap-[12px] cursor-pointer " > 
             <u>Privacy Policy</u>
             |
             <u>Terms & Conditions</u>

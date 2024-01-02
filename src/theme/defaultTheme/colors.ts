@@ -79,7 +79,7 @@ const colors = {
     s8: "#05603A",
     s9: "#054F31",
   },
-  white: "#FFFFFF",
   black: "#00000",
+  white: "#FFFFFF",
 };
 export default colors;
