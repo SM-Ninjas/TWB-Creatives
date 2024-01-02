@@ -14,7 +14,7 @@ function ShowCase() {
               </h1>
             </div>
             <div className="pt-[1.2rem] pb-[45px]">
-              <CustomButton type="primary">Call Now</CustomButton>
+              <CustomButton>Call Now</CustomButton>
             </div>
             <div className="w-[878px] h-[380px]  bg-black rounded-[10px] relative">
               <img
