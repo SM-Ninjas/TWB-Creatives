@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <>
+    <div data-aos="fade-up">
       <div className="w-full h-[310px] flex justify-center">
         <div className="flex justify-between mt-[1.6rem] w-[876px] h-[212px]">
           <div className="flex flex-col justify-center">
@@ -27,7 +27,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,8 @@
 import { StyledInput } from "./style";
-import { useState } from "react";
+import CustomButton from "../Button";
+
 import TextArea from "antd/es/input/TextArea";
+import { useState } from "react";
 // Interface for the form data
 interface FormData {
   fullName: string;
@@ -11,15 +13,18 @@ interface FormData {
 }
 
 function Form() {
-  const [formData, setFormData] = useState<FormData>({ // types of all the input we need
+  const [formData, setFormData] = useState<FormData>({
+    // types of all the input we need
     fullName: "",
     emailAddress: "",
-    contactNumber: '',
+    contactNumber: "",
     subject: "",
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -30,16 +35,15 @@ function Form() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission with formData
-    alert('Your Form data has been saved!')
+    alert("Your Form data has been saved!");
     setFormData({
-        fullName: "",
-        emailAddress: "",
-        contactNumber: '',
-        subject: "",
-        message: "",
-      })
+      fullName: "",
+      emailAddress: "",
+      contactNumber: "",
+      subject: "",
+      message: "",
+    });
     console.log(formData);
-
   };
 
   return (
@@ -47,6 +51,7 @@ function Form() {
       <form onSubmit={handleSubmit}>
         <div className="flex flex-row my-[-15px] gap-[15px]">
           <StyledInput
+            data-aos="fade-right"
             type="text"
             name="fullName"
             placeholder="Full Name"
@@ -55,6 +60,7 @@ function Form() {
             onChange={handleChange}
           />
           <StyledInput
+            data-aos="fade-left"
             type="text"
             name="emailAddress"
             placeholder="Email Address"
@@ -65,6 +71,7 @@ function Form() {
         </div>
         <StyledInput
           type="number"
+          data-aos="fade-up"
           name="contactNumber"
           placeholder="Contact Number"
           required
@@ -72,6 +79,7 @@ function Form() {
           onChange={handleChange}
         />
         <StyledInput
+          data-aos="fade-up"
           type="text"
           name="subject"
           placeholder="Subject"
@@ -80,6 +88,7 @@ function Form() {
           onChange={handleChange}
         />
         <TextArea
+          data-aos="fade-up"
           name="message"
           placeholder="Message"
           required
@@ -88,7 +97,13 @@ function Form() {
           value={formData.message}
           onChange={handleChange}
         ></TextArea>
-        <button className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] " type="submit">Submit</button>
+        <CustomButton
+          data-aos="fade-up"
+          className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
+          type="submit"
+        >
+          Submit
+        </CustomButton>
       </form>
     </div>
   );

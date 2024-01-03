@@ -2,7 +2,7 @@ import Form from "../../components/form";
 
 function ContactUs() {
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="w-full h-[880px]  items-center flex justify-center">
         <div className="w-[713px] h-[621px] flex flex-col gap-[49px]">
           <div className="text-center">
