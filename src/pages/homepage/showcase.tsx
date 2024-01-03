@@ -3,7 +3,7 @@ import CustomButton from "../../components/Button";
 
 function ShowCase() {
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="w-full">
         <div className="w-full flex justify-center">
           <div className="flex flex-col items-center w-[878px] h-[663px] pt-[60px] relative">
@@ -34,7 +34,7 @@ function ShowCase() {
         <div className="h-[500px] flex justify-center items-center">
           <div className="h-[360px] w-full flex justify-center items-center bg-utils-u2">
             <div className=" flex flex-col h-[157px] w-1/2 text-center">
-              <h1 className="font-bold text-white text-[2rem]">We are more than just a company</h1>
+              <h1 className="font-bold text-white text-[2rem]">We are than just a company</h1>
               <p className="text-[16px] opacity-[0.7] text-gray-g2">We are the architects of innovation, crafting a seamless fusion of graphic design, marketing prowess, and web development expertise. More than just a company, we are your creative partners, transforming concepts into captivating visual narratives and strategies that resonate with your audience. </p>
             </div>
           </div>

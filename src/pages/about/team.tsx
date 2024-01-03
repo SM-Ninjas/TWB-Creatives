@@ -7,7 +7,7 @@ import Suyog from "../../assets/images/suyog.png";
 
 function OurTeam() {
   return (
-    <>
+    <div data-aos="fade-up">
       <div className="mt-[5.5rem]">
         <div className="">
           <div className=" bg-utils flex justify-center h-[304px] pt-[103px] ">
@@ -55,7 +55,7 @@ function OurTeam() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

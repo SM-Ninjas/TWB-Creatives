@@ -4,7 +4,7 @@ import clientImage3 from "../../assets/images/client-3.webp";
 
 function OurClients() {
   return (
-    <>
+    <div data-aos="fade-up">
       <div className="w-full h-[377px] flex justify-center items-center">
         <div className="w-[471px] h-[195px] flex flex-col gap-[30px]">
         <div>
@@ -17,7 +17,7 @@ function OurClients() {
         </div>
       </div>
         </div>
-    </>
+    </div>
   );
 }
 

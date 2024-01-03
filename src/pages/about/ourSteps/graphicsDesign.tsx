@@ -1,12 +1,17 @@
-import {graphicDesigningData} from "./stepsData"
-
+import { graphicDesigningData } from "./stepsData";
 
 function GraphicDesign() {
   return (
-    <div className="w-[100%] flex justify-center ">
+    <div
+      className="w-[100%] flex justify-center"
+      data-aos="zoom-in-up"
+      data-aos-duration="1200"
+    >
       <div className=" flex justify-center gap-[70px] w-[70%]">
         <div className="w-[30%]">
-          <h1 className="text-[2rem] font-bold text-utils">Graphic Designing</h1>
+          <h1 className="text-[2rem] font-bold text-utils">
+            Graphic Designing
+          </h1>
           <p className="text-utils opacity-[0.75]">
             In our design process, we meticulously blend creativity with
             strategy. From conceptualization to the final design, we navigate
@@ -15,10 +20,10 @@ function GraphicDesign() {
           </p>
         </div>
         <div className="w-[38%] scrollBar cursor-all-scroll overflow-y-auto max-h-[400px]">
-        {graphicDesigningData.map((item, index) => (
-          <div key={index} className="bg-[#fff] rounded w-[100%] mb-[15px]"> 
-            <h2 className="text-black px-[22px] py-[18px]">{item}</h2>
-          </div>
+          {graphicDesigningData.map((item, index) => (
+            <div key={index} className="bg-[#fff] rounded w-[100%] mb-[15px]">
+              <h2 className="text-black px-[22px] py-[18px]">{item}</h2>
+            </div>
           ))}
         </div>
       </div>

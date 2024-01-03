@@ -49,9 +49,9 @@ function Projects() {
         </div>
         <Mouse size="32" color="#22092C" className="animate-bounce" variant="Bulk" />
         <div className="flex">
-          <div className="flex flex-col gap-[30px] ">
+          <div className="flex flex-col gap-[30px]" data-aos="fade-up">
             {portfolioCopy.map((p, i) => (
-              <StyledProject background={p.background} key={i}>
+              <StyledProject background={p.background} key={i} data-aos="fade-up">
                 <div className="mx-[5rem]">
                   <h1 className="text-white  text-[27px] font-bold">
                     {p.name}

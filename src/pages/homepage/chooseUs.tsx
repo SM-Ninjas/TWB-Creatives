@@ -18,7 +18,7 @@ function ChooseUs() {
         </div>
         <div className=" flex justify-center  w-full bg-utils relative h-[302px]">
           <div className="flex justify-between gap-[48px] absolute  bottom-[30%]">
-            <StyledCard className="">
+            <StyledCard data-aos="fade-right" className="">
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
@@ -42,7 +42,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard className="">
+            <StyledCard data-aos="fade-left">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center  rounded-[50%] p-[13px]">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>

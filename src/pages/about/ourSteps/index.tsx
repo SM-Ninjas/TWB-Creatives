@@ -3,21 +3,20 @@ import DigitalMarketing from "./digitalMarketing";
 import GraphicDesign from "./graphicsDesign";
 import WebDev from "./webDev";
 
-// type ComponentName =
-//   | "digital marketing"
-//   | "graphic designing"
-//   | "web development";
-
 function OurSteps() {
   const [selectedComponent, setSelectedComponent] =
-    useState<string>('graphic designing');
+    useState<string>("graphic designing");
 
   function handleSelectComponent(componentName: string) {
     setSelectedComponent(componentName);
   }
 
   return (
-    <div className="h-dvh flex flex-col items-center">
+    <div
+      className="h-dvh flex flex-col items-center"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >
       <div className="w-[48%] text-center pt-[129px] mb-[60px]">
         <h1 className="text-[2rem] text-utils">How we plan our steps</h1>
         <p className="opacity-[.70]">
