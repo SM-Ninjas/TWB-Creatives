@@ -8,14 +8,14 @@ import "./index.css";
 import Routing from "./routing";
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      // Your AOS config and  styling goes here 
-      offset: 0, 
-      duration: 1000,
-      easing: 'ease-in-out',
-    });
-  }, []);
+    useEffect(() => {
+      AOS.init({
+        // Your AOS config and  styling goes here 
+        offset: 0, 
+        duration: 1000,
+        easing: 'ease-in-out',
+      });
+    }, []);
 
   return (
     <Router>

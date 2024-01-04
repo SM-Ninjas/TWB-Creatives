@@ -4,8 +4,8 @@ import { StyledCard } from "./style";
 function ChooseUs() {
   return (
     <>
-      <div className="w-full h-[568px] flex flex-col gap-[153px]">
-        <div className="flex justify-center">
+      <div className="w-full h-[568px] overflow-hidden">
+        <div className="flex justify-center mb-[150px]">
           <div className="w-[874px] flex flex-col gap-[21px] text-center ">
             <h1 className="text-[2rem] text-utils font-bold">Why Choose Us?</h1>
             <p className="text-utils opacity-[0.7]">
@@ -17,8 +17,8 @@ function ChooseUs() {
           </div>
         </div>
         <div className=" flex justify-center  w-full bg-utils relative h-[302px]">
-          <div className="flex justify-between gap-[48px] absolute  bottom-[30%]">
-            <StyledCard data-aos="fade-right" className="">
+          <div className="flex justify-between gap-[48px] absolute  bottom-[30%] mbl:static mbl:flex-col mbl:">
+            <StyledCard data-aos="fade-up" className="">
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
@@ -30,7 +30,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard className="">
+            <StyledCard className="" data-aos="fade-up">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <PresentionChart size="32" color="#fff" variant="Bulk" />
               </div>
@@ -42,7 +42,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard data-aos="fade-left">
+            <StyledCard data-aos="fade-up">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center  rounded-[50%] p-[13px]">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>

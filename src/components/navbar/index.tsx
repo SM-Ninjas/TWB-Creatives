@@ -6,7 +6,7 @@ import { StyledNavLink } from "./style";
 
 function Navbar() {
   return (
-    <div className="flex justify-center items-center sticky top-0 z-50 bg-white bg-opacity-[60%] border border-[#fff] border-[1px] backdrop-blur-md  p-2">
+    <div className="flex justify-center items-center sticky top-0 z-50 bg-white bg-opacity-[60%] border border-[#fff] border-[1px] backdrop-blur-md p-2 overflow-hidden">
       <div className="flex w-full justify-evenly items-center pt-2">
         <ul className="flex justify-between gap-[42px]">
           <StyledNavLink to="/" className="hover:text-primary-p25 transition">
