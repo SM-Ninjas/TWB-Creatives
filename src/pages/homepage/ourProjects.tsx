@@ -3,7 +3,7 @@
 
   function OurProjects() {
     return (
-      <div data-aos="fade-up">
+      <div data-aos="fade-up opacity-hidden">
         <div className="w-full h-[568px] flex flex-col gap-[153px]">
           <div className="flex justify-center">
             <div className="w-[874px] flex flex-col gap-[21px] text-center ">
@@ -20,7 +20,7 @@
           <div className=" flex justify-center  w-full bg-utils relative h-[302px]">
             <div className="flex justify-between gap-[48px] absolute  bottom-[30%]">
               <StyledDiv
-                data-aos="fade-right"
+                data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 className="gap-[0px]"
               >
@@ -34,7 +34,7 @@
                   </p>
                 </div>
               </StyledDiv>
-              <StyledDiv className="gap-[0px]">
+              <StyledDiv className="gap-[0px]" data-aos="fade-up">
                 <div className="">
                   <img src={insight} alt="" className="rounded-[10px]" />
                 </div>
@@ -47,7 +47,7 @@
                 </div>
               </StyledDiv>
               <StyledDiv
-                data-aos="fade-left"
+                data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 className="gap-[0px]"
               >
