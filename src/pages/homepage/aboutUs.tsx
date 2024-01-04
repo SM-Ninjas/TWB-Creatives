@@ -11,8 +11,8 @@ function AboutUs() {
               Our Approach
             </h1>
           </div>
-          <div className="w-full dp:flex flex-col justify-center tl:w-[80%] dp:w-[72%] mbl:mt-[12px]">
-            <p className="text-utils-u1 opacity-[0.7] text-[1rem]">
+          <div className="w-full dp:flex dp:text-left flex-col justify-center tl:w-[80%] dp:w-[72%] mbl:mt-[12px]">
+            <p className="text-utils-u1 opacity-[0.7]  text-[1rem]">
               Our core goals encompass delivering cutting-edge graphic design,
               impactful marketing strategies, and user-centric web development
               solutions. We aim to elevate our clients' brands, ensuring a
