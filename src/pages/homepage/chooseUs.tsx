@@ -4,7 +4,7 @@ import { StyledCard } from "./style";
 function ChooseUs() {
   return (
     <>
-      <div className="w-full border border-[3px] border-[#901]">
+      <div className="w-full">
         <div className="flex justify-center mb-[120px] sm:mb-16 md:mb-20">
           <div className="w-[70%] flex flex-col gap-5 text-center">
             <h1 className="text-[2rem] sm:text-3xl font-bold">Why Choose Us?</h1>
