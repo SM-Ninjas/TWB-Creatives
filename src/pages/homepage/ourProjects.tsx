@@ -17,6 +17,7 @@
               </p>
             </div>
           </div>
+          
           <div className=" flex justify-center  w-full bg-utils relative h-[302px]">
             <div className="flex justify-between gap-[48px] absolute  bottom-[30%]">
               <StyledDiv
