@@ -4,11 +4,11 @@ import { StyledCard } from "./style";
 function ChooseUs() {
   return (
     <>
-      <div className="w-full h-[568px] overflow-hidden">
-        <div className="flex justify-center mb-[150px]">
-          <div className="w-[874px] flex flex-col gap-[21px] text-center ">
-            <h1 className="text-[2rem] text-utils font-bold">Why Choose Us?</h1>
-            <p className="text-utils opacity-[0.7]">
+      <div className="w-full border border-[3px] border-[#901]">
+        <div className="flex justify-center mb-[120px] sm:mb-16 md:mb-20">
+          <div className="w-[70%] flex flex-col gap-5 text-center">
+            <h1 className="text-[2rem] sm:text-3xl font-bold">Why Choose Us?</h1>
+            <p className="opacity-70">
               Choose us for a seamless blend of creative ingenuity and
               technological expertise, ensuring your brand stands out with
               innovative graphic design, impactful marketing, and cutting-edge
@@ -16,21 +16,27 @@ function ChooseUs() {
             </p>
           </div>
         </div>
-        <div className=" flex justify-center  w-full bg-utils relative h-[302px]">
-          <div className="flex justify-between gap-[48px] absolute  bottom-[30%] mbl:static mbl:flex-col mbl:">
-            <StyledCard data-aos="fade-up" className="">
+        <div className="w-[100%] flex justify-center bg-utils relative">
+          <div className="w-[60%] flex justify-center flex-wrap gap-5 sm:gap-8 md:gap-12 mbl:justify-start relative bottom-[60px] ">
+            <StyledCard
+              // data-aos="fade-up"
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
+            >
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
               <div className="text-center flex flex-col gap-[10px] ">
                 <h2 className="font-bold">Graphic Designing</h2>
-                <p className="text-utils-u1 opacity-[0.7]">
+                <p className="text-utils-u1 opacity-[0.7] p-[3.5px]">
                   Transform your brand with our creative graphic design
                   solutions.
                 </p>
               </div>
             </StyledCard>
-            <StyledCard className="" data-aos="fade-up">
+            <StyledCard
+              // data-aos="fade-up"
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
+            >
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <PresentionChart size="32" color="#fff" variant="Bulk" />
               </div>
@@ -42,8 +48,11 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard data-aos="fade-up">
-              <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center  rounded-[50%] p-[13px]">
+            <StyledCard
+              // data-aos="fade-up"
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
+            >
+              <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
               <div className="text-center flex flex-col gap-[10px]">

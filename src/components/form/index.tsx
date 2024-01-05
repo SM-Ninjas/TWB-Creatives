@@ -1,7 +1,7 @@
-import { StyledInput } from "./style";
+import { StyledInput ,StyledTextArea } from "./style";
 import CustomButton from "../Button";
 
-import TextArea from "antd/es/input/TextArea";
+
 import { useState } from "react";
 // Interface for the form data
 interface FormData {
@@ -87,16 +87,16 @@ function Form() {
           value={formData.subject}
           onChange={handleChange}
         />
-        <TextArea
+        <StyledTextArea
           data-aos="fade-up"
           name="message"
           placeholder="Message"
           required
-          className="w-full"
+          className="w-full text-[#111]"
           rows={8}
           value={formData.message}
           onChange={handleChange}
-        ></TextArea>
+        ></StyledTextArea>
         <CustomButton
           data-aos="fade-up"
           className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
