@@ -6,11 +6,10 @@ interface StyledProjectProps {
   
 
 export const StyledProject =  styled.div<StyledProjectProps>`
-width: 878px;
+width: 90%;  
 height: 290px;
-border:2px solid blue;
 border-radius: 14px;
-background-color: ${(props) => props.background || "#fff"};
+background-color: ${(props) => props.background};
 display:flex;
 align-items:center;
 `

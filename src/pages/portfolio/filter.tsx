@@ -19,6 +19,7 @@ function Filter({ onFilterChange }: FilterProps) {
 
   const handleFilterChange = (category: string | null) => {
     onFilterChange(category);
+    console.log(category)
     setDropdownVisible(false); // Close the dropdown after selecting a filter
   };
 
@@ -40,13 +41,13 @@ function Filter({ onFilterChange }: FilterProps) {
               All
             </li>
             <li
-              onClick={() => handleFilterChange("Branding")}
+              onClick={() => handleFilterChange("branding")}
               className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
             >
               Branding
             </li>
             <li
-              onClick={() => handleFilterChange("Social Marketing")}
+              onClick={() => handleFilterChange("socialmarketing")}
               className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
             >
               Social Marketing
