@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-
 interface ProjectTypes {
   [x: string]: any;
   id: number;
@@ -18,8 +17,8 @@ interface ProjectTypes {
       children: { type: string; text: string }[];
     }[];
     Title: string;
-    Color: string,
-    category: string ,
+    Color: string;
+    Category: string;
     image: {
       data: {
         id: number;
@@ -53,28 +52,26 @@ function Projects() {
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-    };  
+    };
 
     fetchData();
   }, []);
 
   const filterProjects = (category: string | null) => {
-    console.log("Filtering by category:", category);
-  
+    // category received from filter component as props
     const tempData = [...portfolio];
-    console.log("Temp Data:", tempData);
-  
+
     if (category === null) {
       setPortfolioCopy([...portfolio]);
     } else {
       const filteredProjects = tempData.filter(
-        (project) => project.category === category
-        );
-      console.log("Filtered Projects:", filteredProjects);
+        (project) => project.attributes.Category === category
+      );
+      console.log("Filtered Projects:", filterProjects);
       setPortfolioCopy(filteredProjects);
     }
   };
-    
+
   return (
     <>
       <div className=" flex  flex-col items-center  m-[65px] gap-[60px]">
@@ -91,21 +88,25 @@ function Projects() {
           variant="Bulk"
         />
         <div className="flex w-[80%]">
-          <div className={`flex flex-col items-center gap-[30px]`} data-aos="fade-up">
+          <div
+            className={`flex flex-col items-center gap-[30px]`}
+            data-aos="fade-up"
+          >
             {portfolioCopy.map((p, i) => (
               <StyledProject
                 key={i}
                 background={p.attributes.Color}
-                data-aos="fade-up"
               >
                 <div className="mx-[5rem]">
                   <h1 className="text-[#fff] text-[27px] font-bold">
                     {p.attributes.Name}
                   </h1>
                   <p className="text-gray-g2 opacity-[0.60]">
-                   {p.attributes.Title}
+                    {p.attributes.Title}
                   </p>
-                  <Link to={`/portfolio/${p.id}`}><h1>Click to Visit</h1></Link>
+                  <Link to={`/portfolio/${p.id}`}>
+                    <h1 className="text-white underline">Click to Visit</h1>
+                  </Link>
                 </div>
                 <div className="">
                   <img
@@ -118,7 +119,7 @@ function Projects() {
             ))}
           </div>
           <div className="sticky">
-          <Filter onFilterChange={filterProjects}/>
+            <Filter onFilterChange={filterProjects} />
           </div>
         </div>
       </div>
