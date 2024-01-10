@@ -19,7 +19,7 @@ function Filter({ onFilterChange }: FilterProps) {
 
   const handleFilterChange = (category: string | null) => {
     onFilterChange(category);
-    console.log(category)
+    // console.log(category)
     setDropdownVisible(false); // Close the dropdown after selecting a filter
   };
 

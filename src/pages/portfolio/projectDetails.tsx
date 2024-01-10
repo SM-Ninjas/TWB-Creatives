@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -16,12 +15,44 @@ interface ProjectTypes {
     }[];
     Title: string;
     Color: string;
-    category: string;
+    Category: string;
+    Contributing_members: {
+      data: [
+        {
+          id: number;
+          attributes: {
+            name: string;
+            formats: {
+              thumbnail: {
+                name: string;
+                url: string;
+              };
+            };
+          };
+        }
+      ];
+    };
+    Tech_stack_logos: {
+      data: [
+        {
+          id: number;
+          attributes: {
+            name: string;
+            formats: {
+              thumbnail: {
+                name: string;
+                url: string;
+              };
+            };
+          };
+        }
+      ];
+    };
     image: {
       data: {
         id: number;
         attributes: {
-          url: any;
+          url: string;
           name: string;
           formats: {
             thumbnail: {
@@ -35,7 +66,7 @@ interface ProjectTypes {
       data: {
         id: number;
         attributes: {
-          url: any;
+          url: string;
           name: string;
           formats: {
             thumbnail: {
@@ -61,6 +92,7 @@ const ProjectDetails = () => {
         );
 
         setProject(response.data.data);
+        console.log(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -91,7 +123,7 @@ const ProjectDetails = () => {
 
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
-      <div className=" flex justify-center">
+      <div className="flex justify-center">
         <div className="w-[65%] flex flex-col items-center mt-[4rem] gap-[48px]">
           <div>
             <h1 className="text-utils font-extrabold text-[30px]">
@@ -102,7 +134,7 @@ const ProjectDetails = () => {
           <img
             src={`http://localhost:8082${project.attributes.image.data.attributes.url}`}
             alt={project.attributes.image.data.attributes.name}
-            className=" w-[100%]"
+            className="w-[100%]"
           />
           <div className="">
             <p
@@ -117,21 +149,49 @@ const ProjectDetails = () => {
 
       <div className="w-full">
         <div className="text-center mb-[30px]">
-            <h1 className="text-[2rem] text-utils">Design Process</h1>
-            <p className="text-utils opacity-[.6]">Identify  .  Research  .  Brainstorm  .  Mockups</p>
+          <h1 className="text-[2rem] text-utils">Design Process</h1>
+          <p className="text-utils opacity-[.6]">
+            Identify . Research . Brainstorm . Mockups
+          </p>
         </div>
         <img
-            src={`http://localhost:8082${project.attributes.Design_process.data.attributes.url}`}
-            alt={project.attributes.image.data.attributes.name}
-            className=" w-[100%] h-[456px]"
-          />
+          src={`http://localhost:8082${project.attributes.Design_process.data.attributes.url}`}
+          alt={project.attributes.Design_process.data.attributes.name}
+          className="w-[100%] h-[456px]"
+        />
       </div>
-      <div>
-        <div>
-            <h1 className="text-[2rem] text-utils">Contributing Members</h1>
+
+      <div className="w-full text-center ">
+        <h1 className="text-[2rem] text-utils mb-6">Contributing Members</h1>
+        <div className="flex justify-center gap-[60px]">
+          {project.attributes.Contributing_members.data.map((member) => (
+            <div key={member.id}>
+              <img
+                src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
+                alt={member.attributes.name}
+                className="rounded-[8px]"
+              />
+              <h2 className="text-[#111] mt-2">Suyog karki</h2>
+              <h4 className="text-utils opacity-[.60]">Lead Developer</h4>
+            </div>
+          ))}
         </div>
       </div>
-      <Footer/>
+
+      <div className=" text-center">
+        <h2 className="text-[2rem] text-utils font-bold">Tech Stacks</h2>
+        <div className="flex justify-center gap-[60px] mt-[1.9rem]">
+          {project.attributes.Tech_stack_logos.data.map((logo) => (
+            <img
+              key={logo.id}
+              src={`http://localhost:8082${logo.attributes.formats.thumbnail.url}`}
+              alt={logo.attributes.name}
+              className="w-[100px] h-[100px]"
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
