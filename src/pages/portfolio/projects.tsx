@@ -7,34 +7,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-interface ProjectTypes {
-  [x: string]: any;
-  id: number;
-  attributes: {
-    Name: string;
-    Description: {
-      type: string;
-      children: { type: string; text: string }[];
-    }[];
-    Title: string;
-    Color: string;
-    Category: string;
-    image: {
-      data: {
-        id: number;
-        attributes: {
-          url: any;
-          name: string;
-          formats: {
-            thumbnail: {
-              name: string;
-            };
-          };
-        };
-      };
-    };
-  };
-}
 
 function Projects() {
   const [portfolio, setPortfolio] = useState<ProjectTypes[]>([]);

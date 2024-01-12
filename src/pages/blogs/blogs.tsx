@@ -3,27 +3,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-interface BlogData {
-  id: number;
-  attributes: {
-    BlogTitle: string;
-    BlogDate: string;
-    BlogDescription: {
-      type: string;
-      children: { type: string; text: string; bold?: boolean }[];
-    }[];
-    BlogThumbnail: {
-      data: {
-        id: number;
-        attributes: {
-          name: string;
-          url: string;
-        };
-      };
-    };
-  };
-}
-
 const truncateString = (text: string, maxLength: number) => {
   if (!text || typeof text !== "string") {
     console.log("Unable to fetch data");

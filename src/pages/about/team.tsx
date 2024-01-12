@@ -5,6 +5,7 @@ import Saroj from "../../assets/images/saroj.png";
 import Suyog from "../../assets/images/suyog.png";
 
 
+
 function OurTeam() {
   return (
     <div data-aos="fade-up">

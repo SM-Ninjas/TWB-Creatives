@@ -5,7 +5,6 @@ function GraphicDesign() {
     <div
       className="w-[100%] flex justify-center"
       data-aos="zoom-in-up"
-      data-aos-duration="1200"
     >
       <div className=" flex justify-center gap-[70px] w-[70%]">
         <div className="w-[30%]">
