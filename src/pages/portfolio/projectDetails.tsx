@@ -17,8 +17,7 @@ const ProjectDetails = () => {
           `http://localhost:8082/api/portfolios/${id}?populate=*`
         );
 
-        setProject(response.data.data);
-        console.log(response.data.data);
+        setProject(response.data.data); 
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {

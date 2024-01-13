@@ -7,7 +7,7 @@ const CustomButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 12px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
   color: ${colors.gray.DEFAULT};
