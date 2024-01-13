@@ -5,9 +5,14 @@ function ChooseUs() {
   return (
     <>
       <div className="w-full">
-        <div className="flex justify-center mb-[120px] sm:mb-16 md:mb-20">
+        <div
+          className="flex justify-center mb-[120px] sm:mb-16 md:mb-20"
+          data-aos="fade-up"
+        >
           <div className="w-[70%] flex flex-col gap-5 text-center">
-            <h1 className="text-[2rem] sm:text-3xl font-bold">Why Choose Us?</h1>
+            <h1 className="text-[2rem] sm:text-3xl font-bold">
+              Why Choose Us?
+            </h1>
             <p className="opacity-70">
               Choose us for a seamless blend of creative ingenuity and
               technological expertise, ensuring your brand stands out with
@@ -17,11 +22,11 @@ function ChooseUs() {
           </div>
         </div>
         <div className="w-[100%] flex justify-center bg-utils relative">
-          <div className="w-[60%] flex justify-center flex-wrap gap-5 sm:gap-8 md:gap-12 mbl:justify-start relative bottom-[60px] ">
-            <StyledCard
-              // data-aos="fade-up"
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
-            >
+          <div
+            className="w-[60%] flex justify-center flex-wrap gap-5 sm:gap-8 md:gap-12 mbl:justify-start relative bottom-[60px]"
+            data-aos="fade-up"
+          >
+            <StyledCard className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]">
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
@@ -33,10 +38,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard
-              // data-aos="fade-up"
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
-            >
+            <StyledCard className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <PresentionChart size="32" color="#fff" variant="Bulk" />
               </div>
@@ -48,10 +50,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard
-              // data-aos="fade-up"
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]"
-            >
+            <StyledCard className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 min-w-[220px]">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>

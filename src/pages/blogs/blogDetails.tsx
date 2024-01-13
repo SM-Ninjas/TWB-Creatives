@@ -6,26 +6,6 @@ import DisqusComments from "../../components/comments/comments";
 import Footer from "../../components/footer";
 // import { renderToString } from "react-dom/server";
 
-interface BlogData {
-  id: number;
-  attributes: {
-    BlogTitle: string;
-    BlogDate: string;
-    BlogDescription: {
-      type: string;
-      children: { type: string; text: string; bold?: boolean }[];
-    }[];
-    BlogThumbnail: {
-      data: {
-        id: number;
-        attributes: {
-          name: string;
-          url: string;
-        };
-      };
-    };
-  };
-}
 
 const BlogDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -36,7 +16,7 @@ const BlogDetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8082/api/blogs/${id}?populate=*`
+          `http://localhost:8082/api/blogs/$?populate=*{id}`
         );
         setBlogDetails(response.data.data);
       } catch (error) {

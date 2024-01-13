@@ -4,8 +4,7 @@ function WebDev() {
   return (
     <div
       className="w-[100%] flex justify-center"
-      data-aos="zoom-in-left"
-      data-aos-duration="1200"
+      data-aos="fade-up"
     >
       <div className=" flex justify-center gap-[70px] w-[70%]">
         <div className="w-[30%]">
