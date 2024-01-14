@@ -1,7 +1,7 @@
 const colors = {
   // light to dark
   gray: {
-    DEFAULT: "#1b1b1b", //600
+    DEFAULT: "#f8f8f8", //600
     g50: "#F9FAFB",
     g25: "#FCFCFD",
     g1: "#F2F4F7",

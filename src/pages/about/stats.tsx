@@ -30,7 +30,6 @@ function Stats() {
             </div>
             <div className="p-10 w-1/2  flex flex-col gap-[10px]">
               <StyledHeading>
-                {" "}
                 <AnimatedCounter delay={1} end={11} />
               </StyledHeading>
               <StyledParagraph>
@@ -39,7 +38,6 @@ function Stats() {
             </div>
             <div className="p-10 w-1/2 flex flex-col gap-[10px]">
               <StyledHeading>
-                {" "}
                 <AnimatedCounter delay={1} end={4} />
               </StyledHeading>
               <StyledParagraph>
@@ -48,7 +46,6 @@ function Stats() {
             </div>
             <div className="p-10 w-1/2 flex flex-col gap-[10px]">
               <StyledHeading>
-                {" "}
                 <AnimatedCounter delay={1} end={1} />
               </StyledHeading>
               <StyledParagraph>

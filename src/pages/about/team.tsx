@@ -37,6 +37,7 @@ function OurTeam() {
             <div className="flex justify-center gap-[45px]">
               {team.map((teamMember) => (
                 <div key={teamMember.id}>
+                    <Link to={`/about/team/${teamMember.id}`}>
                   <StyledTeam>
                     <img
                       src={`http://localhost:8082${teamMember.attributes.MemberImg.data.attributes.url}`}
@@ -47,10 +48,9 @@ function OurTeam() {
                       {teamMember.attributes.member_name}
                     </h1>
                     <h1 className="text-utils font-bold text-[2rem]">CEO</h1>
-                    <Link to={`/about/team/${teamMember.id}`}>
-                      <h1 className="text-white underline">Click to Visit</h1>
-                    </Link>
+                      
                   </StyledTeam>
+                    </Link>
                 </div>
               ))}
             </div>

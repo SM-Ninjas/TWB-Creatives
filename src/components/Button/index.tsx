@@ -10,7 +10,7 @@ const CustomButton = styled.button`
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
-  color: ${colors.gray.DEFAULT};
+  // color: ${colors.gray.DEFAULT};
   padding: 10px 18px;
   text-shadow: none;
   background: transparent;
