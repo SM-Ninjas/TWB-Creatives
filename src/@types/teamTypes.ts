@@ -61,6 +61,7 @@
       Mem_position: string;
       publishedAt: string;
       Mem_education: string | null;
+      ValuedSkill : string;
       MemberImg: MemberImage;
       skills: {
         data: Skill[];
