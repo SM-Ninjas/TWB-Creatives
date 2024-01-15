@@ -1,13 +1,11 @@
-import Footer from "../../components/footer"
-import BlogList from "./blogs"
+import BlogList from "./blogs";
 
 function Blogs() {
   return (
     <div>
-      <BlogList/>
-      <Footer/>
+      <BlogList />
     </div>
-  )
+  );
 }
 
-export default Blogs
+export default Blogs;

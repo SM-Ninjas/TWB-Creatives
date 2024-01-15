@@ -1,13 +1,11 @@
-import Footer from "../../components/footer"
-import Projects from "./projects"
+import Projects from "./projects";
 
 function Portfolio() {
   return (
     <div>
-      <Projects/>
-        <Footer/> 
+      <Projects />
     </div>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;

@@ -2,8 +2,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from "../../components/footer";
-
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -116,7 +114,6 @@ const ProjectDetails = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

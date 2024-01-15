@@ -131,7 +131,7 @@ function TeamDetails() {
             <div className=" w-[65%] grid grid-cols-3 justify-items-center gap-[45px] dp:w-[70%] dp:gap-[40px] lp:w-[80%] lp:gap-[20px] lp:grid-cols-2 tl:w-[95%] tl:gap-[25px]  tl:grid-cols-2  mbl:w-[95%] mbl:flex mbl:flex-col mbl:items-center ">
               {staff.attributes.skills.data.map((skill) => (
                 <div
-                  className="dp:w-[90%] lp:w-[90%] tl:w-[95%] mbl:w-[80%] py-[30px] px-[22px] bg-gray-g2 border text-center rounded-[8px] relative bottom-[30px]"
+                  className="dp:w-[80%] lp:w-[90%] tl:w-[95%] mbl:w-[80%] py-[30px] px-[22px] bg-gray-g2 border text-center rounded-[8px] relative bottom-[30px]"
                   key={skill.id}
                 >
                   <h1 className="text-[16px] mb-[1rem] font-bold mbl:text-[24px]">
@@ -143,6 +143,29 @@ function TeamDetails() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="w-full my-[5rem]">
+          <div className=" text-center mb-[5rem]">
+            <h1 className="text-[32px] text-utils font-bold mb-[15px]">Achievements</h1>
+            <p className="text-utils opacity-[.75]">
+              Explore  {staff.attributes.member_name}  past works and achievements
+            </p>
+          </div>
+          <div className="flex justify-center flex-wrap gap-[20px]">
+            {staff.attributes.Achievement.data.map((achievement) => (
+              <div
+                className="dp:w-[100%] lp:w-[90%] tl:w-[100%] mbl:w-[100%] py-[30px] px-[22px] text-center rounded-[8px] relative bottom-[30px]"
+                key={achievement.id}
+              >
+                <img
+                   src={`http://localhost:8082${achievement.attributes.url}`}
+                   alt={achievement.attributes.name}
+                  className="w-[100%] h-[375px]"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Navbar from "./components/navbar";
 import "./index.css";
 import Routing from "./routing";
+import Footer from "./components/footer";
 
 function App() {
     useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
       <div className="">
         <Navbar />
         <Routing />
+        <Footer/>
       </div>
     </Router>
   );
