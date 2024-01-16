@@ -27,7 +27,6 @@ function OurClients() {
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log("This is the client data", clientData);
 
   return (
     <div>
@@ -41,11 +40,11 @@ function OurClients() {
           <div className="  w-[70%] flex justify-center items-center">
             {clientData?.map((res) => (
               <div key={res.id} className="p-2 cursor-pointer">
-                 <Link to={`/client/:${res.id}`}>
+                 <Link to={`/client/${res.id}`}>
                  <img
               src={`http://localhost:8082${res.attributes.clientLogo.data.attributes.url}`}
               className="w-[300px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[120px]"
-              alt={res.attributes.clientLogo.data.attributes.url}
+              alt={res.attributes.clientLogo.data.attributes.url  }
               />
               </Link>
               </div>
