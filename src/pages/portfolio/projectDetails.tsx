@@ -103,7 +103,7 @@ const ProjectDetails = () => {
 
       <div className=" text-center">
         <h2 className="text-[2rem] text-utils font-bold">Tech Stacks</h2>
-        <div className="flex justify-center gap-[60px] mt-[1.9rem]">
+        <div className="flex justify-center gap-[60px] my-[1.9rem]">
           {project.attributes.Tech_stack_logos.data.map((logo) => (
             <img
               key={logo.id}
