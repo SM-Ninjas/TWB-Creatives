@@ -1,24 +1,61 @@
-import clientImage1 from "../../assets/images/client-1.webp";
-import clientImage2 from "../../assets/images/client-2.webp";
-import clientImage3 from "../../assets/images/client-3.webp";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function OurClients() {
+  const [clientData, setClientData] = useState<Client[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8082/api/clients/?populate=*`
+        );
+
+        setClientData(response.data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  console.log("This is the client data", clientData);
+
   return (
-    <div data-aos="fade-up">
+    <div>
       <div className="w-full h-[377px] flex justify-center items-center">
-        <div className="w-[471px] h-[195px] flex flex-col gap-[30px]">
-        <div>
-          <h1 className="text-center text-utils font-bold text-[2rem]">Our Brilliant Clients</h1>
-        </div>
-        <div className="flex justify-between  ">
-          <img className="w-[119px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[119px]" src={clientImage1} alt="client-1" />
-          <img className="w-[126px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[89px]" src={clientImage2} alt="client-2" />
-          <img className="w-[100px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[100px]" src={clientImage3} alt="client-3" />
+        <div className="w-[80%] flex flex-col items-center gap-[30px]">
+          <div>
+            <h1 className="text-center text-utils font-bold text-[2rem]">
+              Our Brilliant Clients
+            </h1>
+          </div>
+          <div className="  w-[70%] flex justify-center items-center">
+            {clientData?.map((res) => (
+              <div key={res.id} className="p-2 cursor-pointer">
+                 <Link to={`/client/:${res.id}`}>
+                 <img
+              src={`http://localhost:8082${res.attributes.clientLogo.data.attributes.url}`}
+              className="w-[300px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[120px]"
+              alt={res.attributes.clientLogo.data.attributes.url}
+              />
+              </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-        </div>
     </div>
   );
 }
 
 export default OurClients;
+

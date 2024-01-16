@@ -9,7 +9,7 @@ function ChooseUs() {
           className="flex justify-center mb-[120px] sm:mb-16 md:mb-20"
           data-aos="fade-up"
         >
-          <div className="w-[70%] flex flex-col gap-5 text-center">
+          <div className="w-[60%] flex flex-col gap-5 text-center">
             <h1 className="text-[2rem] sm:text-3xl font-bold">
               Why Choose Us?
             </h1>
@@ -23,7 +23,7 @@ function ChooseUs() {
         </div>
         <div className="w-[100%] flex justify-center bg-utils relative">
           <div
-            className="mbl:w-[80%] tl:w-[50%] lp:w-[60%] dp:w-[60%] flex justify-center flex-wrap gap-5 sm:gap-8 md:gap-12 mbl:justify-center relative bottom-[60px]"
+            className="mbl:w-[80%] tl:w-[50%] lp:w-[60%] dp:w-[60%] flex justify-center flex-wrap gap-5 mbl:gap-8 tl:gap-12 dp:gap-12 dp:gap-10 mbl:justify-center relative bottom-[60px]"
             data-aos="fade-up"
           >
             <StyledCard className="w-full mbl:w-[70%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px]">
