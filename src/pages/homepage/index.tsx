@@ -1,4 +1,3 @@
-import Footer from "../../components/footer";
 import AboutUs from "./aboutUs";
 import ChooseUs from "./chooseUs";
 import ContactUs from "./contactUs";
@@ -13,9 +12,8 @@ function HomePage() {
       <AboutUs />
       <ChooseUs />
       <OurClients />
-      <OurProjects/>
-      <ContactUs/>
-      <Footer/>
+      <OurProjects />
+      <ContactUs />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DisqusComments from "../../components/comments/comments";
-import Footer from "../../components/footer";
+
 // import { renderToString } from "react-dom/server";
 
 
@@ -86,7 +86,6 @@ const BlogDetails = () => {
         />
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

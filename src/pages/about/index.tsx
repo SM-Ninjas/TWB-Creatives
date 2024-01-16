@@ -1,4 +1,4 @@
-import Footer from "../../components/footer"
+
 import AboutMain from "./main"
 import OurSteps from "./ourSteps"
 import Stats from "./stats"
@@ -11,7 +11,7 @@ function About() {
         <Stats/>
         <OurSteps/>
         <OurTeam/> 
-        <Footer/>
+      
     </div>
   )
 }
