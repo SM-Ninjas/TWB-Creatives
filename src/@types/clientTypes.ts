@@ -23,6 +23,16 @@ declare type ClientLogo = {
   };
 };
 
+declare type services = {
+  data : [{
+    id : number,
+    attributes : {
+      serviceName : string
+    }
+  } 
+  ]
+}
+
 // Client data
 declare type Client = {
   id: number;
@@ -30,5 +40,9 @@ declare type Client = {
     ClientName: string;
     Description: string;
     clientLogo: ClientLogo;
+    services : services;
+
   };
 };
+
+

@@ -1,10 +1,13 @@
+import ContactMain from "./contact";
+import SocialLinks from "./socialLinks";
 
 function Contact() {
   return (
     <div>
-      <h1>Welcome to contact page</h1>
+      <ContactMain />
+      <SocialLinks />
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
