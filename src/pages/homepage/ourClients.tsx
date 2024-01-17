@@ -31,7 +31,7 @@ function OurClients() {
   return (
     <div>
       <div className="w-full h-[377px] flex justify-center items-center">
-        <div className="w-[80%] flex flex-col items-center gap-[30px]">
+        <div className="w-[80%] mbl:w-[100%] flex flex-col items-center gap-[30px]">
           <div>
             <h1 className="text-center text-utils font-bold text-[2rem]">
               Our Brilliant Clients

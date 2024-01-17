@@ -2,8 +2,8 @@ function AboutUs() {
   return (
     <div data-aos="fade-up">
       <div className="w-full flex justify-center mb-[3rem]">
-        <div className="flex flex-col items-center mbl:w-[100%]  mbl:text-center mbl:w-[90%]  tl:w-[70%]   lp:w-[60%] lp:flex-row w-[90%] dp:w-[70%] dp:flex-row dp:gap-[30px]  dp:h-[100%] dp:flex  ">
-          <div className=" flex flex-col justify-center w-[35%] mbl:text-center tl:text-center ">
+        <div className="flex flex-col items-center mbl:gap-4  mbl:text-center mbl:w-[90%]  tl:w-[70%] tl:gap-6 lp:flex-row lp:w-[90%] lp:gap-8 dp:w-[75%] dp:flex-row dp:gap-[30px]  dp:h-[100%] dp:flex  ">
+          <div className=" flex flex-col justify-center w-[40%] dp:ml-8  lp: mbl:text-center tl:text-center ">
             <h3 className="mbl:text-[1.1rem] tl:text-[1.1rem]  text-primary-p10 dp:text-left">
               About us
             </h3>
@@ -11,7 +11,7 @@ function AboutUs() {
               Our Approach
             </h1>
           </div>
-          <div className="w-full dp:flex dp:text-left dp:w-[72%] flex-col justify-center tl:w-[80%]  mbl:mt-[12px]">
+          <div className="w-full dp:flex dp:text-left dp:w-[70%] lp:w-[70%] flex-col justify-center tl:w-[80%]  mbl:mt-[12px]">
             <p className="text-utils-u1 opacity-[0.7]  text-[1rem]">
               Our core goals encompass delivering cutting-edge graphic design,
               impactful marketing strategies, and user-centric web development
@@ -20,7 +20,7 @@ function AboutUs() {
               business environment.
             </p>
           </div>
-          <div className="w-full  tl:w-[80%] dp:w-[75%]  mbl:mt-[12px]">
+          <div className="w-full  tl:w-[80%] dp:w-[60%] lp:w-[70%]  mbl:mt-[12px]">
             <p className="text-utils-u1 opacity-[0.7] text-[1rem]">
               Our vision is to be a trailblazer in the intersection of
               creativity and technology, setting new standards in graphic
