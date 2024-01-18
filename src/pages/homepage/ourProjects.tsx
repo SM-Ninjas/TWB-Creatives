@@ -1,12 +1,14 @@
 import { StyledDiv } from "./style";
-import insight from "../../assets/images/insight.webp";
+import insight from "../../assets/images/insight.png"; 
+import bhakundoo from "../../assets/images/bhakundoo.png"
+import rojgari from "../../assets/images/rojgari.png"
 
 function OurProjects() {
   return (
     <>
       <div className="w-full">
         <div
-          className="flex justify-center mb-[120px] sm:mb-16 md:mb-20"
+          className="flex justify-center mb-[120px] sm:mb-16"
           data-aos="fade-up"
         >
           <div className="w-[60%] flex flex-col gap-5 text-center">
@@ -22,7 +24,7 @@ function OurProjects() {
         </div>
         <div className="w-[100%] flex justify-center bg-utils relative">
           <div
-            className="mbl:w-[80%] tl:w-[75%] lp:w-[70%] dp:w-[70%] flex justify-center flex-wrap gap-5 sm:gap-8 md:gap-12 mbl:justify-center relative bottom-[60px]"
+            className="mbl:w-[80%] tl:w-[75%] lp:w-[70%] dp:w-[70%] flex justify-center flex-wrap gap-5 sm:gap-6 md:gap-8 mbl:justify-center relative bottom-[60px]"
             data-aos="fade-up"
           >
             <StyledDiv
@@ -33,10 +35,10 @@ function OurProjects() {
                 <img
                   src={insight}
                   alt=""
-                  className="rounded-[10px] w-full h-auto"
+                  className="rounded-[10px] w-full"
                 />
               </div>
-              <div className="text-center p-2 flex flex-col gap-[10px] mb-4 ">
+              <div className="text-center  flex flex-col gap-[10px] mb-1">
                 <h2 className="font-bold">Insight A Podcast</h2>
                 <p className="text-utils-u1 opacity-[0.7]">
                   Gallery of podcasts where different topics are explored.
@@ -49,13 +51,13 @@ function OurProjects() {
             >
               <div className="">
                 <img
-                  src={insight}
+                  src={bhakundoo}
                   alt=""
-                  className="rounded-[10px] w-full h-auto"
+                  className="rounded-[10px] w-full "
                 />
               </div>
-              <div className="text-center p-2 flex flex-col gap-[10px] mb-4">
-                <h2 className="font-bold">Insight A Podcast</h2>
+              <div className="text-center  flex flex-col gap-[10px] mb-1">
+                <h2 className="font-bold">Bhakundoo</h2>
                 <p className="text-utils-u1 opacity-[0.7]">
                   Gallery of podcasts where different topics are explored.
                 </p>
@@ -67,13 +69,13 @@ function OurProjects() {
             >
               <div className="">
                 <img
-                  src={insight}
+                  src={rojgari}
                   alt=""
-                  className="rounded-[10px] w-full h-auto"
+                  className="rounded-[10px] w-full"
                 />
               </div>
-              <div className="text-center p-2 flex flex-col gap-[10px] mb-4 ">
-                <h2 className="font-bold">Insight A Podcast</h2>
+              <div className="text-center  flex flex-col gap-[10px] mb-1">
+                <h2 className="font-bold">Rojgari</h2>
                 <p className="text-utils-u1 opacity-[0.7]">
                   Gallery of podcasts where different topics are explored.
                 </p>

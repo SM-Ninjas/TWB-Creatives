@@ -61,7 +61,7 @@ function Projects() {
         />
         <div className="flex w-[80%]">
           <div
-            className={`flex flex-col items-center gap-[30px]`}
+            className={`flex flex-col items-center gap-[30px]  w-[100%]`}
             data-aos="fade-up"
           >
             {portfolioCopy.map((p, i) => (
@@ -80,10 +80,10 @@ function Projects() {
                     <h1 className="text-white underline">Click to Visit</h1>
                   </Link>
                 </div>
-                <div className="">
+                <div className=" w-[80%]">
                   <img
                     src={`http://localhost:8082${p.attributes.image.data.attributes.url}`}
-                    className="w-[458px] h-[231px]"
+                    className="w-[] h-[231px]"
                     alt={p.attributes.image.data.attributes.name}
                   />
                 </div>
