@@ -53,10 +53,16 @@ function Filter({ onFilterChange }: FilterProps) {
               Social Marketing
             </li>
             <li
-              onClick={() => handleFilterChange("Web Development")}
+              onClick={() => handleFilterChange("Webdevelopment")}
               className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
             >
               Web Development
+            </li>
+            <li
+              onClick={() => handleFilterChange("eventhandlling")}
+              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
+            >
+              Event Handlling
             </li>
           </ul>
         </div>

@@ -24,6 +24,7 @@ const CustomButton = styled.button`
     background: ${colors.primary.p50}; // Use your primary color here
     border: 1px solid ${colors.primary.p50}; // Use your primary color here
     color: ${colors.white};
+    // transition :ease-in-out 100ms;
     box-shadow: 0 0 5px ${colors.primary.p50}, 0 0 20px ${colors.primary.p50}, 0 0 50px ${colors.primary.p50}, 0 0 100px ${colors.primary.p50};
   }
 

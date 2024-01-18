@@ -2,6 +2,7 @@ import { useState } from "react";
 import DigitalMarketing from "./digitalMarketing";
 import GraphicDesign from "./graphicsDesign";
 import WebDev from "./webDev";
+import { StyledBtn } from "../style";
 
 function OurSteps() {
   const [selectedComponent, setSelectedComponent] =
@@ -26,15 +27,19 @@ function OurSteps() {
         </p>
       </div>
       <div className="flex  gap-[60px]">
-        <button onClick={() => handleSelectComponent("digital marketing")}>
+        <StyledBtn onClick={() => handleSelectComponent("digital marketing")}
+           active={selectedComponent === "digital marketing"}
+        >
           Digital Marketing
-        </button>
-        <button onClick={() => handleSelectComponent("graphic designing")}>
+        </StyledBtn>
+        <StyledBtn onClick={() => handleSelectComponent("graphic designing")}
+           active={selectedComponent === "graphic designing"}>
           Graphic Designing
-        </button>
-        <button onClick={() => handleSelectComponent("web development")}>
+        </StyledBtn>
+        <StyledBtn onClick={() => handleSelectComponent("web development")}
+           active={selectedComponent === "web development"} >
           Web Development
-        </button>
+        </StyledBtn>
       </div>
       <hr className="bg-[#111] w-full mt-3 mb-[72px]" />
 
