@@ -25,3 +25,16 @@ export const StyledParagraph = styled.p`
   font-weight: 400;
   line-height: normal;
 `;
+
+
+interface StyledBtnProps {
+  active: boolean;
+}
+
+export const StyledBtn = styled.button<StyledBtnProps>`
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: ${(props) => (props.active ? "#22092C" : "#fff")};
+  color: ${(props) => (props.active ? "#fff" : "#22092C")};
+`;

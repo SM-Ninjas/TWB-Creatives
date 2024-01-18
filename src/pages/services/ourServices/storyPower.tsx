@@ -1,71 +1,62 @@
-import { StyledCard } from "../style";
-
 function StoryPower() {
   return (
-    <div className="w-full">
-      <div className="flex justify-center text-center gap-[1rem]">
-        <p className="w-[50%] text-[20px] font-medium opacity-[0.80] mb-[2rem]">
-          A craft compelling narratives through press releases, effective media
-          relations, and crisis management strategies. Drive leads with powerful
-          storytelling via cold calling, lead generation, and impactful online
-          press releases.
-        </p>
-      </div>
-      <div className="w-full border flex flex-col items-center wrap">
-        <div className="w-[65%] p-[8px] grid grid-cols-3 gap-[50px]">
-          <StyledCard>
+    <div className="w-[100%]">
+      <div className="flex justify-center text-center gap-[2rem]"></div>
+      <div className="w-full flex flex-col items-center flex-wrap">
+        <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px]">
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              Newspaper ads
+              Press releases
             </h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Build brand narratives with impactful press releases that
+              captivate media and audience attention.
             </p>
-          </StyledCard>
+          </div>
 
-          <StyledCard>
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              Magazine ads
+              Magazine Ads
             </h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Tell your brand story visually with captivating glossy magazine
+              ads.
             </p>
-          </StyledCard>
+          </div>
 
-          <StyledCard>
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">Brochures</h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Convey key information hands-on with visually appealing brand
+              brochures.
             </p>
-          </StyledCard>
+          </div>
 
-          <StyledCard>
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">Flyers</h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Create instant impact, promoting events or offers with
+              attention-grabbing flyers.
             </p>
-          </StyledCard>
+          </div>
 
-          <StyledCard>
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              T.V commercials
+              TV Commercials
             </h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Engage a broad audience, tell your brand story dynamically through
+              TV commercials.
             </p>
-          </StyledCard>
+          </div>
 
-          <StyledCard>
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Radio ads</h1>
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">Radio Ads</h1>
             <p className="m-2">
-              Grab attention with impactful visuals and concise copy in print
-              advertisements.
+              Capture ears effectively, delivering your brand message
+              persuasively in radio advertisements.
             </p>
-          </StyledCard>
+          </div>
         </div>
       </div>
     </div>
