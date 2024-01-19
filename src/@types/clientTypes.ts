@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Client Logo data
 declare type ClientLogo = {
@@ -23,15 +24,17 @@ declare type ClientLogo = {
   };
 };
 
-declare type services = {
-  data : [{
-    id : number,
-    attributes : {
-      serviceName : string
-    }
-  } 
-  ]
-}
+declare type Service = {
+  id: number;
+  attributes: {
+    serviceName: string;
+    isServiceUsed: boolean;
+  };
+};
+
+declare type Services = {
+  data: Service[];
+};
 
 // Client data
 declare type Client = {
@@ -40,9 +43,34 @@ declare type Client = {
     ClientName: string;
     Description: string;
     clientLogo: ClientLogo;
-    services : services;
-
+    webdev_Img: WebDevImg;
+    graphics_img: GraphicsDesignImg;
+    services: Services;
   };
 };
 
+declare type WebDevImg = {
+  attributes: any;
+  id: number;
+  data: {
+    [x: string]: any;
+    id: number;
+    attributes: {
+      name: string;
+      url: string;
+    };
+  };
+};
+declare type GraphicsDesignImg = {
+  attributes: any;
+  id: number;
+  data: {
+    [x: string]: any;
+    id: number;
+    attributes: {
+      name: string;
+      url: string;
+    };
+  };
+};
 

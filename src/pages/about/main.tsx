@@ -1,30 +1,38 @@
+import { headingBlack} from "../../styling/responsive";
+
 function AboutMain() {
   return (
-    <>
-      <div className="w-full flex justify-center ">
-        <div className=" w-[878px] flex flex-col items-center my-[5rem]">
-          <div className="mb-[5rem] w-[580px] h-[138px]">
-            <h2 className="font-bold text-[2rem] text-center text-black">
-              Who We Are: Crafting Digital Excellence in Design, Marketing, and
-              Web Development.
-            </h2>
-          </div>
-          <div className="flex justify-center gap-[33px] items-center">
-            <div className="h-[194px] w-[360px] text-left">
+    <div className="w-full flex justify-center ">
+      <div className="pt-[60px] dp:w-[90%] lp:w-[90%] flex flex-col items-center tl:w-[90%] mbl:w-[100%]  lp:w-[80%]">
+        <div className=" text-center dp:w-[57%] lp:w-[64%] tl:w-[72%]  mbl:w-[90%] mb-[4rem]">
+          <h2 className={`${headingBlack}`}>
+            Who We Are: Crafting Digital Excellence in Design, Marketing, and
+            Web Development.
+          </h2>
+        </div>
+
+        <div className="dp:w-[85%] lp:w-[90%] tl:w-[70%] mbl:w-[85%] flex justify-center tl:block gap-[33px] mb-12 items-center tl:gap-0 mbl:gap-0">
+          <div className="text-left tl:hidden mbl:hidden w-[35%]">
+            <p className="text-[18px]">
+              {" "}
               Welcome to TWB Creatives, where creativity converges with
               technology to redefine the digital landscape. As industry leaders
               in graphic design, marketing, and web development, we embark on a
               mission to transform ideas into impactful digital experiences. Our
               journey is marked by a passion for innovation, collaborative
               spirit, and unwavering commitment to excellence.
-            </div>
-            <div className="">
-              <img src="" className=" w-[430px] h-[256px] bg-gray rounded-[8px]" alt="" />
-            </div>
+            </p>
+          </div>
+          <div className="w-[40%] tl:w-[100%] mbl:w-[100%]">
+            <img
+              src=""
+              className="w-[100%] h-[256px] bg-gray rounded-[8px]"
+              alt=""
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

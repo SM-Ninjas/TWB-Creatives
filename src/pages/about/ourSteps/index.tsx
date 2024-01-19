@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { headingBlack } from "../../../styling/responsive";
+import { StyledBtn } from "../style";
 import DigitalMarketing from "./digitalMarketing";
 import GraphicDesign from "./graphicsDesign";
 import WebDev from "./webDev";
-import { StyledBtn } from "../style";
+
+import { useState } from "react";
 
 function OurSteps() {
   const [selectedComponent, setSelectedComponent] =
@@ -18,15 +20,15 @@ function OurSteps() {
       data-aos="fade-up"
       data-aos-duration="1200"
     >
-      <div className="w-[48%] text-center pt-[129px] mb-[60px]">
-        <h1 className="text-[2rem] text-utils">How we plan our steps</h1>
+      <div className="w-[52%] text-center pt-[129px] mb-[60px] mbl:w-[80%] ">
+        <h1 className={`${headingBlack}`}>How we plan our steps</h1>
         <p className="opacity-[.70]">
           Explore our meticulous project approach, where we break down each step
           to meet your unique requirements, ensuring the highest quality of work
           tailored to your project's success.
         </p>
       </div>
-      <div className="flex  gap-[60px]">
+      <div className="flex  dp:gap-[60px] lp:gap-[45px] tl:gap-[35px] mbl:gap-[10 px]">
         <StyledBtn onClick={() => handleSelectComponent("digital marketing")}
            active={selectedComponent === "digital marketing"}
         >
