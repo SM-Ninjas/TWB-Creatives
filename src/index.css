@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
   background: #f8f8f8;
   font-family: "Shippori Mincho B1", serif;
@@ -20,5 +18,12 @@ body {
   box-align: center;
 } */
 .scrollBar::-webkit-scrollbar {
-    display: none;
+  /* display: none; */
+
+
+}
+@media (min-width: 639px) {
+  .scrollBar::-webkit-scrollbar {
+    display: none; 
+  }
 }

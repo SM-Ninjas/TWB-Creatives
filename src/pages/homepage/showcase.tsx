@@ -1,5 +1,6 @@
 import { VideoCircle } from "iconsax-react";
 import CustomButton from "../../components/Button";
+import { headingBlack } from "../../styling/responsive";
 
 function ShowCase() {
   return (
@@ -8,7 +9,7 @@ function ShowCase() {
         <div className="w-[100%] flex justify-center">
           <div className="flex flex-col items-center w-[90%] lp:w-[80%] mbl:w-[100%] pt-[60px] relative">
             <div className="w-[40%] dp:w-[50%] lp:w-[64%] tl:w-[75%] mbl:w-[70%] ">
-              <h1 className="text-[2rem]  mbl:text-[1.1rem] font-bold text-center">
+              <h1 className={`${headingBlack}`}>
               {/* "text-[1.9rem] font-bold text-center" */}
                 We Deliver Exceptional Graphic Design, Marketing and Web
                 Design/Development Services.
@@ -34,11 +35,11 @@ function ShowCase() {
         </div>
         <div className="h-[500px] flex justify-center items-center">
           <div className="h-[360px] w-full flex justify-center items-center bg-utils-u2">
-            <div className="flex flex-col gap-[10px] w-[40%] mbl:w-[70%]  text-center">
+            <div className="flex flex-col gap-[10px] dp:w-[40%] mbl:w-[80%] tl:w-[75%] lp:w-[60%]  text-center">
               <h1 className="text-[2rem]  mbl:text-[1.1rem] tl:text-[1.5rem] font-bold text-white  ">
                 We are more than just a company
               </h1>
-              <p className="text-[16px] mbl:text-[.8rem]  tl:text-[12pxrem] opacity-[0.7] text-gray-g2">
+              <p className='dp:text-[16px] lp:text-[14px] mbl:text-[16px]  tl:text-[14px] opacity-[0.7] text-white'>
                 We are the architects of innovation, crafting a seamless fusion
                 of graphic design, marketing prowess, and web development
                 expertise. More than just a company, we are your creative
