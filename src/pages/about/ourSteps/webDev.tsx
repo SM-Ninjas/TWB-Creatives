@@ -15,7 +15,7 @@ function WebDev() {
           brand identity and objectives.
         </p>
       </div>
-      <div className="w-[40%] overflow-y-auto cursor-all-scroll scrollBar mbl:flex mbl:w-[90%] mbl:overflow-x-auto mbl:gap-2 ">
+      <div className="w-[40%] overflow-y-auto cursor-all-scroll scrollBar mbl:flex mbl:w-[90%] max-h-[400px] mbl:overflow-x-auto mbl:gap-2 ">
         {graphicDesigningData.map((item, index) => (
           <div key={index} className="bg-[#fff] rounded mb-[15px]">
             <h2 className="text-black px-[18px] py-[10px] mbl:w-[200px] mbl:text-[12px]">{item}</h2>
