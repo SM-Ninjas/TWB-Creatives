@@ -10,7 +10,7 @@ function Footer() {
             <Logo />
             <hr className="bg-[#fff] w-[259px]" />
           </div>
-          <p className="font-medium text-center text-gray-g2 ">
+          <p className="font-medium text-center text-gray-g2 mbl:text-[12px] ">
             In a world driven by pixels and possibilities, we transcend the
             ordinary. We are more than just a company – we are your strategic
             ally, your creative powerhouse, and your technological innovator.
@@ -20,23 +20,23 @@ function Footer() {
           <div className="flex flex-col gap-[12px]">
             <div className="flex gap-[9px] justify-center text-gray-g2">
               <Sms variant="Bulk" />
-              <p className="font-medium">info@twbcreates.com</p>
+              <p className="font-medium mbl:text-[12px]">info@twbcreates.com</p>
             </div>
             <div className="flex gap-[9px] justify-center text-gray-g2">
               <Call size="32" className="text-gray-g2" variant="Bulk" />
-              <p className="font-medium">98xxxxxxxx</p>
+              <p className="font-medium mbl:text-[12px]">98xxxxxxxx</p>
             </div>
           </div>
           <div className="flex justify-center text-gray-g2 gap-[12px] cursor-pointer " > 
-            <u>Privacy Policy</u>
+            <u className="mbl:text-[12px]">Privacy Policy</u>
             |
-            <u>Terms & Conditions</u>
+            <u className="mbl:text-[12px]">Terms & Conditions</u>
           </div>
           <div className="flex justify-center">
           <hr className="bg-[#fff] w-[259px]"/>
           </div>
           <div className="flex justify-center">
-          <p className="text-gray-g2 font-medium">© Copyright 2023 TWB Creates</p>
+          <p className="text-gray-g2 font-medium mbl:text-[12px]">© Copyright 2023 TWB Creates</p>
           </div>
         </div>
       </div>

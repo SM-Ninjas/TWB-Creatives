@@ -5,7 +5,7 @@ function AboutMain() {
     <div className="w-full flex justify-center ">
       <div className="pt-[60px] dp:w-[90%] lp:w-[90%] flex flex-col items-center tl:w-[90%] mbl:w-[100%]  lp:w-[80%]">
         <div className=" text-center dp:w-[57%] lp:w-[64%] tl:w-[72%]  mbl:w-[90%] mb-[4rem]">
-          <h2 className={`${headingBlack}`}>
+          <h2 className={`${headingBlack} mbl:text-[16px]`}>
             Who We Are: Crafting Digital Excellence in Design, Marketing, and
             Web Development.
           </h2>
@@ -13,7 +13,7 @@ function AboutMain() {
 
         <div className="dp:w-[85%] lp:w-[90%] tl:w-[70%] mbl:w-[85%] flex justify-center tl:block gap-[33px] mb-12 items-center tl:gap-0 mbl:gap-0">
           <div className="text-left tl:hidden mbl:hidden w-[35%]">
-            <p className="text-[18px]">
+            <p className="text-[18px] mbl:text-[12px]">
               {" "}
               Welcome to TWB Creatives, where creativity converges with
               technology to redefine the digital landscape. As industry leaders

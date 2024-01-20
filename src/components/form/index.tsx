@@ -1,6 +1,5 @@
-import { StyledInput ,StyledTextArea } from "./style";
+import { StyledInput, StyledTextArea } from "./style";
 import CustomButton from "../Button";
-
 
 import { useState } from "react";
 // Interface for the form data
@@ -47,64 +46,66 @@ function Form() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-row my-[-15px] gap-[15px]">
+    <div className="w-full my-[4rem] flex flex-col items-center">
+      <div className="w-[50%] tl:w-[70%] mbl:w-[100%] border">
+        <form onSubmit={handleSubmit}>
+          <div className="flex flex-row my-[-15px] gap-[15px]">
+            <StyledInput
+              data-aos="fade-right"
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              required
+              value={formData.fullName}
+              onChange={handleChange}
+            />
+            <StyledInput
+              data-aos="fade-left"
+              type="text"
+              name="emailAddress"
+              placeholder="Email Address"
+              required
+              value={formData.emailAddress}
+              onChange={handleChange}
+            />
+          </div>
           <StyledInput
-            data-aos="fade-right"
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
+            type="number"
+            data-aos="fade-up"
+            name="contactNumber"
+            placeholder="Contact Number"
             required
-            value={formData.fullName}
+            value={formData.contactNumber}
             onChange={handleChange}
           />
           <StyledInput
-            data-aos="fade-left"
+            data-aos="fade-up"
             type="text"
-            name="emailAddress"
-            placeholder="Email Address"
+            name="subject"
+            placeholder="Subject"
             required
-            value={formData.emailAddress}
+            value={formData.subject}
             onChange={handleChange}
           />
-        </div>
-        <StyledInput
-          type="number"
-          data-aos="fade-up"
-          name="contactNumber"
-          placeholder="Contact Number"
-          required
-          value={formData.contactNumber}
-          onChange={handleChange}
-        />
-        <StyledInput
-          data-aos="fade-up"
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          required
-          value={formData.subject}
-          onChange={handleChange}
-        />
-        <StyledTextArea
-          data-aos="fade-up"
-          name="message"
-          placeholder="Message"
-          required
-          className="w-full text-[#111]"
-          rows={8}
-          value={formData.message}
-          onChange={handleChange}
-        ></StyledTextArea>
-        <CustomButton
-          data-aos="fade-up"
-          className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
-          type="submit"
-        >
-          Submit
-        </CustomButton>
-      </form>
+          <StyledTextArea
+            data-aos="fade-up"
+            name="message"
+            placeholder="Message"
+            required
+            className="w-full text-[#111]"
+            rows={8}
+            value={formData.message}
+            onChange={handleChange}
+          ></StyledTextArea>
+          <CustomButton
+            data-aos="fade-up"
+            className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
+            type="submit"
+          >
+            Submit
+          </CustomButton>
+        </form>
+      </div>
     </div>
   );
 }

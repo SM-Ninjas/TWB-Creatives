@@ -10,10 +10,10 @@ function ChooseUs() {
           data-aos="fade-up"
         >
           <div className="w-[60%] flex flex-col gap-5 text-center">
-            <h1 className="text-[2rem] sm:text-3xl font-bold">
+            <h1 className="text-[2rem] mbl:text-[15px] font-bold">
               Why Choose Us?
             </h1>
-            <p className="opacity-70">
+            <p className="opacity-70 mbl:text-[12px]">
               Choose us for a seamless blend of creative ingenuity and
               technological expertise, ensuring your brand stands out with
               innovative graphic design, impactful marketing, and cutting-edge
