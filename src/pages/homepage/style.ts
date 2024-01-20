@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column; 
 align-items: center;
 justify-content: center;
-width: 261px;
+// width: 261px;
 height: 281px;
 gap: 10px; 
 font-size: 16px;

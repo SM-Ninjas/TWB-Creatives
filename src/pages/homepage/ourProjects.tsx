@@ -11,8 +11,8 @@ function OurProjects() {
           className="flex justify-center mb-[120px] sm:mb-16"
           data-aos="fade-up"
         >
-          <div className="w-[60%] flex flex-col gap-5 text-center">
-            <h1 className="text-[2rem] mbl:text-[12px] font-bold">
+          <div className="w-[60%] flex flex-col gap-5 text-center mbl:w-[85%]">
+            <h1 className="text-[2rem] mbl:text-[18px] font-bold">
               Explore Our Projects
             </h1>
             <p className="text-utils opacity-[.70] mbl:text-[11px]">
@@ -29,7 +29,7 @@ function OurProjects() {
           >
             <StyledDiv
               data-aos="fade-up"
-              className="w-full mbl:w-[70%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
+              className="w-full mbl:w-[85%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
             >
               <div className="">
                 <img
@@ -47,7 +47,7 @@ function OurProjects() {
             </StyledDiv>
             <StyledDiv
               data-aos="fade-up"
-              className="w-full mbl:w-[70%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
+              className="w-full mbl:w-[85%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
             >
               <div className="">
                 <img
@@ -65,7 +65,7 @@ function OurProjects() {
             </StyledDiv>
             <StyledDiv
               data-aos="fade-up"
-              className="w-full mbl:w-[70%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
+              className="w-full mbl:w-[85%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px] gap-[0px]"
             >
               <div className="">
                 <img

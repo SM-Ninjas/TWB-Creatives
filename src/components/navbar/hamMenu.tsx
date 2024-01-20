@@ -23,7 +23,9 @@ const HamburgerMenu = () => {
       >
         Menu
         <svg
-          className={`w-4 h-4 ms-3 transform ${isMenuOpen ? "rotate-90" : "rotate-0"}`}
+          className={`w-4 h-4 ms-3 transform ${
+            isMenuOpen ? "rotate-90" : "rotate-0"
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -70,9 +72,7 @@ const HamburgerMenu = () => {
             >
               <li>Contact Us</li>
             </Link>
-            <div onClick={closeMenu}>
-              <DropDown />
-            </div>
+            <DropDown />
           </ul>
         </div>
       )}

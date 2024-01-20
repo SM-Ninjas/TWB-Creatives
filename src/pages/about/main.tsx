@@ -4,8 +4,8 @@ function AboutMain() {
   return (
     <div className="w-full flex justify-center ">
       <div className="pt-[60px] dp:w-[90%] lp:w-[90%] flex flex-col items-center tl:w-[90%] mbl:w-[100%]  lp:w-[80%]">
-        <div className=" text-center dp:w-[57%] lp:w-[64%] tl:w-[72%]  mbl:w-[90%] mb-[4rem]">
-          <h2 className={`${headingBlack} mbl:text-[16px]`}>
+        <div className=" text-center dp:w-[57%] lp:w-[64%] tl:w-[72%]  mbl:w-[85%] mb-[3.5rem]">
+          <h2 className={`${headingBlack} mbl:text-[18px]`}>
             Who We Are: Crafting Digital Excellence in Design, Marketing, and
             Web Development.
           </h2>

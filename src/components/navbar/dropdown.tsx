@@ -8,14 +8,14 @@ function DropDown() {
     setDropdownVisible(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleClose = () => {
     setDropdownVisible(false);
   };
 
   return (
-    <div onMouseLeave={handleMouseLeave} className="relative ">
+    <div onMouseLeave={handleClose} className="relative ">
       <button
-        onMouseEnter={handleMouseEnter}
+        onClick={handleMouseEnter}
         className=" text-utils hover:text-utils opacity-[0.6] font-medium rounded-lg text-[1.05rem] px-5 py-2.5 text-center inline-flex items-center "
         type="button"
       >

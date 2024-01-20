@@ -33,25 +33,28 @@ function OurServices() {
           <StyledBtn
             onClick={() => handleSelectComponent("DigitalImpact")}
             active={selectedComponent === "DigitalImpact"}
-            className="mbl:text-[16px]"
+            className="mbl:text-[12px] py-4 px-8 mbl:py-2 mbl:px-4"
           >
             Digital Impact
           </StyledBtn>
           <StyledBtn
             onClick={() => handleSelectComponent("StoryPower")}
             active={selectedComponent === "StoryPower"}
+            className="mbl:text-[12px] py-4 px-8 mbl:py-2 mbl:px-4"
           >
             Story Power
           </StyledBtn>
           <StyledBtn
             onClick={() => handleSelectComponent("StreetBuzz")}
             active={selectedComponent === "StreetBuzz"}
+            className="mbl:text-[12px] py-4 px-8 mbl:py-2 mbl:px-4"
           >
             Street Buzz
           </StyledBtn>
           <StyledBtn
             onClick={() => handleSelectComponent("MediaBoost")}
             active={selectedComponent === "MediaBoost"}
+            className="mbl:text-[12px] py-4 px-8 mbl:py-2 mbl:px-4"
           >
             Media Boost
           </StyledBtn>

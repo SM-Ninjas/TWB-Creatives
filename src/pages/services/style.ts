@@ -6,7 +6,6 @@ interface StyledBtnProps {
 }
 
 export const StyledBtn = styled.button<StyledBtnProps>`
-  padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   background-color: ${(props) => (props.active ? "#22092C" : "#fff")};
