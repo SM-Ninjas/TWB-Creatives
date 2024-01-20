@@ -12,10 +12,10 @@ function OurProjects() {
           data-aos="fade-up"
         >
           <div className="w-[60%] flex flex-col gap-5 text-center">
-            <h1 className="text-[2rem] sm:text-3xl font-bold">
+            <h1 className="text-[2rem] mbl:text-[12px] font-bold">
               Explore Our Projects
             </h1>
-            <p className="text-utils opacity-[.70]">
+            <p className="text-utils opacity-[.70] mbl:text-[11px]">
               Dive into our portfolio and explore a showcase of innovative
               projects, each a testament to our commitment to excellence in
               graphic design, digital marketing, and web development.

@@ -12,7 +12,7 @@ function AboutUs() {
             </h1>
           </div>
           <div className="w-full dp:flex dp:text-left dp:w-[70%] lp:w-[70%] flex-col justify-center tl:w-[80%]  mbl:mt-[12px]">
-            <p className="text-utils-u1 opacity-[0.7]  text-[1rem]">
+            <p className="text-utils-u1 opacity-[0.7]  mbl:text-[12px] text-[1rem]">
               Our core goals encompass delivering cutting-edge graphic design,
               impactful marketing strategies, and user-centric web development
               solutions. We aim to elevate our clients' brands, ensuring a
@@ -21,7 +21,7 @@ function AboutUs() {
             </p>
           </div>
           <div className="w-full  tl:w-[80%] dp:w-[60%] lp:w-[70%]  mbl:mt-[12px]">
-            <p className="text-utils-u1 opacity-[0.7] text-[1rem]">
+            <p className="text-utils-u1 opacity-[0.7] text-[1rem] mbl:text-[12px] ">
               Our vision is to be a trailblazer in the intersection of
               creativity and technology, setting new standards in graphic
               design, marketing, and web development. We aspire to be the go-to

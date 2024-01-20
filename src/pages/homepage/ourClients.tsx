@@ -46,7 +46,7 @@ function OurClients() {
       <div className="w-full h-[377px] flex justify-center items-center">
         <div className="w-[80%] mbl:w-[100%] flex flex-col items-center gap-[30px]">
           <div>
-            <h1 className="text-center text-utils font-bold text-[2rem]">
+            <h1 className="text-center text-utils font-bold text-[2rem] mbl:text-[16px]">
               Our Brilliant Clients
             </h1>
           </div>

@@ -28,7 +28,7 @@ function OurTeam() {
     >
       <div className="mt-[2.5rem]">
         <div className="  bg-utils flex justify-center h-[304px] pt-[103px] ">
-          <h1 className="text-[2rem] font-bold text-white">Meet The Team</h1>
+          <h1 className="text-[2rem] font-bold text-white mbl:text-[12px]">Meet The Team</h1>
         </div>
         <div className="relative bottom-[90px]">
           <div className="flex justify-center flex-wrap mbl:flex-col tl:items-center tl:flex-col mbl:flex-col  mbl:items-center">
