@@ -46,8 +46,8 @@ function Form() {
   };
 
   return (
-    <div className="w-full my-[4rem] flex flex-col items-center">
-      <div className="w-[50%] tl:w-[70%] mbl:w-[100%] border">
+    <div className="w-full  flex flex-col ">
+      <div className="w-[70%] tl:w-[70%] mbl:w-[100%]">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-row my-[-15px] gap-[15px]">
             <StyledInput
