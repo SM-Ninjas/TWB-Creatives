@@ -1,8 +1,7 @@
 function StreetBuzz() {
   return (
     <div className="w-[100%]">
-      <div className="flex justify-center text-center gap-[2rem]">
-      </div>
+      <div className="flex justify-center text-center gap-[2rem]"></div>
       <div className="w-full flex flex-col items-center flex-wrap">
         <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px]">
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
@@ -14,46 +13,50 @@ function StreetBuzz() {
           </div>
 
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">
-              Magazine Ads
-            </h1>
+            <h1 className="text-utils m-2 font-bold text-[1rem]">Posters</h1>
             <p className="m-2">
-              Tell your brand story visually with captivating glossy magazine
-              ads.
-            </p>
-          </div>
-
-          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Brochures</h1>
-            <p className="m-2">
-              Convey key information hands-on with visually appealing brand
-              brochures.
-            </p>
-          </div>
-
-          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Flyers</h1>
-            <p className="m-2">
-              Create instant impact, promoting events or offers with
-              attention-grabbing flyers.
+              Create instant intrigue with eye-catching posters that convey your
+              message at a glance.
             </p>
           </div>
 
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              TV Commercials
+              Bus shelter ads
             </h1>
             <p className="m-2">
-              Engage a broad audience, tell your brand story dynamically through
-              TV commercials.
+              Strategically place compelling ads at bus shelters for maximum
+              impact in high-traffic areas.
             </p>
           </div>
 
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Radio Ads</h1>
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Event management
+            </h1>
             <p className="m-2">
-              Capture ears effectively, delivering your brand message
-              persuasively in radio advertisements.
+              Craft memorable experiences with expert event planning and
+              management for lasting brand impressions.
+            </p>
+          </div>
+
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Partnership Prospects
+            </h1>
+            <p className="m-2">
+              Forge meaningful connections by leveraging strategic sponsorship
+              opportunities tailored to your brand.
+            </p>
+          </div>
+
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Trade show exhibits
+            </h1>
+            <p className="m-2">
+              Stand out at trade shows with captivating exhibits that showcase
+              your brand and engage your audience.
             </p>
           </div>
         </div>

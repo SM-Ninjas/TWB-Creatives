@@ -3,58 +3,65 @@ function StoryPower() {
     <div className="w-[100%]">
       <div className="flex justify-center text-center gap-[2rem]"></div>
       <div className="w-full flex flex-col items-center flex-wrap">
-        <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px]">
+        <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px] border">
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              Press releases
+              Media relations
             </h1>
             <p className="m-2">
-              Build brand narratives with impactful press releases that
-              captivate media and audience attention.
-            </p>
-          </div>
-
-          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">
-              Magazine Ads
-            </h1>
-            <p className="m-2">
-              Tell your brand story visually with captivating glossy magazine
-              ads.
-            </p>
-          </div>
-
-          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Brochures</h1>
-            <p className="m-2">
-              Convey key information hands-on with visually appealing brand
-              brochures.
-            </p>
-          </div>
-
-          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Flyers</h1>
-            <p className="m-2">
-              Create instant impact, promoting events or offers with
-              attention-grabbing flyers.
+              Cultivate positive relationships with the media, ensuring your
+              brand stories reach the right audience.
             </p>
           </div>
 
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
-              TV Commercials
+              Media relations
             </h1>
             <p className="m-2">
-              Engage a broad audience, tell your brand story dynamically through
-              TV commercials.
+              Cultivate positive relationships with the media, ensuring your
+              brand stories reach the right audience.
             </p>
           </div>
 
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
-            <h1 className="text-utils m-2 font-bold text-[1rem]">Radio Ads</h1>
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Crisis management
+            </h1>
             <p className="m-2">
-              Capture ears effectively, delivering your brand message
-              persuasively in radio advertisements.
+              Navigate challenges seamlessly with effective crisis management
+              strategies that safeguard your brand reputation.
+            </p>
+          </div>
+
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Cold calling
+            </h1>
+            <p className="m-2">
+              Initiate meaningful connections through targeted cold calling,
+              generating leads and fostering relationships.
+            </p>
+          </div>
+
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              Lead generation
+            </h1>
+            <p className="m-2">
+              Fuel your sales pipeline with strategic lead generation tactics
+              tailored to your target audience.
+            </p>
+          </div>
+
+          <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
+            <h1 className="text-utils m-2 font-bold text-[1rem]">
+              {" "}
+              Online press releases
+            </h1>
+            <p className="m-2">
+              Amplify your online presence with compelling press releases
+              tailored for the digital landscape.
             </p>
           </div>
         </div>

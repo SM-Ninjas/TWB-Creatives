@@ -11,7 +11,6 @@ export const StyledParagraph = styled.p`
   opacity: 0.75;
   text-align: center;
   font-family: Shippori Mincho B1;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

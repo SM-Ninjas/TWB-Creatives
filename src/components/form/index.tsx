@@ -46,7 +46,7 @@ function Form() {
   };
 
   return (
-    <div className="w-full  flex flex-col ">
+    <div className="w-full flex justify-center">
       <div className="w-[70%] tl:w-[70%] mbl:w-[100%]">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-row my-[-15px] gap-[15px]">

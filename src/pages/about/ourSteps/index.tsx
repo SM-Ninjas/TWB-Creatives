@@ -20,8 +20,8 @@ function OurSteps() {
       data-aos="fade-up"
       data-aos-duration="1200"
     >
-      <div className="w-[52%] text-center pt-[129px] mb-[60px] mbl:w-[80%] ">
-        <h1 className={`${headingBlack} mbl:text-[16px] `}>
+      <div className="w-[52%] text-center pt-[110px] mb-[60px] mbl:w-[80%] mbl:pt-[50px]">
+        <h1 className={`${headingBlack} mbl:text-[18px] mb-2 `}>
           How we plan our steps
         </h1>
         <p className="opacity-[.70] mbl:text-[12px]">
