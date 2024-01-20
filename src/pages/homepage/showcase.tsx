@@ -7,7 +7,7 @@ function ShowCase() {
     <div data-aos="fade-up">
       <div className="w-full">
         <div className="w-[100%] flex justify-center">
-          <div className="flex flex-col items-center w-[90%] lp:w-[80%] mbl:w-[100%] pt-[60px] relative">
+          <div className="flex flex-col items-center w-[90%] lp:w-[80%] mbl:w-[100%] mbl:pt-[20px] pt-[60px] relative">
             <div className="w-[40%] dp:w-[50%] lp:w-[64%] tl:w-[75%] mbl:w-[70%] ">
               <h1 className={`${headingBlack}`}>
               {/* "text-[1.9rem] font-bold text-center" */}

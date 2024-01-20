@@ -50,7 +50,7 @@ function OurClients() {
               Our Brilliant Clients
             </h1>
           </div>
-          <div className="w-[70%]">
+          <div className="w-[70%] mbl:w-[100%]">
             <Slider {...sliderSettings}>
               {clientData?.map((res) => (
                 <div key={res.id} className="p-2 cursor-pointer">

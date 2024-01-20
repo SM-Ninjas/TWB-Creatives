@@ -5,12 +5,12 @@ function Footer() {
   return (
     <>
       <div className="bg-utils w-full h-[565px] py-[5rem] flex justify-center items-center ">
-        <div className="w-[638px] flex flex-col gap-[2rem]">
+        <div className="w-[60%] mbl:w-[90%] flex flex-col gap-[2rem]">
           <div className="flex flex-col items-center gap-[30px]">
             <Logo />
             <hr className="bg-[#fff] w-[259px]" />
           </div>
-          <p className="font-medium text-center text-gray-g2">
+          <p className="font-medium text-center text-gray-g2 ">
             In a world driven by pixels and possibilities, we transcend the
             ordinary. We are more than just a company – we are your strategic
             ally, your creative powerhouse, and your technological innovator.

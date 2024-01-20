@@ -3,6 +3,28 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+declare interface BlogData {
+  id: number;
+  attributes: {
+    BlogTitle: string;
+    BlogDate: string;
+    set_on_top: boolean;
+    BlogDescription: {
+      type: string;
+      children: { type: string; text: string; bold?: boolean }[];
+    }[];
+    BlogThumbnail: {
+      data: {
+        id: number;
+        attributes: {
+          name: string;
+          url: string;
+        };
+      };
+    };
+  };
+}
+
 const truncateString = (text: string, maxLength: number) => {
   if (!text || typeof text !== "string") {
     console.log("Unable to fetch data");
@@ -52,45 +74,76 @@ const BlogList = () => {
       })
       .join(" ");
 
-    const truncatedText = truncateString(combinedText, 369); // Adjust the maxLength as needed
+    const truncatedText = truncateString(combinedText, 369);
 
     return (
       truncatedText + (truncatedText.length < combinedText.length ? "..." : "")
     );
   };
 
+  // Filter data to separate set_on_top and others
+  const featuredBlogs = blogData.filter((blog) => blog.attributes.set_on_top);
+  const otherBlogs = blogData.filter((blog) => !blog.attributes.set_on_top);
+
   return (
-    <div className="flex flex-col w-full my-[5rem] items-center">
-      <div className="flex justify-center p-2 w-[48%] mb-[80px]">
-        <h1 className="text-center text-[2rem] font-bold">
+    <div className="flex flex-col items-center my-[5rem]">
+      <div className="flex justify-center p-2 w-[48%] mb-[80px] mbl:w-[90%]  tl:w-[90%] lp:w-[75%]">
+        <h1 className="mbl:text-[1.1rem]  tl:text-[1.5rem] lp:text-[1.7rem] dp:text-[2rem] font-bold text-center text-utils">
           Explore Insights and Inspiration: Our Blog Unveils the Latest Trends,
           Tips, and Stories in Design, Marketing, and Web Development.
         </h1>
       </div>
-      <div className="w-[80%] flex flex-col items-center gap-[42px] ">
-        {blogData.map((blog) => (
-          <div key={blog.id} className="flex w-[90%] justify-center gap-[25px]">
-            <div className="">
+
+      <div className="dp:w-[75%] mbl:w-[90%] lp:w-[80%] tl:w-[80%]">
+        <div className="mb-[4rem]">
+          {featuredBlogs.map((blog) => (
+            <div className="flex gap-10 tl:block mbl:block" key={blog.id}>
+              <div className="dp:w-[70%] mbl:w-[95%] lp:w-[85%] tl:w-[90%]">
+                {blog.attributes.BlogThumbnail && (
+                  <StyledImg
+                    src={`http://localhost:8082${blog.attributes.BlogThumbnail.data.attributes.url}`}
+                    alt={blog.attributes.BlogThumbnail.data.attributes.name}
+                  />
+                )}
+              </div>
+              <div className="dp:w-[55%] mbl:w-[100%] lp:w-[75%] tl:w-[100%]">
+                <h2 className="text-utils text-[21px] font-bold">
+                  <Link to={`/blogs/${blog.id}`}>
+                    {blog.attributes.BlogTitle}
+                  </Link>
+                </h2>
+                <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
+                <StyledDes>
+                  {renderParagraphs(blog.attributes.BlogDescription)}
+                </StyledDes>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="  grid grid-cols-2 gap-[3rem] tl:grid-cols-1 mbl:grid-cols-1">
+          {otherBlogs.map((blog) => (
+            <div key={blog.id} className="">
               {blog.attributes.BlogThumbnail && (
                 <StyledImg
                   src={`http://localhost:8082${blog.attributes.BlogThumbnail.data.attributes.url}`}
                   alt={blog.attributes.BlogThumbnail.data.attributes.name}
                 />
               )}
+              <div className="">
+                <h2 className="text-utils text-[21px] font-bold">
+                  <Link to={`/blogs/${blog.id}`}>
+                    {blog.attributes.BlogTitle}
+                  </Link>
+                </h2>
+                <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
+                <StyledDes>
+                  {renderParagraphs(blog.attributes.BlogDescription)}
+                </StyledDes>
+              </div>
             </div>
-            <div className="w-[26%]">
-              <h2 className="text-utils text-[21px] font-bold">
-                <Link to={`/blogs/${blog.id}`}>
-                  {blog.attributes.BlogTitle}
-                </Link>
-              </h2>
-              <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
-              <StyledDes>
-                {renderParagraphs(blog.attributes.BlogDescription)}
-              </StyledDes>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

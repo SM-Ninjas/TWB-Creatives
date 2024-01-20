@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const StyledImg = styled.img`
-width: 511px;
-height: 360px;
-flex-shrink: 0;
 border-radius: 14px;
 `
 export const StyledDes = styled.div`

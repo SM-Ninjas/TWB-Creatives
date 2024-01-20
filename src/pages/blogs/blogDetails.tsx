@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DisqusComments from "../../components/comments/comments";
+import { headingBlack } from "../../styling/responsive";
 
 // import { renderToString } from "react-dom/server";
 
@@ -16,7 +17,7 @@ const BlogDetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8082/api/blogs/$?populate=*{id}`
+          `http://localhost:8082/api/blogs/${id}?populate=*`
         );
         setBlogDetails(response.data.data);
       } catch (error) {
@@ -58,32 +59,35 @@ const BlogDetails = () => {
 
   return (
     <div className="">
-      <div className="flex justify-center  w-full">
+       <div className="flex justify-center  w-full">
         <div
           key={blogDetails.id}
-          className="flex flex-col w-[60%] items-center gap-[60px]"
-        >
-          <div className="w-[80%] mt-[60px] text-center">
-            <h2 className="text-utils text-[32px] font-bold">{BlogTitle}</h2>
+          className="flex flex-col w-[75%] items-center gap-[60px]  mbl:w-[95%] lp:w-[85%] tl:w-[90%]"
+         >
+          <div className="w-[60%] mt-[60px] text-center  mbl:w-[95%] lp:w-[85%] tl:w-[90%] ">
+            <h2 className={`${headingBlack}`}>{BlogTitle}</h2>
             <h3 className="text-primary text-[1rem]">{BlogDate}</h3>
           </div>
-          <div className="">
+          <div className="w-[85%]">
             {BlogThumbnail && (
               <img
-                className="w-[100%] rounded-[14px]"
+                className=" w-[100%] rounded-[14px]"
                 src={`http://localhost:8082${BlogThumbnail.data.attributes.url}`}
                 alt={BlogThumbnail.data.attributes.name}
               />
             )}
           </div>
-          <StyledDes
+          <StyledDes className="w-[85%]"
             dangerouslySetInnerHTML={renderParagraphs(BlogDescription)}
           />
+          <div className="w-[100%] flex justify-center">
         <DisqusComments
           url={`http://localhost:5173/blogs/${blogDetails.id}`}
           identifier={blogDetails.id.toString()}
           title={blogDetails.attributes.BlogTitle}
-        />
+          
+          />
+          </div>
         </div>
       </div>
     </div>
