@@ -47,7 +47,7 @@ const ProjectDetails = () => {
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
       <div className="flex justify-center">
-        <div className="w-[65%] flex flex-col items-center mt-[4rem] gap-[48px]">
+        <div className="w-[65%] dp:w-[70%] mbl:w-[90%] lp:w-[85%] tl:w-[80%] flex flex-col items-center mt-[4rem] gap-[48px]">
           <div>
             <h1 className="text-utils font-extrabold text-[30px]">
               {project.attributes.Name}

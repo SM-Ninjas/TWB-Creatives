@@ -33,7 +33,7 @@ const DisqusComments: React.FC<DisqusCommentsProps> = ({
   };
 
   return (
-    <div>
+    <div className="w-[95%]">
       <div id="disqus_thread "></div>
       <noscript>
         Please enable JavaScript to view the{" "}
@@ -41,7 +41,7 @@ const DisqusComments: React.FC<DisqusCommentsProps> = ({
           comments powered by Disqus.
         </a>
       </noscript>
-      <div className =" w-[950px]" >
+      <div className ="w-[100%]" >
       <Disqus.DiscussionEmbed  shortname={disqusShortname}   config={disqusConfig} />
       </div>
     </div>

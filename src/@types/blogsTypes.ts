@@ -5,6 +5,7 @@
     attributes: {
       BlogTitle: string;
       BlogDate: string;
+      set_on_top: boolean,
       BlogDescription: {
         type: string;
         children: { type: string; text: string; bold?: boolean }[];
