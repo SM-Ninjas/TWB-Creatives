@@ -1,7 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -15,7 +19,7 @@ const ProjectDetails = () => {
           `http://localhost:8082/api/portfolios/${id}?populate=*`
         );
 
-        setProject(response.data.data); 
+        setProject(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -42,6 +46,15 @@ const ProjectDetails = () => {
         paragraph.children.map((child) => child.text).join("")
       )
       .join("<br/>"); // Add line breaks between paragraphs
+  };
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -84,34 +97,45 @@ const ProjectDetails = () => {
         />
       </div>
 
-      <div className="w-full text-center ">
-        <h1 className="text-[2rem] text-utils mb-6">Contributing Members</h1>
-        <div className="flex justify-center gap-[60px]">
-          {project.attributes.Contributing_members.data.map((member) => (
-            <div key={member.id}>
-              <img
-                src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
-                alt={member.attributes.name}
-                className="rounded-[8px]"
-              />
-              <h2 className="text-[#111] mt-2">Suyog karki</h2>
-              <h4 className="text-utils opacity-[.60]">Lead Developer</h4>
-            </div>
-          ))}
+      <div className="w-full text-center flex flex-col items-center"> 
+        <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
+          <h2 className="text-[2rem] mb-5 text-utils font-bold mbl:text-[18px]">
+          Contributing Members
+          </h2>
+          <div className="w-[65%] mb-12 mbl:w-[100%]">
+            <Slider {...sliderSettings}>
+              {project.attributes.Contributing_members.data.map((member) => (
+                 <div key={member.id} className="mbl:w-[25%]">  
+                 <img
+                   src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
+                   alt={member.attributes.name}
+                   className="rounded-[8px] "
+                 />
+                 {/* <h2 className="text-[#111] mt-2">{member.attributes.name}</h2> */}
+                 <h4 className="text-utils opacity-[.60]">{/* {} */}</h4>
+               </div>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
 
-      <div className=" text-center">
-        <h2 className="text-[2rem] text-utils font-bold">Tech Stacks</h2>
-        <div className="flex justify-center gap-[60px] my-[1.9rem]">
-          {project.attributes.Tech_stack_logos.data.map((logo) => (
-            <img
-              key={logo.id}
-              src={`http://localhost:8082${logo.attributes.formats.thumbnail.url}`}
-              alt={logo.attributes.name}
-              className="w-[100px] h-[100px]"
-            />
-          ))}
+        <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
+          <h2 className="text-[2rem] text-utils font-bold mbl:text-[18px]">
+            Tech Stacks
+          </h2>
+          <div className="w-[60%] mb-12 mbl:w-[100%] mbl:p-10">
+            <Slider {...sliderSettings}>
+              {project.attributes.Tech_stack_logos.data.map((logo) => (
+                <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
+                  <img
+                    src={`http://localhost:8082${logo.attributes.formats.thumbnail.url}`}
+                    alt={logo.attributes.name}
+                    className="rounded-[8px] h-[100px]"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </div>

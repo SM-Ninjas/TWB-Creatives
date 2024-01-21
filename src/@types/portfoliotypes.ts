@@ -17,6 +17,7 @@ declare interface ProjectTypes {
             id: number;
             attributes: {
               name: string;
+              url: string,
               formats: {
                 thumbnail: {
                   name: string;
@@ -33,6 +34,7 @@ declare interface ProjectTypes {
             id: number;
             attributes: {
               name: string;
+              url: string,
               formats: {
                 thumbnail: {
                   name: string;

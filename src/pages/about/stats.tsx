@@ -4,9 +4,9 @@ import { StyledParagraph } from "./style";
 function Stats() {
   return (
     <div className="w-[100%]  flex flex-col justify-center items-center py-[69px]  bg-utils">
-      <div className={`${headingWhite} mb-12`}>
-        <h1 className="mbl:text-[18px]">Where do we stand?</h1>
-        <StyledParagraph className="mbl:text-[12px]">
+      <div className=''>
+        <h1 className={`${headingWhite} `}>Where do we stand?</h1>
+        <StyledParagraph className="mbl:text-[12px] mb-8">
           Check out our stats, and get a better idea of our position
         </StyledParagraph>
       </div>

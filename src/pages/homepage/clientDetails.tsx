@@ -34,7 +34,7 @@ function ClientDetails() {
   // console.log("Graphics Images:", clientData?.attributes.graphics_img.data);
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
