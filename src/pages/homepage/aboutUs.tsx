@@ -2,9 +2,9 @@ function AboutUs() {
   return (
     <div data-aos="fade-up">
       <div className="w-full flex justify-center mb-[3rem]">
-        <div className="flex flex-col items-center mbl:gap-4  mbl:text-center mbl:w-[90%]  tl:w-[70%] tl:gap-6 lp:flex-row lp:w-[90%] lp:gap-8 dp:w-[75%] dp:flex-row dp:gap-[30px]  dp:h-[100%] dp:flex  ">
-          <div className=" flex flex-col justify-center w-[40%] dp:ml-8  lp: mbl:text-center tl:text-center ">
-            <h3 className="mmbl:text-[16px] tl:text-[1.1rem]  text-primary-p10 dp:text-left">
+        <div className="flex flex-col items-center   mbl:text-center mbl:w-[90%]  tl:w-[70%] tl:gap-6 lp:flex-row lp:w-[90%] lp:gap-8 dp:w-[75%] dp:flex-row dp:gap-[30px]  dp:h-[100%] dp:flex  ">
+          <div className=" flex flex-col justify-center w-[40%] mbl:text-center tl:text-center ">
+            <h3 className="mbl:text-[16px] tl:text-[1.1rem]  text-primary-p10 dp:text-left">
               About us
             </h3>
             <h1 className="text-[2rem] mbl:text-[18px] tl:text-[1.1rem] lp:text-[1.5rem] font-bold">
@@ -20,7 +20,7 @@ function AboutUs() {
               business environment.
             </p>
           </div>
-          <div className="w-full  tl:w-[80%] dp:w-[60%] lp:w-[70%]  mbl:mt-[12px]">
+          <div className="  tl:w-[80%] dp:w-[60%] lp:w-[70%]  mbl:mt-[12px]">
             <p className="text-utils-u1 opacity-[0.7] text-[1rem] mbl:text-[12px] ">
               Our vision is to be a trailblazer in the intersection of
               creativity and technology, setting new standards in graphic

@@ -6,7 +6,7 @@ function ChooseUs() {
     <>
       <div className="w-full">
         <div
-          className="flex justify-center mb-[120px] sm:mb-16 md:mb-20"
+          className="flex justify-center mb-[120px]"
           data-aos="fade-up"
         >
           <div className="w-[60%] flex flex-col gap-5 text-center mbl:w-[90%]">

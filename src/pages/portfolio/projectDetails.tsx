@@ -97,25 +97,23 @@ const ProjectDetails = () => {
         />
       </div>
 
-      <div className="w-full text-center flex flex-col items-center"> 
+      <div className="w-full text-center flex flex-col items-center">
         <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
           <h2 className="text-[2rem] mb-5 text-utils font-bold mbl:text-[18px]">
-          Contributing Members
+            Contributing Members
           </h2>
-          <div className="w-[65%] mb-12 mbl:w-[100%]">
-            <Slider {...sliderSettings}>
-              {project.attributes.Contributing_members.data.map((member) => (
-                 <div key={member.id} className="mbl:w-[25%]">  
-                 <img
-                   src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
-                   alt={member.attributes.name}
-                   className="rounded-[8px] "
-                 />
-                 {/* <h2 className="text-[#111] mt-2">{member.attributes.name}</h2> */}
-                 <h4 className="text-utils opacity-[.60]">{/* {} */}</h4>
-               </div>
-              ))}
-            </Slider>
+          <div className=" flex justify-center gap-10 w-[65%] mb-12 mbl:w-[100%]">
+            {project.attributes.Contributing_members.data.map((member) => (
+              <div key={member.id} className="mbl:w-[25%]">
+                <img
+                  src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
+                  alt={member.attributes.name}
+                  className="rounded-[8px] "
+                />
+                {/* <h2 className="text-[#111] mt-2">{member.attributes.name}</h2> */}
+                <h4 className="text-utils opacity-[.60]">{/* {} */}</h4>
+              </div>
+            ))}
           </div>
         </div>
 
