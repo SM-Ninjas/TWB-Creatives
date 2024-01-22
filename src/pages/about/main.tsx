@@ -13,7 +13,7 @@ function AboutMain() {
 
         <div className="dp:w-[85%] lp:w-[90%] tl:w-[70%] mbl:w-[85%] flex justify-center tl:block gap-[33px] mb-12 items-center tl:gap-0 mbl:gap-0">
           <div className="text-left tl:hidden mbl:hidden w-[35%]">
-            <p className="text-[18px] mbl:text-[12px]">
+            <p className="text-[16px] mbl:text-[12px]">
               {" "}
               Welcome to TWB Creatives, where creativity converges with
               technology to redefine the digital landscape. As industry leaders

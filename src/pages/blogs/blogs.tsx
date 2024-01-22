@@ -86,8 +86,8 @@ const BlogList = () => {
   const otherBlogs = blogData.filter((blog) => !blog.attributes.set_on_top);
 
   return (
-    <div className="flex flex-col items-center my-[5rem]">
-      <div className="flex justify-center p-2 w-[48%] mb-[80px] mbl:w-[90%]  tl:w-[90%] lp:w-[75%]">
+    <div className="flex flex-col items-center my-[5rem] mbl:my-[1rem]">
+      <div className="flex justify-center p-2 w-[48%] mb-[80px] mbl:w-[95%]  tl:w-[90%] lp:w-[75%] mbl:mb-[20px]">
         <h1 className="mbl:text-[1.1rem]  tl:text-[1.5rem] lp:text-[1.7rem] dp:text-[2rem] font-bold text-center text-utils">
           Explore Insights and Inspiration: Our Blog Unveils the Latest Trends,
           Tips, and Stories in Design, Marketing, and Web Development.
@@ -107,13 +107,13 @@ const BlogList = () => {
                 )}
               </div>
               <div className="dp:w-[55%] mbl:w-[100%] lp:w-[75%] tl:w-[100%]">
-                <h2 className="text-utils text-[21px] font-bold">
+                <h2 className="text-utils text-[21px] font-bold mbl:text-[18px]">
                   <Link to={`/blogs/${blog.id}`}>
                     {blog.attributes.BlogTitle}
                   </Link>
                 </h2>
                 <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
-                <StyledDes>
+                <StyledDes className="">
                   {renderParagraphs(blog.attributes.BlogDescription)}
                 </StyledDes>
               </div>
