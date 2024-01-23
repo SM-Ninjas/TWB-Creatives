@@ -82,8 +82,8 @@ const BlogList = () => {
   };
 
   // Filter data to separate set_on_top and others
-  const featuredBlogs = blogData.filter((blog) => blog.attributes.set_on_top);
-  const otherBlogs = blogData.filter((blog) => !blog.attributes.set_on_top);
+  const featuredBlogs = blogData.filter((blog) => blog?.attributes.set_on_top);
+  const otherBlogs = blogData.filter((blog) => !blog?.attributes.set_on_top);
 
   return (
     <div className="flex flex-col items-center my-[5rem] mbl:my-[1rem]">
@@ -101,8 +101,8 @@ const BlogList = () => {
               <div className="dp:w-[70%] mbl:w-[95%] lp:w-[85%] tl:w-[90%]">
                 {blog.attributes.BlogThumbnail && (
                   <StyledImg
-                    src={`https://admin.twbcreates.com${blog.attributes.BlogThumbnail.data.attributes.url}`}
-                    alt={blog.attributes.BlogThumbnail.data.attributes.name}
+                    src={`https://admin.twbcreates.com${blog?.attributes.BlogThumbnail.data?.attributes.url}`}
+                    alt={blog?.attributes.BlogThumbnail.data?.attributes.name}
                   />
                 )}
               </div>
@@ -112,9 +112,9 @@ const BlogList = () => {
                     {blog.attributes.BlogTitle}
                   </Link>
                 </h2>
-                <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
+                <h3 className="text-primary">{blog?.attributes.BlogDate}</h3>
                 <StyledDes className="">
-                  {renderParagraphs(blog.attributes.BlogDescription)}
+                  {renderParagraphs(blog?.attributes.BlogDescription)}
                 </StyledDes>
               </div>
             </div>
@@ -126,7 +126,7 @@ const BlogList = () => {
             <div key={blog.id} className="">
               {blog.attributes.BlogThumbnail && (
                 <StyledImg
-                  src={`https://admin.twbcreates.com${blog.attributes.BlogThumbnail.data.attributes.url}`}
+                  src={`https://admin.twbcreates.com${blog?.attributes?.BlogThumbnail.data?.attributes.url}`}
                   alt={blog.attributes.BlogThumbnail.data.attributes.name}
                 />
               )}
@@ -136,9 +136,9 @@ const BlogList = () => {
                     {blog.attributes.BlogTitle}
                   </Link>
                 </h2>
-                <h3 className="text-primary">{blog.attributes.BlogDate}</h3>
+                <h3 className="text-primary">{blog?.attributes.BlogDate}</h3>
                 <StyledDes>
-                  {renderParagraphs(blog.attributes.BlogDescription)}
+                  {renderParagraphs(blog?.attributes.BlogDescription)}
                 </StyledDes>
               </div>
             </div>
