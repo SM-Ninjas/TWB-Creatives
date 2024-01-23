@@ -17,7 +17,7 @@ const ProjectDetails = () => {
       try {
         const response = await axios.get(
           // `http://localhost:8082/api/portfolios/?populate=*`
-          `https://admin.twbcreates.com/api/portfolios/1?populate=*`
+          `https://admin.twbcreates.com/api/portfolios/${id}?populate=*`
 
         );
 
