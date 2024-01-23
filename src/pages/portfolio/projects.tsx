@@ -15,7 +15,7 @@ function Projects() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8082/api/portfolios/?populate=*"
+          "https://admin.twbcreates.com/api/portfolios?populate=*"
         );
 
         setPortfolio(response.data.data);
@@ -66,37 +66,49 @@ function Projects() {
         <div
           className={`flex flex-col items-center gap-[30px]`}
           // data-aos="fade-up"
-         >
-          {portfolioCopy.map((p, i) => (
-            <StyledProject
-              key={i}
-              background={p.attributes.Color}
-              className="flex items-center justify-around mbl:justify-between dp:w-[80%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%] "
-            >
-              <div className="flex flex-col  mx-[3rem]  dp:w-[30%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%]">
-                <h1 className="text-[#fff] text-[27px] font-bold">
-                  {p.attributes.Name}
-                </h1>
-                <p className="text-gray-g2 opacity-[0.60]">
-                  {p.attributes.Title}
-                </p>
-                <Link to={`/portfolio/${p.id}`}>
-                  <h1 className="text-white underline">Click to Visit</h1>
-                </Link>
-              </div>
+        >
+          {portfolioCopy.map((p, i) => {
+            // console.log(p.attributes.image.data.attributes);
+            console.log(p.attributes.image?.data?.attributes.url);
+            return (
+              <StyledProject
+                key={i}
+                background={p.attributes.Color}
+                className="flex items-center justify-around mbl:justify-between dp:w-[80%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%] "
+              >
+                <div className="flex flex-col  mx-[3rem]  dp:w-[30%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%]">
+                  <h1 className="text-[#fff] text-[27px] font-bold">
+                    {p.attributes.Name}
+                  </h1>
+                  <p className="text-gray-g2 opacity-[0.60]">
+                    {p.attributes.Title}
+                  </p>
+                  <Link to={`/portfolio/${p.id}`}>
+                    <h1 className="text-white underline">Click to Visit</h1>
+                  </Link>
+                </div>
 
-              <div className="dp:w-[35%] mbl:w-[90%] lp:w-[75%] tl:w-[80%]">
-                <img
-                  src={`http://localhost:8082${p.attributes.image.data.attributes.url}`}
-                  className="w-[] h-[231px]"
-                  alt={p.attributes.image.data.attributes.name}
-                />
-              </div>
-            </StyledProject>
-          ))}
+                <div className="dp:w-[35%] mbl:w-[90%] lp:w-[75%] tl:w-[80%]">
+                  <img
+                    // src={{p.attributes.image.data.attributes.url}
+                    // src={`${webdevImg.attributes.url}`}
+                    src={`https://admin.twbcreates.com${p.attributes.image?.data?.attributes.url}`}
+                    alt={p.attributes.image?.data?.attributes.name}
+                    className="w-[] h-[231px]"
+                  />
+                </div>
+              </StyledProject>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
 export default Projects;
+
+// <img
+//   // src={`https://admin.twbcreates.com${p.attributes.image.data.attributes.url}`}
+//   // "https://admin.twbcreates.com/api/portfolios?populate=*"
+
+// />
