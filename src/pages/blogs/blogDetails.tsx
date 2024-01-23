@@ -71,8 +71,8 @@ const BlogDetails = () => {
             {BlogThumbnail && (
               <img
                 className=" w-[100%] rounded-[14px]"
-                src={`https://admin.twbcreates.com${BlogThumbnail.data.attributes.url}`}
-                alt={BlogThumbnail.data.attributes.name}
+                src={`https://admin.twbcreates.com${BlogThumbnail.data?.attributes.url}`}
+                alt={BlogThumbnail.data?.attributes.name}
               />
             )}
           </div>
@@ -83,8 +83,8 @@ const BlogDetails = () => {
           <div className="w-[100%] flex justify-center">
             <DisqusComments
               url={`https://admin.twbcreates.com/${blogDetails.id}`}
-              identifier={blogDetails.id.toString()}
-              title={blogDetails.attributes.BlogTitle}
+              identifier={blogDetails?.id.toString()}
+              title={blogDetails?.attributes.BlogTitle}
             />
           </div>
         </div>
