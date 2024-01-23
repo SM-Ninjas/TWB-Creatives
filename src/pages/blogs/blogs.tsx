@@ -127,7 +127,7 @@ const BlogList = () => {
               {blog.attributes.BlogThumbnail && (
                 <StyledImg
                   src={`https://admin.twbcreates.com${blog?.attributes?.BlogThumbnail.data?.attributes.url}`}
-                  alt={blog.attributes.BlogThumbnail.data.attributes.name}
+                  alt={blog?.attributes.BlogThumbnail.data?.attributes.name}
                 />
               )}
               <div className="">
