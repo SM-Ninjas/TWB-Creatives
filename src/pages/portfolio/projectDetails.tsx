@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import Slider from "react-slick";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -16,7 +16,6 @@ const ProjectDetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          // `http://localhost:8082/api/portfolios/?populate=*`
           `https://admin.twbcreates.com/api/portfolios/${id}?populate=*`
 
         );
@@ -49,16 +48,16 @@ const ProjectDetails = () => {
       )
       .join("<br/>"); // Add line breaks between paragraphs
   };
-  // const sliderSettings = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  // };
-  // console.log(project?.attributes)
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+  console.log(project?.attributes)
 
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
@@ -113,8 +112,8 @@ const ProjectDetails = () => {
                   alt={member.attributes.name}
                   className="rounded-[8px] "
                 />
-                {/* <h2 className="text-[#111] mt-2">{member.attributes.name}</h2> */}
-                <h4 className="text-utils opacity-[.60]">{/* {} */}</h4>
+                <h2 className="text-[#111] mt-2">{member.attributes.name}</h2>
+                <h4 className="text-utils opacity-[.60]">{}</h4>
               </div>
             ))}
           </div>
@@ -125,7 +124,7 @@ const ProjectDetails = () => {
             Tech Stacks
           </h2>
           <div className="w-[60%] mb-12 mbl:w-[100%] mbl:p-10">
-            {/* <Slider {...sliderSettings}> */}
+            <Slider {...sliderSettings}>
               {project.attributes.Tech_stack_logos.data.map((logo) => (
                 <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
                   <img
@@ -135,7 +134,7 @@ const ProjectDetails = () => {
                   />
                 </div>
               ))}
-            {/* </Slider > */}
+            </Slider >
           </div>
         </div>
       </div>
