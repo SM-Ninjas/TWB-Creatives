@@ -16,7 +16,9 @@ const ProjectDetails = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8082/api/portfolios/${id}?populate=*`
+          // `http://localhost:8082/api/portfolios/?populate=*`
+          `https://admin.twbcreates.com/api/portfolios/1?populate=*`
+
         );
 
         setProject(response.data.data);
@@ -47,15 +49,16 @@ const ProjectDetails = () => {
       )
       .join("<br/>"); // Add line breaks between paragraphs
   };
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
+  // const sliderSettings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  // };
+  // console.log(project?.attributes)
 
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
@@ -68,15 +71,15 @@ const ProjectDetails = () => {
             <p className="text-primary text-center">Responsive Web App</p>
           </div>
           <img
-            src={`http://localhost:8082${project.attributes.image.data.attributes.url}`}
-            alt={project.attributes.image.data.attributes.name}
+            src={`https://admin.twbcreates.com${project.attributes.image?.data?.attributes.url}`}
+            alt={project?.attributes?.image.data?.attributes.name}
             className="w-[100%]"
           />
           <div className="">
             <p
               className="text-utils opacity-[0.60]"
               dangerouslySetInnerHTML={{
-                __html: renderDescriptionHTML(project.attributes.Description),
+                __html: renderDescriptionHTML(project?.attributes.Description),
               }}
             />
           </div>
@@ -91,8 +94,8 @@ const ProjectDetails = () => {
           </p>
         </div>
         <img
-          src={`http://localhost:8082${project.attributes.Design_process.data.attributes.url}`}
-          alt={project.attributes.Design_process.data.attributes.name}
+          src={`https://admin.twbcreates.com${project?.attributes?.Design_process.data?.attributes.url}`}
+          alt={project?.attributes.Design_process?.data?.attributes.name}
           className="w-[100%] h-[456px]"
         />
       </div>
@@ -106,7 +109,7 @@ const ProjectDetails = () => {
             {project.attributes.Contributing_members.data.map((member) => (
               <div key={member.id} className="mbl:w-[25%]">
                 <img
-                  src={`http://localhost:8082${member.attributes.formats.thumbnail.url}`}
+                  src={`https://admin.twbcreates.com${member.attributes?.formats?.thumbnail.url}`}
                   alt={member.attributes.name}
                   className="rounded-[8px] "
                 />
@@ -116,23 +119,23 @@ const ProjectDetails = () => {
             ))}
           </div>
         </div>
-
+{/* Tech stacks */}
         <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
           <h2 className="text-[2rem] text-utils font-bold mbl:text-[18px]">
             Tech Stacks
           </h2>
           <div className="w-[60%] mb-12 mbl:w-[100%] mbl:p-10">
-            <Slider {...sliderSettings}>
+            {/* <Slider {...sliderSettings}> */}
               {project.attributes.Tech_stack_logos.data.map((logo) => (
                 <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
                   <img
-                    src={`http://localhost:8082${logo.attributes.formats.thumbnail.url}`}
-                    alt={logo.attributes.name}
+                    src={`https://admin.twbcreates.com${logo.attributes?.formats?.thumbnail.url}`}
+                    alt={logo?.attributes.name}
                     className="rounded-[8px] h-[100px]"
                   />
                 </div>
               ))}
-            </Slider>
+            {/* </Slider > */}
           </div>
         </div>
       </div>

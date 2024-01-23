@@ -45,7 +45,7 @@ const BlogList = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8082/api/blogs/?populate=*"
+          "https://admin.twbcreates.com/api/blogs?populate=*"
         );
 
         setBlogData(response.data.data);
@@ -101,7 +101,7 @@ const BlogList = () => {
               <div className="dp:w-[70%] mbl:w-[95%] lp:w-[85%] tl:w-[90%]">
                 {blog.attributes.BlogThumbnail && (
                   <StyledImg
-                    src={`http://localhost:8082${blog.attributes.BlogThumbnail.data.attributes.url}`}
+                    src={`https://admin.twbcreates.com${blog.attributes.BlogThumbnail.data.attributes.url}`}
                     alt={blog.attributes.BlogThumbnail.data.attributes.name}
                   />
                 )}
@@ -126,7 +126,7 @@ const BlogList = () => {
             <div key={blog.id} className="">
               {blog.attributes.BlogThumbnail && (
                 <StyledImg
-                  src={`http://localhost:8082${blog.attributes.BlogThumbnail.data.attributes.url}`}
+                  src={`https://admin.twbcreates.com${blog.attributes.BlogThumbnail.data.attributes.url}`}
                   alt={blog.attributes.BlogThumbnail.data.attributes.name}
                 />
               )}
