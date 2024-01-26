@@ -16,6 +16,7 @@ declare interface ProjectTypes {
           {
             id: number;
             attributes: {
+              caption: string;
               name: string;
               url: string,
               formats: {
