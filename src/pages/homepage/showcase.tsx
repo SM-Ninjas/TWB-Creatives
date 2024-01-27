@@ -5,11 +5,11 @@ import { headingBlack } from "../../styling/responsive";
 function ShowCase() {
   return (
     <div data-aos="fade-up">
-      <div className="w-full my-[5rem]">
+      <div className="w-full my-[5rem] mbl:my-[20px]">
         <div className="flex justify-center">
           <div className="flex flex-col items-center w-[90%] lp:w-[80%] mbl:w-[100%] mbl:pt-[20px] relative">
             <div className="w-[40%] dp:w-[50%] lp:w-[64%] tl:w-[75%] mbl:w-[80%] ">
-              <h1 className={`${headingBlack} mbl:text-[16px] `}>
+              <h1 className={`${headingBlack} mbl:text-[18px] `}>
               {/* "text-[1.9rem] font-bold text-center" */}
                 We Deliver Exceptional Graphic Design, Marketing and Web
                 Design/Development Services.

@@ -9,12 +9,6 @@ declare type ClientLogo = {
       formats: {
         thumbnail: {
           name: string;
-          hash: string;
-          ext: string;
-          mime: string;
-          path: string | null;
-          width: number;
-          height: number;
           size: number;
           url: string;
         };
@@ -58,6 +52,12 @@ declare type WebDevImg = {
     attributes: {
       name: string;
       url: string;
+      formats: {
+        thumbnail: {
+          name: string;
+          url: string;
+        };
+      };
     };
   };
 };
@@ -70,7 +70,12 @@ declare type GraphicsDesignImg = {
     attributes: {
       name: string;
       url: string;
+      formats: {
+        thumbnail: {
+          name: string;
+          url: string;
+        };
+      };
     };
   };
 };
-

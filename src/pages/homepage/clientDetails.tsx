@@ -14,7 +14,7 @@ function ClientDetails() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8082/api/clients/${id}?populate=*`
+          `https://admin.twbcreates.com/api/clients/${id}?populate=*`
         );
 
         setClientData(response.data.data);
@@ -37,7 +37,7 @@ function ClientDetails() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -54,7 +54,9 @@ function ClientDetails() {
           <p className="text-primary mbl:text-[14px]">
             About {clientData?.attributes.ClientName}
           </p>
-          <h1 className="text-[32px] text-utils font-bold mbl:text-[18px]">Introduction</h1>
+          <h1 className="text-[32px] text-utils font-bold mbl:text-[18px]">
+            Introduction
+          </h1>
         </div>
         <div className="text-utils opacity-[.75] mbl:text-[12px]">
           <p>{clientData?.attributes.Description}</p>
@@ -75,7 +77,6 @@ function ClientDetails() {
       <div className=" w-full  flex flex-col items-center text-center mb-[2rem] gap-[5rem]">
         {clientData?.attributes.services.data.map((service) => (
           <div className="w-[85%]" key={service.id}>
-
             {service.attributes.serviceName == "Web Development" && (
               <div className="flex flex-col items-center">
                 <div className="w-[25%] mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%]">
@@ -87,13 +88,12 @@ function ClientDetails() {
                   </p>
                 </div>
                 <div>
-                  {clientData?.attributes.webdev_Img.data.map(
-                    
+                  {clientData?.attributes.webdev_Img.data?.map(
                     (webdevImg: WebDevImg) => (
                       <img
                         key={webdevImg.id}
-                        src={`http://localhost:8082${webdevImg.attributes.url}`}
-                        alt={webdevImg.attributes.name}
+                        src={`https://admin.twbcreates.com${webdevImg?.attributes.url}`}
+                        alt={webdevImg?.data?.attributes.formats?.thumbnail?.name}
                         className="rounded-[8px]"
                       />
                     )
@@ -103,7 +103,6 @@ function ClientDetails() {
             )}
 
             {service.attributes.serviceName === "Graphics Designing" && (
-
               <div className="w-[100%] flex flex-col items-center">
                 <div className=" mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%] ">
                   <h1 className="text-[21px] font-semibold mbl:text-[14px]">
@@ -115,17 +114,19 @@ function ClientDetails() {
                 </div>
 
                 <div className="w-[75%] mbl:w-[90%]">
-                  <Slider {...sliderSettings}>
-                    {clientData?.attributes.graphics_img.data.map(
+                  {/* <div className="border border-black flex justify-center items-center p-2"> */}
+                    <Slider {...sliderSettings}>
+                    {clientData?.attributes.graphics_img.data?.map(
                       (img: GraphicsDesignImg) => (
                         <img
                           key={img.id}
-                          src={`http://localhost:8082${img.attributes.url}`}
+                          src={`https://admin.twbcreates.com${img.attributes.url}`}
                           alt={img.attributes.name}
-                          className="rounded-[8px] w-[200px]"
+                          className="rounded-[8px]"
                         />
                       )
                     )}
+                  {/* </div> */}
                   </Slider>
                 </div>
               </div>

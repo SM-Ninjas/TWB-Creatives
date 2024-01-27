@@ -14,7 +14,7 @@ function TeamDetails() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8082/api/teams/${id}?populate=*`
+          `https://admin.twbcreates.com/api/teams/${id}?populate=*`
         );
 
         setStaff(response.data.data);
@@ -39,7 +39,7 @@ function TeamDetails() {
   return (
     <div className="w-full">
       <div className="flex flex-col  items-center">
-        <div className=" w-[65%] mb-[5rem]">
+        <div className=" flex flex-col items-center w-[65%] mb-[5rem]">
           <div className="flex flex-col items-center gap-[8px] ">
             <h1 className=" text-[32px] text-utils font-bold mbl:text-[16px]">
               {staff.attributes.member_name}
@@ -50,9 +50,9 @@ function TeamDetails() {
             </CustomButton> */}
           </div>
           <img
-            src={`http://localhost:8082${staff.attributes.MemberImg.data.attributes.url}`}
+            src={`https://admin.twbcreates.com${staff.attributes?.MemberImg.data?.attributes.url}`}
             alt={staff.attributes.MemberImg.data.attributes.name}
-            className="w-[100%] h-[375px]"
+            className="w-[65%] h-[420px]"
           />
         </div>
         <div className="w-[65%] pb-[5rem] dp:flex dp:justify-evenly dp:items-center ">
@@ -160,7 +160,7 @@ function TeamDetails() {
                 key={achievement.id}
               >
                 <img
-                   src={`http://localhost:8082${achievement.attributes.url}`}
+                   src={`https://admin.twbcreates.com${achievement.attributes.url}`}
                    alt={achievement.attributes.name}
                   className="w-[100%] h-[375px]"
                 />
