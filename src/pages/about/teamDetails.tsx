@@ -52,7 +52,7 @@ function TeamDetails() {
           <img
             src={`https://admin.twbcreates.com${staff.attributes?.MemberImg.data?.attributes.url}`}
             alt={staff.attributes.MemberImg.data.attributes.name}
-            className="w-[65%] h-[420px]"
+            className="w-[65%] h-[420px] mbl:w-[100%] mbl:h-[280px]"
           />
         </div>
         <div className="w-[65%] pb-[5rem] dp:flex dp:justify-evenly dp:items-center ">
