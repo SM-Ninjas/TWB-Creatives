@@ -1,6 +1,6 @@
 import { Divider } from "antd";
 import Form from "../../components/form";
-import { Location ,Call, Sms} from "iconsax-react";
+import { Location, Call, Sms } from "iconsax-react";
 
 function ContactMain() {
   return (
@@ -11,7 +11,7 @@ function ContactMain() {
           stand out.
         </h1>
       </div>
-      
+
       <div className="w-[80%] flex gap-[1rem]  tl:w-[95%]  mbl:flex-col mbl:items-center mbl:w-[100%]  ">
         <div className="w-[95%]  mbl:w-[80%]">
           <Form />
@@ -19,38 +19,40 @@ function ContactMain() {
 
         <div className="w-[60%] flex flex-col items-center flex-wrap">
           <div className="w-[75%] mbl:w-[86%]">
-            <div className="flex gap-2 my-3">
-            <Location size="32" color="#FF8A65" variant="Bulk"/>
-              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">Address</h1>
+            <div className="flex items-center gap-2 my-3">
+              <Location size="32" color="#FF8A65" variant="Bulk" />
+              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">
+                Address
+              </h1>
             </div>
             <div>
               <p className="mbl:text-[12px]">
-                77408 Satterfield Motorway Suite 469 New Antonetta, BC K3L6P6
+                Suncity Marg. Kathmandu, bag 44600, NP
               </p>
             </div>
           </div>
           <Divider />
           <div className="w-[75%]">
-            <div className="flex gap-2 my-3">
-            <Sms size="32" color="#FF8A65" variant="Bulk"/>
-              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">Email</h1>
+            <div className="flex items-center gap-2 my-3">
+              <Sms size="32" color="#FF8A65" variant="Bulk" />
+              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">
+                Email
+              </h1>
             </div>
             <div>
-              <p className="mbl:text-[12px]">
-                info@twbcreates.com  
-              </p>
+              <p className="mbl:text-[12px]">info@twbcreates.com</p>
             </div>
           </div>
           <Divider />
           <div className="w-[75%]">
-            <div className="flex gap-2 my-3">
-            <Call size="32" color="#FF8A65" variant="Bulk"/>
-              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">Toll Free Number</h1>
+            <div className="flex items-center gap-2 my-3">
+              <Call size="32" color="#FF8A65" variant="Bulk" />
+              <h1 className="text-[1.4rem] font-semibold mbl:text-[16px]">
+                Toll Free Number
+              </h1>
             </div>
             <div>
-              <p className="mbl:text-[12px]"> 
-              +1800 200 14523
-              </p>
+              <p className="mbl:text-[12px]">+1800 200 14523</p>
             </div>
           </div>
           <Divider />

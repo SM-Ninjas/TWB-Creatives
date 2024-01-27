@@ -52,12 +52,12 @@ const ProjectDetails = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
   };
-  console.log(project?.attributes)
+
 
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
@@ -106,25 +106,26 @@ const ProjectDetails = () => {
           </h2>
           <div className=" flex justify-center gap-10 w-[65%] mb-12 mbl:w-[100%]">
             {project.attributes.Contributing_members.data.map((member) => (
-              <div key={member.id} className="mbl:w-[25%]">
+              <div key={member.id} className=" mbl:w-[25%]">
                 <img
                   src={`https://admin.twbcreates.com${member.attributes?.formats?.thumbnail.url}`}
                   alt={member.attributes.name}
-                  className="rounded-[8px] "
+                  className=" rounded-[8px] "
                 />
-                <h2 className="text-[#111] mt-2">{member.attributes.name}</h2>
+                <h2 className="text-[#111] mt-2">{member.attributes.caption}</h2>
                 <h4 className="text-utils opacity-[.60]">{}</h4>
               </div>
             ))}
           </div>
         </div>
+
 {/* Tech stacks */}
         <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
           <h2 className="text-[2rem] text-utils font-bold mbl:text-[18px]">
             Tech Stacks
           </h2>
-          <div className="w-[60%] mb-12 mbl:w-[100%] mbl:p-10">
-            <Slider {...sliderSettings}>
+          {/* <div className=" w-[60%] mb-12 mbl:w-[100%] mbl:p-10"> */}
+            <Slider className="flex justify-center w-[60%] mb-12 mbl:w-[100%] mbl:p-10" {...sliderSettings}>
               {project.attributes.Tech_stack_logos.data.map((logo) => (
                 <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
                   <img
@@ -138,7 +139,7 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

@@ -1,4 +1,4 @@
-// member image data 
+// member image data
 declare interface MemberImage {
   data: {
     id: number;
@@ -11,13 +11,6 @@ declare interface MemberImage {
       formats: {
         thumbnail: {
           name: string;
-          hash: string;
-          ext: string;
-          mime: string;
-          path: string | null;
-          width: number;
-          height: number;
-          size: number;
           url: string;
         };
       };
@@ -39,7 +32,6 @@ declare interface Achievement {
   attributes: {
     name: string;
     url: string;
-   
   };
 }
 

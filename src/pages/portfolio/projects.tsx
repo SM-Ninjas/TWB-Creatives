@@ -38,7 +38,6 @@ function Projects() {
       const filteredProjects = tempData.filter(
         (project) => project.attributes.Category === category
       );
-      console.log("Filtered Projects:", filterProjects);
       setPortfolioCopy(filteredProjects);
     }
   };
@@ -69,12 +68,12 @@ function Projects() {
         >
           {portfolioCopy.map((p, i) => {
             // console.log(p.attributes.image.data.attributes);
-            console.log(p.attributes.image?.data?.attributes.url);
+            // console.log(p.attributes.image?.data?.attributes.url);
             return (
               <StyledProject
                 key={i}
                 background={p.attributes.Color}
-                className="flex items-center justify-around mbl:justify-between dp:w-[80%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%] "
+                className="flex items-center justify-around mbl:justify-between dp:w-[80%] mbl:w-[85%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%] "
               >
                 <div className="flex flex-col  mx-[3rem]  dp:w-[30%] mbl:w-[100%] mbl:mx-[1rem] lp:w-[50%] tl:w-[70%]">
                   <h1 className="text-[#fff] text-[27px] font-bold">
@@ -88,7 +87,7 @@ function Projects() {
                   </Link>
                 </div>
 
-                <div className="dp:w-[35%] mbl:w-[90%] lp:w-[75%] tl:w-[80%]">
+                <div className="dp:w-[35%] mbl:w-[90%] lp:w-[75%] tl:w-[80%] mbl:hidden">
                   <img
                     // src={{p.attributes.image.data.attributes.url}
                     // src={`${webdevImg.attributes.url}`}
@@ -106,9 +105,3 @@ function Projects() {
   );
 }
 export default Projects;
-
-// <img
-//   // src={`https://admin.twbcreates.com${p.attributes.image.data.attributes.url}`}
-//   // "https://admin.twbcreates.com/api/portfolios?populate=*"
-
-// />
