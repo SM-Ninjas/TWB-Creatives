@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center sticky top-0 z-50 bg-white bg-opacity-[60%] border border-[#fff] border-[1px] backdrop-blur-md p-2">
+    <div className="flex justify-center items-center sticky top-0 z-50 bg-white bg-opacity-[60%] border-b-[1px] border-[#fff]  backdrop-blur-md p-2">
       <div className="flex w-full justify-around items-center pt-2 tl:justify-between mbl:justify-between">
         {/* Logo */}
         <Link to="/">
