@@ -13,7 +13,7 @@ function HomePage() {
       <ChooseUs />
       <OurClients />
       <OurProjects />
-      {/* <ContactUs />   */}
+      <ContactUs />  
     </div>
   );
 }
