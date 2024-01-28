@@ -5,7 +5,6 @@ export const StyledInput = styled(Input)`
   height: 60px;
   display: block;
   margin: 15px 0px;
-  width: 100%;
   border-radius: 4px;
 
   &::placeholder {
@@ -17,7 +16,6 @@ export const StyledInput = styled(Input)`
 
 
 export const StyledTextArea = styled(Input.TextArea)`
-  width: 100%;
   border-radius: 4px;
   resize: none;
 
