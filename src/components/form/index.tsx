@@ -46,8 +46,8 @@ function Form() {
   };
 
   return (
-    <div className="w-full flex justify-center border border-black">
-      <form onSubmit={handleSubmit}>
+    <div className="w-full flex justify-center">
+      <form className="w-[60%] mbl:w-[85%]" onSubmit={handleSubmit}>
         <div className="flex flex-row my-[15px] gap-[15px]">
           <StyledInput
             data-aos="fade-right"
@@ -98,7 +98,7 @@ function Form() {
         ></StyledTextArea>
         <CustomButton
           data-aos="fade-up"
-          className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
+          className="py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
           type="submit"
         >
           Submit
