@@ -46,66 +46,64 @@ function Form() {
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-[70%] tl:w-[70%] mbl:w-[100%]">
-        <form onSubmit={handleSubmit}>
-          <div className="flex flex-row my-[-15px] gap-[15px]">
-            <StyledInput
-              data-aos="fade-right"
-              type="text"
-              name="fullName"
-              placeholder="Full Name"
-              required
-              value={formData.fullName}
-              onChange={handleChange}
-            />
-            <StyledInput
-              data-aos="fade-left"
-              type="text"
-              name="emailAddress"
-              placeholder="Email Address"
-              required
-              value={formData.emailAddress}
-              onChange={handleChange}
-            />
-          </div>
+    <div className="w-full flex justify-center border border-black">
+      <form onSubmit={handleSubmit}>
+        <div className="flex flex-row my-[15px] gap-[15px]">
           <StyledInput
-            type="number"
-            data-aos="fade-up"
-            name="contactNumber"
-            placeholder="Contact Number"
-            required
-            value={formData.contactNumber}
-            onChange={handleChange}
-          />
-          <StyledInput
-            data-aos="fade-up"
+            data-aos="fade-right"
             type="text"
-            name="subject"
-            placeholder="Subject"
+            name="fullName"
+            placeholder="Full Name"
             required
-            value={formData.subject}
+            value={formData.fullName}
             onChange={handleChange}
           />
-          <StyledTextArea
-            data-aos="fade-up"
-            name="message"
-            placeholder="Message"
+          <StyledInput
+            data-aos="fade-left"
+            type="text"
+            name="emailAddress"
+            placeholder="Email Address"
             required
-            className="w-full text-[#111]"
-            rows={8}
-            value={formData.message}
+            value={formData.emailAddress}
             onChange={handleChange}
-          ></StyledTextArea>
-          <CustomButton
-            data-aos="fade-up"
-            className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
-            type="submit"
-          >
-            Submit
-          </CustomButton>
-        </form>
-      </div>
+          />
+        </div>
+        <StyledInput
+          type="number"
+          data-aos="fade-up"
+          name="contactNumber"
+          placeholder="Contact Number"
+          required
+          value={formData.contactNumber}
+          onChange={handleChange}
+        />
+        <StyledInput
+          data-aos="fade-up"
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          value={formData.subject}
+          onChange={handleChange}
+        />
+        <StyledTextArea
+          data-aos="fade-up"
+          name="message"
+          placeholder="Message"
+          required
+          className="text-[#111]"
+          rows={8}
+          value={formData.message}
+          onChange={handleChange}
+        ></StyledTextArea>
+        <CustomButton
+          data-aos="fade-up"
+          className="border border-black py-[.5rem] px-[2rem] rounded-[4px] my-[24px] "
+          type="submit"
+        >
+          Submit
+        </CustomButton>
+      </form>
     </div>
   );
 }

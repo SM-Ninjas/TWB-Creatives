@@ -2,16 +2,16 @@ import Form from "../../components/form";
 
 function ContactUs() {
   return (
-    <div data-aos="fade-up" className="flex justify-center items-center h-full">
-      <div className="w-[75%] mbl:w-[80%] p-[0rem]">
-        <div className="my-[2rem] text-center">
+    <div data-aos="fade-up" className=" border w-full flex justify-center items-center">
+      <div className="w-[80%]">
+        <div className=" flex flex-col items-center my-[2rem] text-center">
           <h1 className="text-[2rem] font-semibold text-utils mbl:text-[15px]">Contact Us</h1>
           <p className="text-utils opacity-[0.75] mbl:text-[12px]">
             Feel free to reach out to us with any questions or concerns you may
             have. We are here to help!
           </p>
         </div>
-        <div className="">
+        <div className="border">
           <Form />
         </div>
       </div>

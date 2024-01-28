@@ -3,7 +3,7 @@ function StoryPower() {
     <div className="w-[100%]">
       <div className="flex justify-center text-center gap-[2rem]"></div>
       <div className="w-full flex flex-col items-center flex-wrap">
-        <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px] border">
+        <div className="w-[100%] gap-[50px] p-[8px] grid grid-cols-3 tl:grid-cols-2 mbl:grid-cols-1 mbl:gap-[10px]">
           <div className="text-center flex flex-col p-3 shadow-[-4px_-4px_20px_#0000000d] p-4">
             <h1 className="text-utils m-2 font-bold text-[1rem]">
               Media relations

@@ -50,14 +50,14 @@ function OurClients() {
               Our Brilliant Clients
             </h1>
           </div>
-          <div className="w-[70%] mbl:w-[100%] tl:w-[90%]">
+          <div className="w-[70%] mbl:w-[85%] tl:w-[90%]">
             <Slider {...sliderSettings}>
               {clientData?.map((res) => (
                 <div key={res.id} className="p-2 cursor-pointer">
                   <Link to={`/client/${res.id}`}>
                     <img
                       src={`https://admin.twbcreates.com${res.attributes.clientLogo.data.attributes.url}`}
-                      className="w-[200px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[140px]"
+                      className="shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[140px]"
                       alt={res.attributes.clientLogo.data.attributes.url}
                     />
                   </Link>

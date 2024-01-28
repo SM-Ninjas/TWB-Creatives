@@ -33,7 +33,7 @@ function OurProjects() {
             <div className="">
               <img src={insight} alt="" className="rounded-[10px]" />
             </div>
-            <div className="text-center  flex flex-col gap-[10px] mb-1">
+            <div className="text-center  flex flex-col gap-[10px] p-4">
               <h2 className="font-bold">Insight A Podcast</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Gallery of podcasts where different topics are explored.
