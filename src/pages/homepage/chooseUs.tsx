@@ -26,7 +26,7 @@ function ChooseUs() {
             className="mbl:w-[80%] tl:w-[75%] lp:w-[70%] dp:w-[70%] flex justify-center flex-wrap gap-5 mbl:gap-8 tl:gap-12 dp:gap-12 dp:gap-10 mbl:justify-center relative bottom-[60px]"
             data-aos="fade-up"
           >
-            <StyledCard className="w-full mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px]">
+            <StyledCard className="w-full mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%]">
               <div className="bg-primary-p10 w-[58px] h-[58px] rounded-[50%] p-[13px] ">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
@@ -38,7 +38,8 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard className="mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px]">
+
+            <StyledCard className="mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%]">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <PresentionChart size="32" color="#fff" variant="Bulk" />
               </div>
@@ -50,7 +51,8 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
-            <StyledCard className="w-full mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%] min-w-[220px]">
+
+            <StyledCard className="w-full mbl:w-[90%] tl:w-[45%] lp:w-[35%] dp:w-[25%]">
               <div className=" felx justify-center bg-primary-p10 w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                 <Designtools size="32" color="#fff" variant="Bulk" />
               </div>
@@ -62,6 +64,7 @@ function ChooseUs() {
                 </p>
               </div>
             </StyledCard>
+            
           </div>
         </div>
       </div>

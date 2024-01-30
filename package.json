@@ -27,7 +27,8 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

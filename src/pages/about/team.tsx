@@ -45,24 +45,24 @@ function OurTeam() {
         <div className="relative bottom-[90px]">
           <div className="flex justify-center flex-wrap mbl:flex-col tl:items-center tl:flex-col mbl:flex-col  mbl:items-center">
             <Slider
-              className="w-[70%] flex justify-center gap-[45px] mbl:flex-col mbl:items-center mbl:w-[75%] lp:w-[80%] tl:flex-wrap"
+              className="w-[70%] grid grid-cols-3 mbl:grid-cols-1 gap-[45px] items-center   mbl:items-center mbl:w-[90%] lp:w-[80%]"
               {...sliderSettings}
             >
               {team.map((teamMember) => (
                 <div className="" key={teamMember.id}>
                   <Link to={`/about/team/${teamMember.id}`}>
-                    <div className="">
+                    <div className="m-2">
                       <img
-                        src={`https://admin.twbcreates.com${teamMember.attributes.MemberImg.data.attributes.url}`}
+                        src={`https://admin.twbcreates.com${teamMember.attributes?.MemberImg.data.attributes.url}`}
                         alt={
-                          teamMember.attributes.MemberImg.data.attributes.name
+                          teamMember.attributes?.MemberImg.data?.attributes.formats?.thumbnail.name
                         }
-                        className="w-[261px] h-[268px]  rounded-[8px]"
+                        className="rounded-[8px]"
                       />
-                      <h1 className="text-utils text-[21px] mt-4 opacity-[0.6]">
+                      <h1 className="text-utils text-[21px] mt-2 opacity-[0.6] mbl:text-[16px]">
                         {teamMember.attributes.member_name}
                       </h1>
-                      <h1 className="text-utils  text-[18px]  mt-4">
+                      <h1 className="text-utils  text-[18px]  mt-2 mbl:text-[16px]">
                         {teamMember.attributes.Mem_position}
                       </h1>
                     </div>

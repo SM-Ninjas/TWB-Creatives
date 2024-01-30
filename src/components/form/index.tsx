@@ -47,7 +47,7 @@ function Form() {
 
   return (
     <div className="w-full flex justify-center">
-      <form className="w-[60%] mbl:w-[85%]" onSubmit={handleSubmit}>
+      <form className="w-[100%] mbl:w-[80%]" onSubmit={handleSubmit}>
         <div className="flex flex-row my-[15px] gap-[15px]">
           <StyledInput
             data-aos="fade-right"
