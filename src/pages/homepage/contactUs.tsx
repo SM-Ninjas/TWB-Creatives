@@ -2,7 +2,7 @@ import Form from "../../components/form";
 
 function ContactUs() {
   return (
-    <div data-aos="fade-up" className="w-full flex justify-center items-center border border-black">
+    <div data-aos="fade-up" className="w-full flex justify-center items-center">
       <div className="w-[90%] flex flex-col items-center">
         <div className=" flex flex-col items-center my-[2rem] text-center">
           <h1 className="text-[2rem] font-semibold text-utils mbl:text-[15px]">Contact Us</h1>
