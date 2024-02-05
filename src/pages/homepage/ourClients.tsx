@@ -32,7 +32,7 @@ function OurClients() {
   }
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -44,13 +44,13 @@ function OurClients() {
   return (
     <div>
       <div className="w-full h-[377px] flex justify-center items-center">
-        <div className="w-[80%] mbl:w-[100%]  flex flex-col items-center gap-[30px]">
+        <div className="w-[80%] mbl:w-[100%]  flex flex-col items-center gap-[30px] overflow-hidden">
           <div>
             <h1 className="text-center text-utils font-bold text-[2rem] mbl:text-[16px]">
               Our Brilliant Clients
             </h1>
           </div>
-          <div className="w-[70%] mbl:w-[85%] tl:w-[90%]">
+          <div className="w-[70%] mbl:w-[150%] tl:w-[90%] ">
             <Slider {...sliderSettings}>
               {clientData?.map((res) => (
                 <div key={res.id} className="p-2 cursor-pointer">
