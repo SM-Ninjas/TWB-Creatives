@@ -7,6 +7,7 @@ import Navbar from "./components/navbar";
 import "./index.css";
 import Routing from "./routing";
 import Footer from "./components/footer";
+import ContactLinks from "./components/contactLink/contact";
 
 function App() {
     useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <div className="">
         <Navbar />
+        <ContactLinks/>
         <Routing />
         <Footer/>
       </div>

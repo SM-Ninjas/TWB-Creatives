@@ -42,7 +42,7 @@ function ContactMain() {
             <div>
               <p className="mbl:text-[12px]">info@twbcreates.com</p>
             </div>
-          </div>
+          </div>   
           <Divider />
           <div className="w-[75%]">
             <div className="flex items-center gap-2 my-3">
@@ -52,7 +52,7 @@ function ContactMain() {
               </h1>
             </div>
             <div>
-              <p className="mbl:text-[12px]">+1800 200 14523</p>
+              <p className="mbl:text-[12px]">+977 985 1163192</p>
             </div>
           </div>
           <Divider />
