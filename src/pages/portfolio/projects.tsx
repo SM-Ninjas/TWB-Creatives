@@ -8,6 +8,7 @@ import axios from "axios";
 
 function Projects() {
   const [portfolio, setPortfolio] = useState<ProjectTypes[]>([]);
+  
   const [portfolioCopy, setPortfolioCopy] = useState<ProjectTypes[]>([]);
 
   useEffect(() => {
