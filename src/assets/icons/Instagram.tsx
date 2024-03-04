@@ -16,8 +16,8 @@ function Instagram() {
             r="129.502"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".09" stop-color="#fa8f21"></stop>
-            <stop offset=".78" stop-color="#d82d7e"></stop>
+            <stop offset=".09" stopColor="#fa8f21"></stop>
+            <stop offset=".78" stopColor="#d82d7e"></stop>
           </radialGradient>
           <radialGradient
             id="b"
@@ -26,8 +26,8 @@ function Instagram() {
             r="113.963"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".64" stop-color="#8c3aaa" stopOpacity="0"></stop>
-            <stop offset="1" stop-color="#8c3aaa"></stop>
+            <stop offset=".64" stopColor="#8c3aaa" stopOpacity="0"></stop>
+            <stop offset="1" stopColor="#8c3aaa"></stop>
           </radialGradient>
         </defs>
         <path
