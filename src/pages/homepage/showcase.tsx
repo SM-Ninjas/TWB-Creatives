@@ -1,7 +1,6 @@
 import { VideoCircle } from "iconsax-react";
 import CustomButton from "../../components/Button";
 import { headingBlack } from "../../styling/responsive";
-import heroImg from "../../assets/images/heroimg.png"
 
 function ShowCase() {
   return (
@@ -20,9 +19,9 @@ function ShowCase() {
           </div>
           <div className="w-[80%] h-[380px] rounded-[10px] relative">
             <img
-              src={heroImg}
+              src=''
               alt="my img"
-              className="h-full w-full rounded-[10px] object-cover"
+              className="bg-black h-full w-full rounded-[10px] object-cover"
             />
             {/* VideoCircle is now absolutely positioned on top of the image */}
             <VideoCircle
