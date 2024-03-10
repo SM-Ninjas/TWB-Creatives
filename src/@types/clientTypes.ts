@@ -40,6 +40,8 @@ declare type Client = {
     webdev_Img: WebDevImg;
     graphics_img: GraphicsDesignImg;
     services: Services;
+    socialMarketing : SocialMediaMarketing;
+    eventHandling : eventHandlingImg
   };
 };
 
@@ -79,3 +81,42 @@ declare type GraphicsDesignImg = {
     };
   };
 };
+declare type SocialMediaMarketing = {
+  attributes: any;
+  id: number;
+  data: {
+    [x: string]: any;
+    id: number;
+    attributes: {
+      name: string;
+      url: string;
+      formats: {
+        thumbnail: {
+          name: string;
+          url: string;
+        };
+      };
+    };
+  };
+};
+declare type eventHandlingImg = {
+  attributes: any;
+  id: number;
+  data: {
+    [x: string]: any;
+    id: number;
+    attributes: {
+      name: string;
+      url: string;
+      formats: {
+        thumbnail: {
+          name: string;
+          url: string;
+        };
+      };
+    };
+  };
+};
+
+
+// 
