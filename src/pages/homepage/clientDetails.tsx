@@ -42,6 +42,20 @@ function ClientDetails() {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+  console.log(
+    "Social Marketing Data:",
+    clientData?.attributes?.socialMarketing?.data
+  );
+  console.log(
+    "Event Handling Data:",
+    clientData?.attributes?.eventHandling?.data
+  );
+
+  console.log(
+    "Event Handling Data:",
+    clientData?.attributes?.graphics_img?.data
+  );
+
   return (
     <div className="w-full flex flex-col items-center gap-[4rem]">
       {/* title */}
@@ -78,22 +92,24 @@ function ClientDetails() {
         {clientData?.attributes.services.data.map((service) => (
           <div className="w-[85%]" key={service.id}>
             {service.attributes.serviceName == "Web Development" && (
-              <div className="flex flex-col items-center">
-                <div className="w-[25%] mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%]">
+              <div className="w-[100%] flex flex-col items-center border">
+                <div className=" mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%] ">
                   <h1 className="text-[21px] font-semibold mbl:text-[14px]">
                     {service.attributes.serviceName}
                   </h1>
-                  <p className="mt-[1rem]  mb-[2rem] rounded-[6px] opacity-[0.6] bg-gray-g4 mbl:text-[12px]">
+                  <p className="mt-[1rem]  mb-[2rem] rounded-[6px] opacity-[0.6] bg-gray-g4 mbl:text-[12px] ">
                     Requirements {">"} Design {">"} Development
                   </p>
                 </div>
-                <div>
+                <div className="w-[90%] mbl:w-[90%]">
                   {clientData?.attributes.webdev_Img.data?.map(
                     (webdevImg: WebDevImg) => (
                       <img
                         key={webdevImg.id}
                         src={`https://admin.twbcreates.com${webdevImg?.attributes.url}`}
-                        alt={webdevImg?.data?.attributes.formats?.thumbnail?.name}
+                        alt={
+                          webdevImg?.data?.attributes.formats?.thumbnail?.name
+                        }
                         className="rounded-[8px]"
                       />
                     )
@@ -113,9 +129,9 @@ function ClientDetails() {
                   </p>
                 </div>
 
-                <div className="w-[75%] mbl:w-[90%]">
+                <div className="w-[90%] mbl:w-[90%]">
                   {/* <div className="border border-black flex justify-center items-center p-2"> */}
-                    <Slider {...sliderSettings}>
+                  <Slider {...sliderSettings}>
                     {clientData?.attributes.graphics_img.data?.map(
                       (img: GraphicsDesignImg) => (
                         <img
@@ -126,7 +142,66 @@ function ClientDetails() {
                         />
                       )
                     )}
-                  {/* </div> */}
+                    {/* </div> */}
+                  </Slider>
+                </div>
+              </div>
+            )}
+
+            {service.attributes.serviceName === "Social Media Marketing" && (
+              <div className="w-[100%] flex flex-col items-center">
+                <div className=" mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%] ">
+                  <h1 className="text-[24px] font-semibold mbl:text-[14px] mb-5">
+                    {service.attributes.serviceName}
+                  </h1>
+                  <p className="mt-[1rem]  mb-[2rem] rounded-[6px] opacity-[0.6] bg-gray-g4 mbl:text-[12px] ">
+                    Strategy {">"} Execution {">"} Analysis
+                  </p>
+                </div>
+
+                <div className="w-[90%] mbl:w-[90%]">
+                  {/* <div className="border border-black flex justify-center items-center p-2"> */}
+                  <Slider {...sliderSettings}>
+                    {clientData?.attributes?.socialMarketing?.data?.map(
+                      (img: SocialMediaMarketing) => (
+                        <img
+                          key={img.id}
+                          src={`https://admin.twbcreates.com${img?.attributes?.url}`}
+                          alt={img.attributes.name}
+                          className="rounded-[8px]"
+                        />
+                      )
+                    )}
+                    {/* </div> */}
+                  </Slider>
+                </div>
+              </div>
+            )}
+            {service.attributes.serviceName === "Event Handling" && (
+              <div className="w-[100%] flex flex-col items-center">
+                <div className=" mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%] ">
+                  <h1 className="text-[24px] font-semibold mbl:text-[14px] mb-5">
+                    {service.attributes.serviceName}
+                  </h1>
+                  <p className="mt-[1rem]  mb-[2rem] rounded-[6px] opacity-[0.6] bg-gray-g4 mbl:text-[12px] ">
+                    Planning {">"} Execution {">"} Evaluation
+                  </p>
+                </div>
+
+                <div className="w-[90%] mbl:w-[90%]">
+                  {/* <div className="border border-black flex justify-center items-center p-2"> */}
+                  <Slider {...sliderSettings}>
+                    {clientData?.attributes?.eventHandling?.data?.map(
+                      (img: eventHandlingImg) => (
+                        <img
+                          key={img.id}
+                          src={`https://admin.twbcreates.com${img.attributes.url}`}
+                          alt={img.attributes.name}
+                          className="rounded-[8px]"
+                        />
+                      )
+                    )}
+                    {/* </div> */}
                   </Slider>
                 </div>
               </div>

@@ -33,9 +33,9 @@ function ShowCase() {
         </div>
       </div>
 
-      <div className="mt-[5rem] flex justify-center items-center">
+      <div className="w-[100%] border border-black mt-[5rem]">
         <div className="py-[8rem] flex justify-center items-center bg-utils-u2">
-          <div className="flex flex-col gap-[10px] dp:w-[50%] mbl:w-[85%] tl:w-[75%] lp:w-[60%]  text-center">
+          <div className="flex flex-col gap-[10px] dp:w-[50%] mbl:w-[85%] tl:w-[75%] lp:w-[60%] text-center">
             <h1 className="text-[2rem]  mbl:text-[16px] tl:text-[1.5rem] font-bold text-white  ">
               We are more than just a company
             </h1>

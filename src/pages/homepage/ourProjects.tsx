@@ -10,7 +10,7 @@ function OurProjects() {
         className="flex justify-center mb-[120px] sm:mb-16"
         data-aos="fade-up"
       >
-        <div className="w-[60%] flex flex-col gap-5 text-center mbl:w-[85%]">
+        <div className="w-[40%] tl:w-[60%] flex flex-col gap-5 text-center mbl:w-[85%]">
           <h1 className="text-[2rem] mbl:text-[18px] font-bold">
             Explore Our Projects
           </h1>
