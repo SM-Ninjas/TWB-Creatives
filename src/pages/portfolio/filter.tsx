@@ -9,30 +9,7 @@ interface FilterProps {
 const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-  // useEffect(() => {
-  //   // Check if the notification has been shown
-  //   const notificationShown = sessionStorage.getItem("notificationShown");
-
-  //   if (!notificationShown) {
-  //     const api = notification.open({
-  //       message: "Filter Button",
-  //       description: "Click the filter button to filter the items.",
-  //       duration: 8, // Duration in seconds
-  //       placement: "bottomRight", // Change this to suit your layout
-  //     });
-
-  //     // Close the notification after 8 seconds
-  //     setTimeout(() => {
-  //       if (api) {
-  //         api.close();
-  //       }
-  //     }, 8000);
-
-  //     // Set the flag in sessionStorage
-  //     sessionStorage.setItem("notificationShown", "true");
-  //   }
-  // }, []);
-
+ 
   const handleOpen = () => {
     setDropdownVisible(true);
   };
