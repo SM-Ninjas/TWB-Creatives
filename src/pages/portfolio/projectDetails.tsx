@@ -17,7 +17,6 @@ const ProjectDetails = () => {
       try {
         const response = await axios.get(
           `https://admin.twbcreates.com/api/portfolios/${id}?populate=*`
-
         );
 
         setProject(response.data.data);
@@ -43,8 +42,8 @@ const ProjectDetails = () => {
     description: ProjectTypes["attributes"]["Description"]
   ) => {
     return description
-      .map((paragraph) =>
-        paragraph.children.map((child) => child.text).join("")
+      ?.map((paragraph) =>
+        paragraph?.children.map((child) => child.text).join("")
       )
       .join("<br/>"); // Add line breaks between paragraphs
   };
@@ -58,27 +57,26 @@ const ProjectDetails = () => {
     autoplaySpeed: 2000,
   };
 
-
   return (
     <div className="w-full flex flex-col items-center gap-[5rem]">
       <div className="flex justify-center">
-        <div className="w-[65%] dp:w-[70%] mbl:w-[90%] lp:w-[85%] tl:w-[80%] flex flex-col items-center mt-[4rem] gap-[48px]">
+        <div className="w-[65%] dp:w-[75%] mbl:w-[90%] lp:w-[85%] tl:w-[80%] flex flex-col items-center mt-[4rem] gap-[48px]">
           <div>
-            <h1 className="text-utils font-extrabold text-[30px]">
+            <h1 className="text-utils font-extra bold text-[26px] ">
               {project.attributes.Name}
             </h1>
-            <p className="text-primary text-center">Responsive Web App</p>
+            <p className="text-primary  text-center">Responsive Web App</p>
           </div>
           <img
-            src={`https://admin.twbcreates.com${project.attributes.image?.data?.attributes.url}`}
-            alt={project?.attributes?.image.data?.attributes.name}
+            src={`https://admin.twbcreates.com${project.attributes?.image?.data?.attributes?.url}`}
+            alt={project?.attributes?.image.data?.attributes?.name}
             className="w-[100%]"
           />
           <div className="">
             <p
               className="text-utils opacity-[0.60]"
               dangerouslySetInnerHTML={{
-                __html: renderDescriptionHTML(project?.attributes.Description),
+                __html: renderDescriptionHTML(project?.attributes?.Description),
               }}
             />
           </div>
@@ -93,8 +91,8 @@ const ProjectDetails = () => {
           </p>
         </div>
         <img
-          src={`https://admin.twbcreates.com${project?.attributes?.Design_process.data?.attributes.url}`}
-          alt={project?.attributes.Design_process?.data?.attributes.name}
+          src={`https://admin.twbcreates.com${project?.attributes?.Design_process.data?.attributes?.url}`}
+          alt={project?.attributes.Design_process?.data?.attributes?.name}
           className="w-[100%] h-[456px]"
         />
       </div>
@@ -105,40 +103,45 @@ const ProjectDetails = () => {
             Contributing Members
           </h2>
           <div className=" flex justify-center gap-10 w-[65%] mb-12 mbl:w-[100%]">
-            {project.attributes.Contributing_members.data.map((member) => (
+            {project.attributes?.Contributing_members?.data?.map((member) => (
               <div key={member.id} className=" mbl:w-[25%]">
                 <img
-                  src={`https://admin.twbcreates.com${member.attributes?.formats?.thumbnail.url}`}
-                  alt={member.attributes.name}
+                  src={`https://admin.twbcreates.com${member.attributes?.formats?.thumbnail?.url}`}
+                  alt={member?.attributes.name}
                   className=" rounded-[8px] "
                 />
-                <h2 className="text-[#111] mt-2">{member.attributes.caption}</h2>
+                <h2 className="text-[#111] mt-2">
+                  {member?.attributes?.caption}
+                </h2>
                 <h4 className="text-utils opacity-[.60]">{}</h4>
               </div>
             ))}
           </div>
         </div>
 
-{/* Tech stacks */}
+        {/* Tech stacks */}
         <div className="w-[75%] text-center  flex flex-col items-center mbl:w-[100%]">
           <h2 className="text-[2rem] text-utils font-bold mbl:text-[18px]">
             Tech Stacks
           </h2>
           {/* <div className=" w-[60%] mb-12 mbl:w-[100%] mbl:p-10"> */}
-            <Slider className="flex justify-center w-[60%] mb-12 mbl:w-[100%] mbl:p-10" {...sliderSettings}>
-              {project.attributes.Tech_stack_logos.data.map((logo) => (
-                <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
-                  <img
-                    src={`https://admin.twbcreates.com${logo.attributes?.formats?.thumbnail.url}`}
-                    alt={logo?.attributes.name}
-                    className="rounded-[8px] h-[100px]"
-                  />
-                </div>
-              ))}
-            </Slider >
-          </div>
+          <Slider
+            className="flex justify-center w-[60%] mb-12 mbl:w-[100%] mbl:p-10"
+            {...sliderSettings}
+          >
+            {project?.attributes?.Tech_stack_logos?.data?.map((logo) => (
+              <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
+                <img
+                  src={`https://admin.twbcreates.com${logo.attributes?.formats?.thumbnail?.url}`}
+                  alt={logo?.attributes.name}
+                  className="rounded-[8px] h-[100px]"
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
+    </div>
     // </div>
   );
 };
