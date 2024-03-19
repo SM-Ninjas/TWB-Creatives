@@ -1,14 +1,15 @@
-// Filter.js
+import React, { useState } from "react";
 import { FilterSquare } from "iconsax-react";
-import { useState } from "react";
+import CustomNotification from "../../components/notifkcation";
 
 interface FilterProps {
   onFilterChange: (category: string | null) => void;
 }
 
-function Filter({ onFilterChange }: FilterProps) {
+const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+ 
   const handleOpen = () => {
     setDropdownVisible(true);
   };
@@ -19,20 +20,27 @@ function Filter({ onFilterChange }: FilterProps) {
 
   const handleFilterChange = (category: string | null) => {
     onFilterChange(category);
-    // console.log(category)
     setDropdownVisible(false); // Close the dropdown after selecting a filter
   };
 
   return (
     <div onMouseLeave={handleClose} className="">
-      <FilterSquare
-        size="32"
-        color="#22092C"
-        onClick={handleOpen}
-        variant="Bulk"
-      ></FilterSquare>
+      <div className="relative">
+        <CustomNotification
+          message="Filter Button"
+          description="Click to Filter the portfolios."
+        />
+        <div className="absolute top-0 right-0 m-2">
+          <FilterSquare
+            size="32"
+            color="#22092C"
+            onClick={handleOpen}
+            variant="Bulk"
+          />
+        </div>
+      </div>
       {isDropdownVisible && (
-        <div className="absolute bg-white divide-y pointer divide-white  rounded-lg shadow w-44">
+        <div className="absolute top-full right-0 bg-white divide-y pointer divide-white rounded-lg shadow w-44">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
             <li
               onClick={() => handleFilterChange(null)}
@@ -64,13 +72,17 @@ function Filter({ onFilterChange }: FilterProps) {
             >
               Event Handlling
             </li>
+            <li
+              onClick={() => handleFilterChange("seosem")}
+              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 hover:bg-primary-p50"
+            >
+           SEO & SEM
+            </li>
           </ul>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Filter;
-
-

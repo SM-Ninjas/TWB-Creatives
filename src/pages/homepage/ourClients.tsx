@@ -35,7 +35,7 @@ function OurClients() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -50,11 +50,11 @@ function OurClients() {
               Our Brilliant Clients
             </h1>
           </div>
-          <div className="w-[70%] mbl:w-[150%] tl:w-[90%] ">
+          <div className="w-[80%] mbl:w-[150%] tl:w-[90%] ">
             <Slider {...sliderSettings}>
               {clientData?.map((res) => (
-                <div key={res.id} className="p-2 cursor-pointer">
-                  <Link to={`/client/${res.id}`}>
+                <div key={res.id} className="p-4 cursor-pointer">
+                  <Link to={`/client/${res.id}`} className="">
                     <img
                       src={`https://admin.twbcreates.com${res.attributes.clientLogo.data.attributes.url}`}
                       className="shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] h-[140px]"
