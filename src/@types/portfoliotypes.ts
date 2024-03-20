@@ -6,7 +6,9 @@ declare interface ProjectTypes {
       Name: string;
       Description: {
         type: string;
-        children: { type: string; text: string }[];
+        children: {
+          list: string; type: string; text: string 
+}[];
       }[];
       Title: string;
       Color: string;

@@ -1,14 +1,15 @@
 import { headingBlack } from "../../../styling/responsive";
 import { StyledBtn } from "../style";
+import Branding from "./branding";
 import DigitalMarketing from "./digitalMarketing";
 import GraphicDesign from "./graphicsDesign";
+import Seosem from "./seosem";
 import WebDev from "./webDev";
 
 import { useState } from "react";
 
 function OurSteps() {
-  const [selectedComponent, setSelectedComponent] =
-    useState<string>("graphic designing");
+  const [selectedComponent, setSelectedComponent] = useState<string>("graphic designing");
 
   function handleSelectComponent(componentName: string) {
     setSelectedComponent(componentName);
@@ -30,32 +31,46 @@ function OurSteps() {
           tailored to your project's success.
         </p>
       </div>
-      <div className="flex  dp:gap-[60px] lp:gap-[45px] tl:gap-[35px] mbl:gap-[10 px]">
+      <div className="flex  dp:gap-[40px] lp:gap-[45px] tl:gap-[35px] mbl:gap-[5px]">
         <StyledBtn
           onClick={() => handleSelectComponent("digital marketing")}
           active={selectedComponent === "digital marketing"}
         >
-          <p className="mbl:text-[12px]"> Digital Marketing</p>
+          <p className="mbl:text-[12px]">Digital Marketing</p>
+        </StyledBtn>
+        <StyledBtn
+          onClick={() => handleSelectComponent("development")}
+          active={selectedComponent === "development"}
+        >
+          <p className="mbl:text-[12px]">Development</p>
         </StyledBtn>
         <StyledBtn
           onClick={() => handleSelectComponent("graphic designing")}
           active={selectedComponent === "graphic designing"}
         >
-          <p className="mbl:text-[12px]">Graphic Designing</p>
+          <p className="mbl:text-[12px]">Graphic/Motion Designing</p>
         </StyledBtn>
         <StyledBtn
-          onClick={() => handleSelectComponent("web development")}
-          active={selectedComponent === "web development"}
+          onClick={() => handleSelectComponent("SEO/SEM")}
+          active={selectedComponent === "SEO/SEM"}
         >
-          <p className="mbl:text-[12px]"> Web Development</p>
+          <p className="mbl:text-[12px]">SEO/SEM</p>
+        </StyledBtn>
+        <StyledBtn
+          onClick={() => handleSelectComponent("branding")}
+          active={selectedComponent === "branding"}
+        >
+          <p className="mbl:text-[12px]">Branding & Positioning</p>
         </StyledBtn>
       </div>
       <hr className="bg-[#111] w-full mt-3 mb-[65px] mbl:mb-[30px]" />
 
       {/* conditionally render the components*/}
       {selectedComponent === "digital marketing" && <DigitalMarketing />}
+      {selectedComponent === "development" && <WebDev />}
       {selectedComponent === "graphic designing" && <GraphicDesign />}
-      {selectedComponent === "web development" && <WebDev />}
+      {selectedComponent === "SEO/SEM" && <Seosem />}
+      {selectedComponent === "branding" && <Branding />}
     </div>
   );
 }

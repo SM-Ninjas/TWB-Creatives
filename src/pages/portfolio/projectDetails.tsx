@@ -41,12 +41,19 @@ const ProjectDetails = () => {
   const renderDescriptionHTML = (
     description: ProjectTypes["attributes"]["Description"]
   ) => {
-    return description
+    // Concatenate paragraphs with line breaks
+    const text = description
       ?.map((paragraph) =>
-        paragraph?.children.map((child) => child.text).join("")
+        paragraph.children.map((child) => child.text).join("")
       )
-      .join("<br/>"); // Add line breaks between paragraphs
+      .join("\n");
+
+    // Replace line breaks with <br> tags
+    const htmlContent = text?.replace(/\n/g, "<br>");
+
+    return htmlContent || "";
   };
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -130,10 +137,7 @@ const ProjectDetails = () => {
             {...sliderSettings}
           >
             {project?.attributes?.Tech_stack_logos?.data?.map((logo) => (
-              <div
-                key={logo.id}
-                className=""
-              >
+              <div key={logo.id} className="">
                 <div className="gap-[2rem] m-[2rem] p-1">
                   <img
                     src={`https://admin.twbcreates.com${logo.attributes?.url}`}
