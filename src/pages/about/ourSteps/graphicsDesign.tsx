@@ -6,7 +6,7 @@ function GraphicDesign() {
       <div className=" flex justify-center gap-[25px] dp:w-[75%] lp:w-[80%] tl:w-[86%] mbl:w-[90%]   mbl:flex-col mbl:items-center ">
         <div className="dp:w-[40%] lp:w-[50%] tl:w-[70%]  mbl:w-[90%] mbl:text-center mbl:mb-[1.2rem] ">
           <h1 className="text-[2rem] font-bold text-utils mbl:text-[16px] mb-2">
-            Graphics Designing
+            Graphics/Motion Designing
           </h1>
           <p className="text-utils opacity-[0.75] mbl:text-[12px]">
             Illuminate your brand with captivating visual narratives. Our

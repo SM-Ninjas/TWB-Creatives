@@ -20,12 +20,12 @@ export const digitalMarketingData = [
 
 export const developmentData = [
   "Gathering project requirements and specifications from the client.",
-  "Creating wireframes, mockups, and prototypes to visualize the user interface and user experience.",
-  "Writing clean, efficient, and scalable code using programming languages such as HTML, CSS, JavaScript, and frameworks like React or Angular.",
-  "Testing the developed features and functionalities to ensure cross-browser compatibility, responsiveness, and functionality.",
-  "Deploying the application to production environment and providing ongoing support and maintenance as needed.",
-  "Collaborating with designers, stakeholders, and other developers to troubleshoot issues and implement new features.",
-  "Continuously learning and adapting to new technologies and best practices in web development.",
+  "Creating wireframes, mockups, and prototypes to visualize the user interface and user experience for both web and app platforms.",
+  "Writing clean, efficient, and scalable code using programming languages such as HTML, CSS, JavaScript for web development and languages like Java, Swift, or Kotlin for app development, along with frameworks like React Native or Flutter for cross-platform app development.",
+  "Testing the developed features and functionalities to ensure cross-browser compatibility for web applications and compatibility across different devices and OS versions for mobile applications.",
+  "Deploying the application to production environment for both web and app platforms and providing ongoing support and maintenance as needed.",
+  "Collaborating with designers, stakeholders, and other developers to troubleshoot issues and implement new features for both web and app projects.",
+  "Continuously learning and adapting to new technologies and best practices in both web and app development.",
 ];
 
 export const seoSemData = [

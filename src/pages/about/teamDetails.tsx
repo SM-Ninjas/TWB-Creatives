@@ -39,29 +39,34 @@ function TeamDetails() {
   return (
     <div className="w-full">
       <div className="flex flex-col  items-center">
-        <div className=" flex flex-col items-center w-[65%] mb-[5rem]">
-          <div className="flex flex-col items-center gap-[8px] ">
-            <h1 className=" text-[32px] text-utils font-bold mbl:text-[16px]">
-              {staff.attributes.member_name}
-            </h1>
-            <p className="text-primary mbl:text-[16px] m-2 ">{staff.attributes.Mem_position}</p>
-            {/* <CustomButton className=" text-black mb-[40px]">
-              Download CV
-            </CustomButton> */}
-          </div>
-          <img
-            src={`https://admin.twbcreates.com${staff.attributes?.MemberImg.data?.attributes.url}`}
-            alt={staff.attributes.MemberImg.data.attributes.name}
-            className="w-[65%] h-[420px] mbl:w-[100%] mbl:h-[280px]"
-          />
+        <div className="flex flex-col items-center gap-[8px] text-center">
+          <h1 className=" text-[32px] text-utils font-bold mbl:text-[16px]">
+            {staff.attributes.member_name}
+          </h1>
+          <p className="text-primary mbl:text-[16px] m-2 ">
+            {staff.attributes.Mem_position}
+          </p>
         </div>
-        <div className="w-[65%] pb-[5rem] dp:flex dp:justify-evenly dp:items-center ">
-          <div className="text-center dp:text-left">
-            <p className="text-primary mbl:text-[12px]">About {staff.attributes.member_name}</p>
-            <h1 className=" text-[32px] text-utils font-bold mbl:text-[16px]">Introduction</h1>
+        <div className="flex border w-[75%] items-center my-[5rem]">
+          <div className="w-[65%]">
+            <img
+              src={`https://admin.twbcreates.com${staff.attributes?.MemberImg.data?.attributes.url}`}
+              alt={staff.attributes.MemberImg.data.attributes.name}
+              className="w-[65%] h-[420px] mbl:w-[100%] mbl:h-[280px]"
+            />
           </div>
-          <div className="w-[100%] dp:w-[72%]  text-utils opacity-[.75] mbl:text-[12px]">
-            {staff.attributes.Description}
+          <div className="w-[65%] pb-[1rem] ">
+            <div className="text-center dp:text-left">
+              <p className="text-primary mbl:text-[12px]">
+                About {staff.attributes.member_name}
+              </p>
+              <h1 className=" text-[32px] text-utils font-bold mbl:text-[16px]">
+                Introduction
+              </h1>
+            </div>
+            <div className="w-[100%] dp:w-[72%]  text-utils opacity-[.75] mbl:text-[12px]">
+              {staff.attributes.Description}
+            </div>
           </div>
         </div>
 
@@ -148,9 +153,12 @@ function TeamDetails() {
 
         <div className="w-full my-[5rem]">
           <div className=" text-center mb-[5rem]">
-            <h1 className="text-[32px] text-utils font-bold mb-[15px] mbl:text-[16px]">Achievements</h1>
+            <h1 className="text-[32px] text-utils font-bold mb-[15px] mbl:text-[16px]">
+              Achievements
+            </h1>
             <p className="text-utils opacity-[.75] mbl:text-[12px]">
-              Explore  {staff.attributes?.member_name}  past works and achievements
+              Explore {staff.attributes?.member_name} past works and
+              achievements
             </p>
           </div>
           <div className="flex justify-center flex-wrap gap-[20px]">
@@ -160,8 +168,8 @@ function TeamDetails() {
                 key={achievement.id}
               >
                 <img
-                   src={`https://admin.twbcreates.com${achievement.attributes.url}`}
-                   alt={achievement.attributes.name}
+                  src={`https://admin.twbcreates.com${achievement.attributes.url}`}
+                  alt={achievement.attributes.name}
                   className="w-[100%] h-[375px]"
                 />
               </div>
