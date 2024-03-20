@@ -19,7 +19,7 @@ function ShowCase() {
           <div className="pt-[.8rem] pb-[45px]">
             <CustomButton>Call Now</CustomButton>
           </div>
-          <div className="w-[80%] h-[380px] rounded-[10px] relative">
+          <div className="w-[82%] h-[385px] rounded-[10px] relative">
             <img
               src={homepage}
               alt="my img"
