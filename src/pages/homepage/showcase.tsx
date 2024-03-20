@@ -19,11 +19,11 @@ function ShowCase() {
           <div className="pt-[.8rem] pb-[45px]">
             <CustomButton>Call Now</CustomButton>
           </div>
-          <div className="w-[82%] h-[385px] rounded-[10px] relative">
+          <div className="rounded-[10px] relative">
             <img
               src={homepage}
               alt="my img"
-              className="h-full w-full rounded-[10px] object-cover"
+              className="object-cover"
             />
             {/* VideoCircle is now absolutely positioned on top of the image */}
             {/* <VideoCircle
