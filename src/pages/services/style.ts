@@ -1,5 +1,7 @@
 import { Input } from "antd";
 import styled from "styled-components";
+import { Select } from "antd";
+
 
 interface StyledBtnProps {
   active: boolean;
@@ -41,6 +43,20 @@ export const StyledTextArea = styled(Input.TextArea)`
   border-radius: 4px;
   resize: none;
 
+  &::placeholder {
+    color: #344054; /* Adjust the color to your preference */
+    opacity: 1; /* Set the opacity as needed */
+  }
+`;
+export const StyledSelect = styled(Select)`
+  height: 60px;
+  display: block;
+  width: 100%;
+  // padding-bottom:4px;
+  border: none;
+  margin-top:.8rem;
+  margin-bottom:.8rem;
+  // background: #fefefe;
   &::placeholder {
     color: #344054; /* Adjust the color to your preference */
     opacity: 1; /* Set the opacity as needed */
