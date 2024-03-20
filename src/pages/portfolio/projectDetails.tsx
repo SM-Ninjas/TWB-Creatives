@@ -130,12 +130,17 @@ const ProjectDetails = () => {
             {...sliderSettings}
           >
             {project?.attributes?.Tech_stack_logos?.data?.map((logo) => (
-              <div key={logo.id} className="flex gap-[2rem] m-[2rem] ">
-                <img
-                  src={`https://admin.twbcreates.com${logo.attributes?.formats?.thumbnail?.url}`}
-                  alt={logo?.attributes.name}
-                  className="rounded-[8px] h-[100px]"
-                />
+              <div
+                key={logo.id}
+                className=""
+              >
+                <div className="gap-[2rem] m-[2rem] p-1">
+                  <img
+                    src={`https://admin.twbcreates.com${logo.attributes?.url}`}
+                    alt={logo?.attributes.name}
+                    className="rounded-[8px] h-[100px] mx-5"
+                  />
+                </div>
               </div>
             ))}
           </Slider>

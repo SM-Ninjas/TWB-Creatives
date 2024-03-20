@@ -1,26 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface CustomNotificationProps {
   message: string;
   description: string;
 }
 
-const CustomNotification: React.FC<CustomNotificationProps> = ({ message, description }) => {
+const CustomNotification: React.FC<CustomNotificationProps> = ({
+  message,
+  description,
+}) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     // Check if the notification has been shown
-    const notificationShown = sessionStorage.getItem('notificationShown');
+    const notificationShown = sessionStorage.getItem("notificationShown");
 
     if (!notificationShown) {
       setVisible(true);
-      const timer = setTimeout(() => setVisible(false), 8000); // Hide after 8 seconds
-      // Set the flag in sessionStorage
-      sessionStorage.setItem('notificationShown', 'true');
+      const timer = setTimeout(() => {
+        if (isMounted) {
+          setVisible(false);
+          sessionStorage.setItem("notificationShown", "true");
+        }
+      }, 6000);
 
-      return () => clearTimeout(timer); // Clean up on unmount
+      return () => {
+        isMounted = false;
+        clearTimeout(timer);
+      };
     }
   }, []);
+
+  // Hide the notification after 6 seconds
+  useEffect(() => {
+    if (visible) {
+      const timer = setTimeout(() => {
+        setVisible(false);
+        sessionStorage.setItem("notificationShown", "true");
+      }, 6000); 
+
+      return () => clearTimeout(timer); 
+    }
+  }, [visible]);
 
   if (!visible) return null;
 

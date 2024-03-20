@@ -13,25 +13,25 @@ function Stats() {
 
       <div className="pb-[4rem] dp:w-[70%] lp:w-[80%] tl:w-[90%] mbl:w-[100%] flex justify-center gap-[2.5rem] tl:flex-wrap lp:flex-wrap mbl:flex-wrap ">
         <div className="w-[160px] flex flex-col gap-[10px]">
-          <h1 className={`${headingWhite}`}>23</h1>
+          <h1 className={`${headingWhite}`}>100+</h1>
           <StyledParagraph className=" mbl:text-[12px]">
             Projects we have completed in total
           </StyledParagraph>
         </div>
         <div className="w-[160px] flex flex-col gap-[10px]">
-          <h1 className={`${headingWhite}`}>11</h1>
+          <h1 className={`${headingWhite}`}>16+</h1>
           <StyledParagraph className=" mbl:text-[12px]">
             Excellent staff excelling in a particular field
           </StyledParagraph>
         </div>
         <div className="w-[160px] flex flex-col gap-[10px]">
-          <h1 className={`${headingWhite}`}>4</h1>
+          <h1 className={`${headingWhite}`}>5+</h1>
           <StyledParagraph className=" mbl:text-[12px]">
             Ongoing projects from our brightest clients
           </StyledParagraph>
         </div>
         <div className="w-[160px] flex flex-col gap-[10px]">
-          <h1 className={`${headingWhite}`}>1</h1>
+          <h1 className={`${headingWhite}`}>4+</h1>
           <StyledParagraph className=" mbl:text-[12px]">
             Years of exposure in the market as a team
           </StyledParagraph>

@@ -78,7 +78,7 @@ function TeamDetails() {
             {/* dp:flex dp:justify-center dp:gap-[2rem] */}
             <div className=" flex justify-center gap-[2rem] flex-wrap ">
               <div className="w-[25%] dp:w-[15%]">
-                <h1 className="text-[32px] text-white font-extrabold mbl:text-[24px] mbl:text-[12px]">
+                <h1 className="text-[32px] text-white font-extrabold mbl:text-[12px]">
                   {staff.attributes.Experience}
                 </h1>
                 <p className="text-gray-g2 opacity-[.75] mbl:text-[12px]">
@@ -86,7 +86,7 @@ function TeamDetails() {
                 </p>
               </div>
               <div className="w-[25%] dp:w-[15%]">
-                <h1 className="text-[32px] text-white font-extrabold mbl:text-[24px] mbl:text-[12px]">
+                <h1 className="text-[32px] text-white font-extrabold  mbl:text-[12px]">
                   {staff.attributes.Mem_education}
                 </h1>
                 <p className="text-gray-g2 opacity-[.75] mbl:text-[12px]">
@@ -129,7 +129,7 @@ function TeamDetails() {
           {/* dp:flex dp:justify-center dp:gap-[2rem] */}
           <div className="bg-utils flex justify-center">
             <div className=" w-[65%] grid grid-cols-3 justify-items-center gap-[45px] dp:w-[70%] dp:gap-[40px] lp:w-[80%] lp:gap-[20px] lp:grid-cols-2 tl:w-[95%] tl:gap-[25px]  tl:grid-cols-2  mbl:w-[95%] mbl:flex mbl:flex-col mbl:items-center ">
-              {staff.attributes.skills.data.map((skill) => (
+              {staff?.attributes?.skills.data?.map((skill) => (
                 <div
                   className="dp:w-[80%] lp:w-[90%] tl:w-[95%] mbl:w-[80%] py-[30px] px-[22px] bg-gray-g2 border text-center rounded-[8px] relative bottom-[30px]"
                   key={skill.id}
@@ -138,7 +138,7 @@ function TeamDetails() {
                     {skill.attributes.Skill_name}
                   </h1>
                   <p className="text-utils opacity-[.75] mbl:text-[12px]">
-                    {skill.attributes.skills_descriptions}
+                    {skill.attributes?.skills_descriptions}
                   </p>
                 </div>
               ))}
@@ -150,11 +150,11 @@ function TeamDetails() {
           <div className=" text-center mb-[5rem]">
             <h1 className="text-[32px] text-utils font-bold mb-[15px] mbl:text-[16px]">Achievements</h1>
             <p className="text-utils opacity-[.75] mbl:text-[12px]">
-              Explore  {staff.attributes.member_name}  past works and achievements
+              Explore  {staff.attributes?.member_name}  past works and achievements
             </p>
           </div>
           <div className="flex justify-center flex-wrap gap-[20px]">
-            {staff.attributes.Achievement.data.map((achievement) => (
+            {staff.attributes?.Achievement?.data?.map((achievement) => (
               <div
                 className="dp:w-[100%] lp:w-[90%] tl:w-[100%] mbl:w-[100%] py-[30px] px-[22px] text-center rounded-[8px] relative bottom-[30px]"
                 key={achievement.id}
