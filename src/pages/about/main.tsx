@@ -1,4 +1,5 @@
-import { headingBlack} from "../../styling/responsive";
+import { headingBlack } from "../../styling/responsive";
+import aboutimg  from "../../assets/images/aboutimg.jpg";
 
 function AboutMain() {
   return (
@@ -25,7 +26,7 @@ function AboutMain() {
           </div>
           <div className="w-[40%] tl:w-[100%] mbl:w-[100%]">
             <img
-              src=""
+              src={aboutimg}
               className="w-[100%] h-[256px] bg-gray rounded-[8px]"
               alt=""
             />
