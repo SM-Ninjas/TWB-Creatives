@@ -65,7 +65,7 @@ function TeamDetails() {
           </div>
         </div>
 
-        <div className="w-[100%] text-center flex justify-center  bg-utils border border-black border-[2px] pt-[100px] pb-[60px]">
+        <div className="w-[100%] text-center flex justify-center  bg-utils  border-black border-[2px] pt-[100px] pb-[60px]">
           <div className="w-[75%]">
             <div className="mb-[2rem]">
               <h1 className="text-[32px] text-white font-bold mbl:text-[16px]">
@@ -94,7 +94,7 @@ function TeamDetails() {
                 </p>
               </div>
               <div className="w-[25%] dp:w-[15%] mbl:text-[12px]">
-                <h1 className="text-[32px] text-white font-extrabold mbl:text-[24px] mbl:text-[12px]">
+                <h1 className="text-[32px] text-white font-extrabold  mbl:text-[12px]">
                   {staff.attributes.ValuedSkill}
                 </h1>
                 <p className="text-gray-g2 opacity-[.75] mbl:text-[12px]">
@@ -102,7 +102,7 @@ function TeamDetails() {
                 </p>
               </div>
               <div className="w-[25%] dp:w-[15%]">
-                <h1 className="text-[32px] text-white font-extrabold mbl:text-[24px] mbl:text-[12px]">
+                <h1 className="text-[32px] text-white font-extrabold mbl:text-[12px]">
                   {staff.attributes.Exposure}
                 </h1>
                 <p className="text-gray-g2 opacity-[.75] mbl:text-[12px]">

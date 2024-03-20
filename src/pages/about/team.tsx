@@ -43,7 +43,7 @@ function OurTeam() {
           </h1>
         </div>
         <div className="relative bottom-[90px]">
-          <div className="flex justify-center flex-wrap mbl:flex-col tl:items-center tl:flex-col mbl:flex-col  mbl:items-center">
+          <div className="flex justify-center flex-wrap  tl:items-center tl:flex-col mbl:flex-col  mbl:items-center">
             <Slider
               className="w-[70%] grid grid-cols-3 mbl:grid-cols-1 gap-[45px] items-center   mbl:items-center mbl:w-[90%] lp:w-[80%]"
               {...sliderSettings}
