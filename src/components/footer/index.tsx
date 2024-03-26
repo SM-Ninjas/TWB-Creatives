@@ -24,7 +24,7 @@ function Footer() {
             </div>
             <div className="flex gap-[9px] justify-center text-gray-g2">
               <Call size="32" className="text-gray-g2" variant="Bulk" />
-              <p className="font-medium mbl:text-[12px]">98xxxxxxxx</p>
+              <p className="font-medium mbl:text-[12px]">985 1163192</p>
             </div>
           </div>
           <div className="flex justify-center text-gray-g2 gap-[12px] cursor-pointer " > 
