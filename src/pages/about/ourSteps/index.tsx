@@ -31,7 +31,7 @@ function OurSteps() {
           tailored to your project's success.
         </p>
       </div>
-      <div className="flex  dp:gap-[40px] lp:gap-[45px] tl:gap-[35px] mbl:gap-[5px]">
+      <div className="flex dp:gap-[40px] lp:gap-[45px] tl:gap-[35px] tl:flex-wrap tl:justify-center mbl:gap-[10px] mbl:flex-wrap mbl:justify-center ">
         <StyledBtn
           onClick={() => handleSelectComponent("digital marketing")}
           active={selectedComponent === "digital marketing"}

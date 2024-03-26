@@ -43,24 +43,25 @@ function OurClients() {
 
   return (
     <div>
-      <div className="w-full h-[377px] flex justify-center items-center">
-        <div className="w-[80%] mbl:w-[100%]  flex flex-col items-center gap-[30px] overflow-hidden">
+      <div className="w-full h-[380px] flex justify-center items-center">
+        <div className="w-[80%] tl:w-[90%] mbl:w-[100%]  flex flex-col items-center gap-[30px] overflow-hidden">
           <div>
             <h1 className="text-center text-utils font-bold text-[2rem] mbl:text-[16px]">
               Our Brilliant Clients
             </h1>
           </div>
-          <div className="w-[80%] mbl:w-[150%] tl:w-[90%]">
+          <div className="w-[80%] mbl:w-[160%] tl:w-[100%]">
+            
             <Slider {...sliderSettings} className="flex flex-col">
               {clientData?.map((res) => (
                 <div
                   key={res.id}
-                  className="p-4 cursor-pointer  mr-[30px]"
+                  className="p-2 cursor-pointer  mr-[30px] mbl:mr-[1rem]"
                 >
-                  <Link to={`/client/${res.id}`} className="">
+                  <Link to={`/client/${res.id}`} className="flex justify-center ">
                     <img
                       src={`https://admin.twbcreates.com${res.attributes.clientLogo.data.attributes.url}`}
-                      className="w-[220px] h-[120px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] mx-[3.5rem]"
+                      className="w-[220px] h-[130px] shadow-offset-x-[-4] shadow-offset-y-[-4] shadow-blur-[20] shadow-color-[rgba(0, 0, 0, 0.05)] mx-[3.5rem]"
                       alt={res.attributes.clientLogo.data.attributes.url}
                     />
                   </Link>

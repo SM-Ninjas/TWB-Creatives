@@ -29,7 +29,7 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           message="Filter Button"
           description="Click to Filter the portfolios."
         />
-        <div className="absolute top-0 right-0 m-2">
+        <div className="absolute top-0 right-0 mbl:top-[-2rem] mbl:right-[-1.8rem] m-2">
           <FilterSquare
             size="32"
             className=""
@@ -41,7 +41,7 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
       </div>
       {isDropdownVisible && (
         <div
-          className="fixed top-[-14] right-[9.2rem] bg-white divide-y pointer divide-white rounded-lg shadow w-44"
+          className="fixed right-[9.2rem] mbl:top-[16rem] mbl:right-[2.5rem] bg-white divide-y pointer divide-white rounded-lg shadow w-44"
         >
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
             <li
