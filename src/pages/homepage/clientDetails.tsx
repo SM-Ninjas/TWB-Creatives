@@ -92,7 +92,7 @@ function ClientDetails() {
         {clientData?.attributes.services.data.map((service) => (
           <div className="w-[85%]" key={service.id}>
             {service.attributes.serviceName == "Web Development" && (
-              <div className="w-[100%] flex flex-col items-center border">
+              <div className="w-[100%] flex flex-col items-center">
                 <div className=" mbl:w-[60%] tl:w-[40%] lp:w-[30%] dp:w-[30%] ">
                   <h1 className="text-[21px] font-semibold mbl:text-[14px]">
                     {service.attributes.serviceName}
